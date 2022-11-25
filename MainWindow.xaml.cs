@@ -23,6 +23,8 @@ namespace cooking_app
         public MainWindow()
         {
             InitializeComponent();
+            CookingApplication.Content = new HomePage();
         }
+
     }
 }
