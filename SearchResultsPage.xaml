@@ -74,13 +74,13 @@
             </Button.Resources>
             JAPANESE
         </Button>
-        <Image Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="/481A2SearchResults;component/img/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
+        <Image Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="cooking-app;component/img/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
 
         </Image>
-        <Image Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Source="/481A2SearchResults;component/img/Curry.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
+        <Image Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Source="cooking-app;component/img/Curry.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
 
         </Image>
-        <Image Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="3" Source="/481A2SearchResults;component/img/Udon.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
+        <Image Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="3" Source="cooking-app;component/img/Udon.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
 
         </Image>
         <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
@@ -257,13 +257,13 @@
         <Rectangle Grid.Row="15" Grid.Column="0" HorizontalAlignment="Stretch" Fill="Black" Height="1" Margin="0,-72,0,0"
                    Width="390" Grid.ColumnSpan="10"/>
 
-        <Image x:Name="profile" Grid.Column="1" Grid.Row="15" Source="/481A2SearchResults;component/img/Profile.png" Height="40" Width="40" HorizontalAlignment="Center"
+        <Image x:Name="profile" Grid.Column="1" Grid.Row="15" Source="cooking-app;component/img/Profile.png" Height="40" Width="40" HorizontalAlignment="Center"
               Margin="0,-28,0,0"/>
 
-        <Image x:Name="home" Grid.Column="2" Grid.Row="15" Source="/481A2SearchResults;component/img/Home.png" Height="30" Width="40"
+        <Image x:Name="home" Grid.Column="2" Grid.Row="15" Source="cooking-app;component/img/Home.png" Height="30" Width="40"
                Margin="0,-30,0,0"/>
 
-        <Image x:Name="saved" Grid.Column="3" Grid.Row="15" Source="C:\Users\jessi\source\repos\481A2SearchResults\481A2SearchResults\img\Saved.png" Height="35" Width="35" HorizontalAlignment="Center"
+        <Image x:Name="saved" Grid.Column="3" Grid.Row="15" Source="cooking-app;component/img/Saved.png" Height="35" Width="35" HorizontalAlignment="Center"
                Margin="0,-29,0,0"/>
         <TextBlock Grid.Column="1" Grid.Row="15" Text="Profile" HorizontalAlignment="Center" Margin="0,20,0,0"/>
         <TextBlock Grid.Column="2" Grid.Row="15" Text="Home" HorizontalAlignment="Center" Margin="0,20,0,0"/>

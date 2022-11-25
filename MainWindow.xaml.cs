@@ -23,8 +23,9 @@ namespace cooking_app
         public MainWindow()
         {
             InitializeComponent();
-            CookingApplication.Content = new HomePage();
+            //CookingApplication.Content = new HomePage();
             //CookingApplication.Content = new SearchResultsPage();
+            CookingApplication.Content = new FilterPage();
         }
 
     }
