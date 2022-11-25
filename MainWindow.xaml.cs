@@ -24,6 +24,7 @@ namespace cooking_app
         {
             InitializeComponent();
             CookingApplication.Content = new HomePage();
+            //CookingApplication.Content = new SearchResultsPage();
         }
 
     }

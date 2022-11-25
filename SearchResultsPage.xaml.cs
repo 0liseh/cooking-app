@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace cooking_app
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for SearchResultsPage.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class SearchResultsPage : Page
     {
-        public HomePage()
+        public SearchResultsPage()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void btn1Hr_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

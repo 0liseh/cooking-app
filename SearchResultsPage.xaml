@@ -1,0 +1,274 @@
+﻿<Page x:Class="cooking_app.SearchResultsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cooking_app"
+      mc:Ignorable="d" 
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
+      d:DesignHeight="840" d:DesignWidth="390"
+      Title="SearchResultsPage" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15" />
+            <ColumnDefinition Width="115" />
+            <ColumnDefinition Width="115" />
+            <ColumnDefinition Width="115" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="26" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <!-- Move position attributes from the Grid into the enclosing Border -->
+        <Button x:Name="btnFilter" Grid.Column="3" Grid.Row="1" Width="27" Height="27" Background="White" BorderThickness="0" HorizontalAlignment="Left" Margin="80,-10,0,0">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Filter"/>
+            </Button.Content>
+        </Button>
+        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="2" BorderBrush="#9B9B9B" HorizontalAlignment="Left" Width="303" Height="36" Margin="0,0,0,10" Padding="0, 4, 10, 10">
+            <Border.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Border.Resources>
+            <TextBlock Grid.Column="1" Grid.Row="1" FontSize="15" Foreground="#9B9B9B" Grid.ColumnSpan="3" Width="250" Height="36" TextAlignment="Justify">
+            Search Recipe Title
+            </TextBlock>
+        </Border>
+        <Button Grid.Column="3" Grid.Row="2" FontSize="15" Background="#50AF18" Foreground="#F5F5F5" Margin="5, 5, -10, 5" Padding="2, 2, 0, 5" Height="27" Width="75" HorizontalAlignment="Left">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            EASY
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" FontSize="15" Background="#50AF18" Foreground="#F5F5F5" Margin="5, 5, 5, 5" Padding="10, 2, 10, 5" Height="27" Width="90" HorizontalAlignment="Left">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            DINNER
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" FontSize="15" Background="#50AF18" Foreground="#F5F5F5" Margin="5, 5, 5, 5" Padding="10, 2, 10, 5" Height="27" Width="100" HorizontalAlignment="Left">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            JAPANESE
+        </Button>
+        <Image Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="/481A2SearchResults;component/img/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
+
+        </Image>
+        <Image Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Source="/481A2SearchResults;component/img/Curry.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
+
+        </Image>
+        <Image Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="3" Source="/481A2SearchResults;component/img/Udon.jpg" Width="344" Height="126" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0, 10, 0, 5">
+
+        </Image>
+        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
+
+        </Border>
+        <Label Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            MISO RAMEN
+        </Label>
+        <Button Grid.Column="3" Grid.Row="4" Width="18" Height="18" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,40,0">
+            <Button.Content>
+                <fa:ImageAwesome Icon="HeartOutline" Foreground="#D11515"/>
+            </Button.Content>
+        </Button>
+        <Label Grid.Column="1" Grid.Row="5" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="0,5,0,10">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            30 MIN
+        </Label>
+        <Label Grid.Column="2" Grid.Row="5" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,5,0,10">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            EASY
+        </Label>
+        <Label Grid.Column="3" Grid.Row="5" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,15,10">
+            4.8
+        </Label>
+
+        <Button Grid.Column="3" Grid.Row="5" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,18,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="StarHalfEmpty" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="5" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,30,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="5" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,42,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="5" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,54,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="5" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,66,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Label Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            KATSU CURRY
+        </Label>
+        <Label Grid.Column="1" Grid.Row="8" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="0,5,0,10">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            30 MIN
+        </Label>
+        <Label Grid.Column="2" Grid.Row="8" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,5,0,10">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            EASY
+        </Label>
+        <Label Grid.Column="3" Grid.Row="8" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,15,10">
+            4.5
+        </Label>
+        <Button Grid.Column="3" Grid.Row="8" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,18,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="StarHalfEmpty" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="8" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,30,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="8" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,42,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="8" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,54,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="8" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,66,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Label Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            KITSUNE UDON
+        </Label>
+        <Label Grid.Column="1" Grid.Row="11" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="0,5,0,10">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            30 MIN
+        </Label>
+        <Label Grid.Column="2" Grid.Row="11" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,5,0,10">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            EASY
+        </Label>
+        <Label Grid.Column="3" Grid.Row="11" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,15,10" >
+            4.0
+        </Label>
+
+        <Button Grid.Column="3" Grid.Row="11" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,18,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="StarOutline" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="11" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,30,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="11" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,42,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="11" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,54,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="11" Width="12" Height="12" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,0,66,28">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="4" Grid.Row="3" Width="3.5" Height="100" Background="#828282" Margin="3,-25,0,0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="1"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Border Grid.Column="1" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="3" BorderBrush="#5F5F5F" BorderThickness="3" Margin="0,7,0,0">
+
+        </Border>
+        <Border Grid.Column="1" Grid.Row="6" Grid.RowSpan="3" Grid.ColumnSpan="3" BorderBrush="#5F5F5F" BorderThickness="3" Margin="0,7,0,0">
+
+        </Border>
+        <Border Grid.Column="1" Grid.Row="9" Grid.RowSpan="3" Grid.ColumnSpan="3" BorderBrush="#5F5F5F" BorderThickness="3" Margin="0,7,0,0">
+
+        </Border>
+
+        <Rectangle Grid.Row="15" Grid.Column="0" HorizontalAlignment="Stretch" Fill="White" Height="62" Margin="0,-19,0,0"
+                   Width="390" Grid.ColumnSpan="10"/>
+
+        <Rectangle Grid.Row="15" Grid.Column="0" HorizontalAlignment="Stretch" Fill="Black" Height="1" Margin="0,-72,0,0"
+                   Width="390" Grid.ColumnSpan="10"/>
+
+        <Image x:Name="profile" Grid.Column="1" Grid.Row="15" Source="/481A2SearchResults;component/img/Profile.png" Height="40" Width="40" HorizontalAlignment="Center"
+              Margin="0,-28,0,0"/>
+
+        <Image x:Name="home" Grid.Column="2" Grid.Row="15" Source="/481A2SearchResults;component/img/Home.png" Height="30" Width="40"
+               Margin="0,-30,0,0"/>
+
+        <Image x:Name="saved" Grid.Column="3" Grid.Row="15" Source="C:\Users\jessi\source\repos\481A2SearchResults\481A2SearchResults\img\Saved.png" Height="35" Width="35" HorizontalAlignment="Center"
+               Margin="0,-29,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="15" Text="Profile" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="2" Grid.Row="15" Text="Home" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="3" Grid.Row="15" Text="Saved" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+
+
+    </Grid>
+</Page>

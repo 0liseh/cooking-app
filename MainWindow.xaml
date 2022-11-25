@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cooking_app"
         mc:Ignorable="d"
-        Title="MainWindow/HomePage" Height="800" Width="390">
+        Title="MainWindow/HomePage" 
+        Height="840" Width="390">
     <Grid>
-        <Frame x:Name="CookingApplication" Margin="15,35,15,15"/>
+        <Frame x:Name="CookingApplication"  NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
