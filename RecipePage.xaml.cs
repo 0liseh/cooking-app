@@ -26,5 +26,9 @@ namespace cooking_app
             InitializeComponent();
         }
 
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
