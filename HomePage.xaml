@@ -8,7 +8,6 @@
       xmlns:fa="http://schemas.fontawesome.io/icons/"
       d:DesignHeight="840" d:DesignWidth="390"
       Title="HomePage" Background="White">
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15" />
@@ -328,19 +327,28 @@
         <Rectangle Grid.Row="15" Grid.Column="0" HorizontalAlignment="Stretch" Fill="Black" Height="1" Margin="0,-80,0,0"
                    Width="390" Grid.ColumnSpan="10"/>
 
-        <Image x:Name="profile" Grid.Column="1" Grid.Row="14" Source="/CPSC481A2;component/img/ProfileActive.png" Height="32" Width="32" HorizontalAlignment="Right"
-              Margin="0,87,3,24" Grid.RowSpan="2"/>
+        <Button Grid.Column="1" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Center" Margin="34,0,0,15">
+            <Button.Content>
+                <fa:ImageAwesome Icon="UserOutline" Foreground="Black" />
+            </Button.Content>
+        </Button>
 
-        <Image x:Name="home" Grid.Column="3" Grid.Row="15" Source="/CPSC481A2;component/img/Home.png" Height="30" Width="40"
-               Margin="0,-37,0,0"/>
+        <Button Grid.Column="3" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Center" Margin="0,0,0,15">
+            <Button.Content>
+                <fa:ImageAwesome Icon="Home" Foreground="Black" />
+            </Button.Content>
+        </Button>
 
-        <Image x:Name="saved" Grid.Column="5" Grid.Row="15" Source="/CPSC481A2;component/img/Saved.png" Height="35" Width="35" HorizontalAlignment="Left"
-               Margin="0,-35,0,0"/>
-        <TextBlock Grid.Column="1" Grid.Row="15" Text="Profile" Margin="35,23,0,0"/>
-        <TextBlock Grid.Column="3" Grid.Row="15" Text="Home" HorizontalAlignment="Center" Margin="0,23,0,0"/>
-        <TextBlock Grid.Column="5" Grid.Row="15" Text="Saved" Margin="2,23,0,0"/>
+        <Button Grid.Column="5" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Left" Margin="3,0,0,15">
+            <Button.Content>
+                <fa:ImageAwesome Icon="BookmarkOutline" Foreground="Black" />
+            </Button.Content>
+        </Button>
+        <TextBlock Grid.Column="1" Grid.Row="15" Text="Profile" Margin="35,35,0,0"/>
+        <TextBlock Grid.Column="3" Grid.Row="15" Text="Home" HorizontalAlignment="Center" Margin="0,35,0,0"/>
+        <TextBlock Grid.Column="5" Grid.Row="15" Text="Saved" Margin="2,35,0,0"/>
 
-        <Rectangle Grid.Column="0" Fill="#5F5F5F" Margin="0,0,-3,19"
+<!--        <Rectangle Grid.Column="0" Fill="#5F5F5F" Margin="0,0,-3,19"
                    Width="390" Grid.RowSpan="15" Grid.ColumnSpan="7" Opacity="0.8"/>
 
         <Rectangle Grid.Row="1" Grid.Column="1" Fill="White" Height="250" Margin="-13,0,0,0"
@@ -359,6 +367,6 @@
                 </Style>
             </Button.Resources>
             LOG OUT
-        </Button>
+        </Button> -->
     </Grid>
 </Page>
