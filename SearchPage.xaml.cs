@@ -24,5 +24,10 @@ namespace cooking_app
         {
             InitializeComponent();
         }
+
+        private void MacAndCheese_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

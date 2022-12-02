@@ -87,10 +87,10 @@
                     </UserControl>
 
                     <!-- Time -->
-                    <Label Content="30 minutes" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                    <Label Content="30 minutes" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
                     
                     <!-- Difficulty --> 
-                    <Label Content="Easy" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                    <Label Content="Easy" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
                     
                     <!-- Rating -->
                     <!--<UserControl x:Name="Rating1"
@@ -160,7 +160,7 @@
 
 
                     <!-- Serving size -->
-                    <Label Content="1 serving" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                    <Label Content="1 serving" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
                 </Grid>
             </Border>
 
@@ -174,11 +174,10 @@
                     <RowDefinition Height="60"/>
                     <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" x:Name="IngridentsTab" Content="Ingridients" FontSize="20" Click="ScrollToIngredients"  />
-                    <Button Grid.Column="1" Grid.Row="0" x:Name="InstructionsTab" Content="Instructions" FontSize="20" Background="#FFFFFF" Click="ScrollToInstructions"/>
-                    <Button Margin="0,20,0,0" Grid.Column="0" Grid.Row="1" x:Name="NutritionTab" Content="Nutrition" FontSize="20" Background="#FFFFFF" Click="ScrollToNutrition"/>
-
-                <Button Margin="0,20,0,0" Grid.Column="1" Grid.Row="1" x:Name="ReviewsTab" Content="Reviews" FontSize="20"  Background="#FFFFFF" Click="ScrollToReviews"/>
+                    <Button Grid.Column="0" Grid.Row="0" x:Name="IngridentsTab" Content="Ingridients" FontSize="22" Click="ScrollToIngredients"  />
+                    <Button Grid.Column="1" Grid.Row="0" x:Name="InstructionsTab" Content="Instructions" FontSize="22" Background="#FFFFFF" Click="ScrollToInstructions"/>
+                    <Button Margin="0,20,0,0" Grid.Column="0" Grid.Row="1" x:Name="NutritionTab" Content="Nutrition" FontSize="22" Background="#FFFFFF" Click="ScrollToNutrition"/>
+                    <Button Margin="0,20,0,0" Grid.Column="1" Grid.Row="1" x:Name="ReviewsTab" Content="Reviews" FontSize="22"  Background="#FFFFFF" Click="ScrollToReviews"/>
             </Grid>
             
             <!-- Contains Ingridients, Instructions, Nutrition and Comments -->
