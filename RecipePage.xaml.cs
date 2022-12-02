@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace cooking_app
 {
@@ -29,6 +30,26 @@ namespace cooking_app
         private void Back_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ScrollToIngredients(object sender, RoutedEventArgs e)
+        {
+            Ingridients.BringIntoView();
+        }
+
+        private void ScrollToInstructions(object sender, RoutedEventArgs e)
+        {
+            
+            Instructions.BringIntoView();
+        }
+
+        private void ScrollToNutrition(object sender, RoutedEventArgs e)
+        {
+            Nutrition.BringIntoView();
+        }
+        private void ScrollToReviews(object sender, RoutedEventArgs e)
+        {
+            Reviews.BringIntoView();
         }
     }
 }
