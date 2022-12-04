@@ -10,7 +10,7 @@
       Title="RecipePage" Background="White"
 >
 
-    <DockPanel LastChildFill="False" Margin="15">
+    <DockPanel LastChildFill="False" Margin="15,15,15,10">
             <!-- Back button -->
             <Button 
                 x:Name="back" 
@@ -43,6 +43,22 @@
                 <Button Margin="0,20,0,0" Grid.Column="0" Grid.Row="1" x:Name="NutritionTab" Content="Nutrition" FontSize="22" Background="#FFFFFF" Click="ScrollToNutrition"/>
                 <Button Margin="0,20,0,0" Grid.Column="1" Grid.Row="1" x:Name="ReviewsTab" Content="Reviews" FontSize="22"  Background="#FFFFFF" Click="ScrollToReviews"/>
             </Grid>
+
+        <Grid DockPanel.Dock="Top"
+                Grid.Column="1" Grid.Row="1"                 Height="50"
+>
+            
+            <Popup 
+                Name="Popup1"    
+                IsOpen="True"
+                
+            >
+                <TextBlock Name="McTextBlock" FontSize="20">  
+                    This is popup text
+                </TextBlock>
+            </Popup>
+        </Grid>
+        
             <Grid DockPanel.Dock="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -52,15 +68,11 @@
                 <!-- Source="cooking-app;component/img/MisoRamen.jpg" -->
             <ScrollViewer VerticalScrollBarVisibility="Hidden">
                 <StackPanel>
-                    
                     <StackPanel>
-                        
-
                         <!-- Food pic -->
                         <Image
                               Source="C:\Users\danch\github\Cooking App\Recipe Page\images\MinoRamen.jfif"
                          />
-
                         <!-- Food card section -->
                         <Border BorderThickness="2" BorderBrush="#000000">
                             <Grid Height="180" >
@@ -191,8 +203,6 @@
                                 <Label Content="1 serving" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
                             </Grid>
                         </Border>
-
-                        
                     </StackPanel>
 
                     <!-- Contains Ingridients, Instructions, Nutrition and Comments -->
@@ -450,51 +460,60 @@
                         />
 
                         <!-- User's review -->
-                        <UserControl x:Name="Rating2"
-                              Grid.Column="2"
-                              Grid.Row="1"
-                        >
-                            <Grid Height="25" Width="100">
-                                <Grid.Resources>
-                                    <ControlTemplate x:Key="starTemplate" TargetType="{x:Type ToggleButton}">
-                                        <Viewbox>
-                                            <Path Name="star" Fill="Gray" Data="F1 M 145.637,174.227L 127.619,110.39L 180.809,70.7577L 114.528,68.1664L 93.2725,5.33333L 70.3262,67.569L 4,68.3681L 56.0988,109.423L 36.3629,172.75L 91.508,135.888L 145.637,174.227 Z"/>
-                                        </Viewbox>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsChecked" Value="True">
-                                                <Setter TargetName="star" Property="Fill">
-                                                    <!-- Value="Yellow">-->
-                                                    <Setter.Value>
-                                                        <LinearGradientBrush>
-                                                            <GradientStop Color="#88FFEF11" Offset="0" />
-                                                            <GradientStop Color="#FFFFEE00" Offset="1" />
-                                                        </LinearGradientBrush>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Grid.Resources>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-                                <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                                <ToggleButton Grid.Column="1" Tag="2" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                                <ToggleButton Grid.Column="2" Tag="3" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                                <ToggleButton Grid.Column="3" Tag="4" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                                <ToggleButton Grid.Column="4" Tag="5" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                            </Grid>
-                        </UserControl>
-                        <Border BorderBrush="#000000" BorderThickness="1" Margin="0,0,0,10" Width="300" >
-                            <Grid Height="50" >
-                                <TextBox  Text="Add Your Review!"/>
-                            </Grid>
+                        <Border BorderBrush="#000000" BorderThickness="1" Margin="0,0,0,30" Width="Auto">
+                            <StackPanel>
+                                <TextBlock HorizontalAlignment="Center" FontSize="18">
+                                    Please click the stars to add your rating
+                                </TextBlock>
+                                <UserControl 
+                                    x:Name="Rating2"
+                                    Grid.Column="2"
+                                    Grid.Row="1"
+                                    Margin="0,0,0,15"
+                                >
+                                    <Grid Height="25" Width="100">
+                                        <Grid.Resources>
+                                            <ControlTemplate x:Key="starTemplate" TargetType="{x:Type ToggleButton}">
+                                                <Viewbox>
+                                                    <Path Name="star" Fill="Gray" Data="F1 M 145.637,174.227L 127.619,110.39L 180.809,70.7577L 114.528,68.1664L 93.2725,5.33333L 70.3262,67.569L 4,68.3681L 56.0988,109.423L 36.3629,172.75L 91.508,135.888L 145.637,174.227 Z"/>
+                                                </Viewbox>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsChecked" Value="True">
+                                                        <Setter TargetName="star" Property="Fill">
+                                                            <!-- Value="Yellow">-->
+                                                            <Setter.Value>
+                                                                <LinearGradientBrush>
+                                                                    <GradientStop Color="#88FFEF11" Offset="0" />
+                                                                    <GradientStop Color="#FFFFEE00" Offset="1" />
+                                                                </LinearGradientBrush>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Grid.Resources>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                        <ToggleButton Grid.Column="1" Tag="2" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                        <ToggleButton Grid.Column="2" Tag="3" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                        <ToggleButton Grid.Column="3" Tag="4" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                        <ToggleButton Grid.Column="4" Tag="5" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                    </Grid>
+                                </UserControl>
+                                <Border BorderBrush="#000000" BorderThickness="1" Margin="0,0,0,10" Width="300" >
+                                    <Grid Height="100" >
+                                        <TextBox  Text="Add Your Review!"/>
+                                    </Grid>
+                                </Border>
+                                <Button Content="Submit" Width="100" Height="50" Margin="0,0,0,30" Background="Green" Foreground="White" FontSize="20"/>
+                            </StackPanel>
                         </Border>
-                        <Button Content="Submit" Width="50" Height="20" Margin="0,0,0,30"/>
 
 
                         <!-- Other user's comments -->
@@ -608,7 +627,43 @@
                 </StackPanel>
             </ScrollViewer>
 
-            <Label Grid.Row="1" Grid.Column="0" Content="Label at the bottom"/>
+            <!-- Holds divider and Menu buttons-->
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <!-- Seperates menu from recipe -->
+                <Rectangle  Grid.Column="0" HorizontalAlignment="Stretch" Fill="Black" Height="1" 
+                       Width="390"/>
+                
+                <!--<Label Grid.Row="1" Grid.Column="0"  Content="Label at the bottom"/>-->
+                <DockPanel  Height="70" Width="360">
+                <StackPanel Width="120">
+                        <Button x:Name="profile" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0">
+                        <Image Source="/cooking-app;component/img/Profile.png"/>
+                    </Button>
+                    <Button HorizontalAlignment="Center" Height="30" Background="White" BorderThickness="0" FontSize="18">
+                        Profile
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Width="120">
+                    <Button x:Name="home" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0">
+                        <Image  Source="/cooking-app;component/img/Home.png"/>
+                    </Button>
+                    <Button Height="30" HorizontalAlignment="Center" Background="White" BorderThickness="0" FontSize="18">
+                        Home
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Width="120">
+                        <Button x:Name="saved" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0">
+                        <Image Source="/cooking-app;component/img/saved.png" 
+                       />
+                    </Button>
+                        <Button Height="30" Background="White" HorizontalAlignment="Center" BorderThickness="0" FontSize="18">
+                        Saved
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+            </StackPanel>
         </Grid>
     </DockPanel>
     

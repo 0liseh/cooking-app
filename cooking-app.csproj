@@ -9,7 +9,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\Bread.jpeg" />
+    <None Remove="img\Home.png" />
+    <None Remove="img\HomeActive.jpg" />
+    <None Remove="img\Profile.png" />
+    <None Remove="img\Saved.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\Saved.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\Bread.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\HomeActive.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
