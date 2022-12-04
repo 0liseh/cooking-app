@@ -34,7 +34,7 @@ namespace cooking_app
 
         private void ScrollToIngredients(object sender, RoutedEventArgs e)
         {
-            Ingridients.BringIntoView();
+            Ingredients.BringIntoView();
         }
 
         private void ScrollToInstructions(object sender, RoutedEventArgs e)

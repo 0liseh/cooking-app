@@ -7,165 +7,29 @@
       xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="840" d:DesignWidth="390"
-      Title="RecipePage" Background="White">
+      Title="RecipePage" Background="White"
+>
 
-
-
-
-    <ScrollViewer VerticalScrollBarVisibility="Hidden">
-        
-        <StackPanel HorizontalAlignment="Center" Margin="15">
-            
-            <!-- Height="130" -->
-            <!-- Source="cooking-app;component/img/MisoRamen.jpg" -->
-            
+    <DockPanel LastChildFill="False" Margin="15">
             <!-- Back button -->
-            <Button x:Name="back" Grid.Column="1" Grid.Row="1" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Back_Click" Height="50" Width="60" FontSize="20">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </Button.Resources>
+            <Button 
+                x:Name="back" 
+                Grid.Column="1" Grid.Row="1" 
+                Content="Back" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Click="Back_Click" Height="50" Width="60" 
+                FontSize="20"
+                DockPanel.Dock="Top"
+            >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
             </Button>
-
-            <!-- Food pic -->
-            <Image
-                  Source="C:\Users\danch\github\Cooking App\Recipe Page\images\MinoRamen.jfif"
-             />
-
-            <!-- Food card section -->
-            <Border BorderThickness="2" BorderBrush="#000000">
-                <Grid Height="180" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition />
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    
-                    <!--Food title -->
-                    <Label Content="MISO RAMEN" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="3"/>
-                    
-                    <!-- Heart button -->
-                    <UserControl x:Name="HeartButton"
-                      Grid.Column="2"
-                      Grid.Row="0"
-                      HorizontalAlignment="Right"
-                      Margin="0,0,12,0"
-                      Height="50"
-                    >
-                        <Grid>
-                            <Grid.Resources>
-                                <ControlTemplate x:Key="heartTemplate" TargetType="{x:Type ToggleButton}">
-                                    <Viewbox>
-                                        <Path Name="heart" Fill="Gray" Data="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14"/>
-                                    </Viewbox>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsChecked" Value="True">
-                                            <Setter TargetName="heart" Property="Fill">
-                                                <!-- Value="Yellow">-->
-                                                <Setter.Value>
-                                                    <LinearGradientBrush>
-                                                        <GradientStop Color="#FF5250" Offset="0" />
-                                                        <GradientStop Color="#FF5252" Offset="1" />
-                                                    </LinearGradientBrush>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Grid.Resources>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource heartTemplate}" />
-                        </Grid>
-                    </UserControl>
-
-                    <!-- Time -->
-                    <Label Content="30 minutes" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
-                    
-                    <!-- Difficulty --> 
-                    <Label Content="Easy" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
-                    
-                    <!-- Rating -->
-                    <!--<UserControl x:Name="Rating1"
-                      Grid.Column="2"
-                      Grid.Row="1"
-                      HorizontalAlignment="Center"
-                    >
-                        <Grid>
-                            <Grid.Resources>
-                                <ControlTemplate x:Key="goldStarTemplate" TargetType="{x:Type ToggleButton}">
-                                    <Viewbox>
-                                        <Path 
-                                            Name="star" 
-                                            Fill="#FFFFEE00"  
-                                            Data= "
-                                                F1 M 145,
-                                                174.227L 127.619,
-                                                110.39L 180.809,
-                                                70.7577L 114.528,
-                                                68.1664L 93.2725,
-                                                5.33333L 70.3262,
-                                                67.569L 4,
-                                                68.3681L 56.0988,
-                                                109.423L 36.3629,
-                                                172.75L 91.508,
-                                                135.888L 145.637,
-                                                174.227 Z"
-                                              />
-                                    </Viewbox>
-                                </ControlTemplate>
-                                <ControlTemplate x:Key="grayStarTemplate" TargetType="{x:Type ToggleButton}">
-                                    <Viewbox>
-                                        <Path 
-                                            Name="star" 
-                                            Fill="Gray"  
-                                            Data= "
-                                                F1 M 145,
-                                                174.227L 127.619,
-                                                110.39L 180.809,
-                                                70.7577L 114.528,
-                                                68.1664L 93.2725,
-                                                5.33333L 70.3262,
-                                                67.569L 4,
-                                                68.3681L 56.0988,
-                                                109.423L 36.3629,
-                                                172.75L 91.508,
-                                                135.888L 145.637,
-                                                174.227 Z"
-                                              />
-                                    </Viewbox>
-                                </ControlTemplate>
-                            </Grid.Resources>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource goldStarTemplate}" />
-                            <ToggleButton Grid.Column="1" Tag="2" Cursor="Hand" Template="{StaticResource goldStarTemplate}" />
-                            <ToggleButton Grid.Column="2" Tag="1" Cursor="Hand" Template="{StaticResource goldStarTemplate}" />
-                            <ToggleButton Grid.Column="3" Tag="1" Cursor="Hand" Template="{StaticResource grayStarTemplate}" />
-                            <ToggleButton Grid.Column="4" Tag="1" Cursor="Hand" Template="{StaticResource grayStarTemplate}" Background="Gray" />
-                        </Grid>
-                    </UserControl>-->
-
-
-                    <!-- Serving size -->
-                    <Label Content="1 serving" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
-                </Grid>
-            </Border>
-
             <!-- Tabs section -->
-            <Grid Height="145" Width="Auto">
+            <Grid Height="145" Width="Auto" DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -174,331 +38,421 @@
                     <RowDefinition Height="60"/>
                     <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" x:Name="IngridentsTab" Content="Ingridients" FontSize="22" Click="ScrollToIngredients"  />
-                    <Button Grid.Column="1" Grid.Row="0" x:Name="InstructionsTab" Content="Instructions" FontSize="22" Background="#FFFFFF" Click="ScrollToInstructions"/>
-                    <Button Margin="0,20,0,0" Grid.Column="0" Grid.Row="1" x:Name="NutritionTab" Content="Nutrition" FontSize="22" Background="#FFFFFF" Click="ScrollToNutrition"/>
-                    <Button Margin="0,20,0,0" Grid.Column="1" Grid.Row="1" x:Name="ReviewsTab" Content="Reviews" FontSize="22"  Background="#FFFFFF" Click="ScrollToReviews"/>
+                <Button Grid.Column="0" Grid.Row="0" x:Name="IngridentsTab" Content="Ingredients" FontSize="22" Click="ScrollToIngredients"  />
+                <Button Grid.Column="1" Grid.Row="0" x:Name="InstructionsTab" Content="Instructions" FontSize="22" Background="#FFFFFF" Click="ScrollToInstructions"/>
+                <Button Margin="0,20,0,0" Grid.Column="0" Grid.Row="1" x:Name="NutritionTab" Content="Nutrition" FontSize="22" Background="#FFFFFF" Click="ScrollToNutrition"/>
+                <Button Margin="0,20,0,0" Grid.Column="1" Grid.Row="1" x:Name="ReviewsTab" Content="Reviews" FontSize="22"  Background="#FFFFFF" Click="ScrollToReviews"/>
             </Grid>
-            
-            <!-- Contains Ingridients, Instructions, Nutrition and Comments -->
+            <Grid DockPanel.Dock="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <!-- Source="cooking-app;component/img/MisoRamen.jpg" -->
             <ScrollViewer VerticalScrollBarVisibility="Hidden">
-                <StackPanel Margin="0,15,0,0">
-                    <!-- Ingridients section -->
-                    <TextBlock
-                    Grid.Column="1"
-                    Grid.Row="3"
-                    Width="auto"
-                    FontSize="35"
-                    Text="INGREDIENTS"
-                    Name="Ingridients"
-                    Margin="0, 20, 0, 0"
-                    FontWeight="Bold"
-                    />
-                    <ListBox 
-                    BorderThickness="0" 
-                    Margin="0,0,0,15" 
-                    FontSize="20" 
-                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                >
-                    <ListBox.Resources>
-                        <Style TargetType="CheckBox">
-                            <Setter Property="LayoutTransform">
-                                <Setter.Value>
-                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
-                                </Setter.Value>
-                            </Setter>
+                <StackPanel>
+                    
+                    <StackPanel>
+                        
 
-                        </Style>
-                    </ListBox.Resources>
+                        <!-- Food pic -->
+                        <Image
+                              Source="C:\Users\danch\github\Cooking App\Recipe Page\images\MinoRamen.jfif"
+                         />
 
-                    <ListBoxItem Margin="0,0,0,15" >
-                        <CheckBox>
-                            <TextBlock Text="2 Eggs" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                        <!-- Food card section -->
+                        <Border BorderThickness="2" BorderBrush="#000000">
+                            <Grid Height="180" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="Bean Sprouts" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                                <!--Food title -->
+                                <Label Content="MISO RAMEN" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Grid.ColumnSpan="3"/>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="2 servings of fresh Ramen Noodles" TextWrapping="Wrap"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                                <!-- Heart button -->
+                                <UserControl x:Name="HeartButton"
+                                  Grid.Column="2"
+                                  Grid.Row="0"
+                                  HorizontalAlignment="Right"
+                                  Margin="0,0,12,0"
+                                  Height="50"
+                                >
+                                    <Grid>
+                                        <Grid.Resources>
+                                            <ControlTemplate x:Key="heartTemplate" TargetType="{x:Type ToggleButton}">
+                                                <Viewbox>
+                                                    <Path Name="heart" Fill="Gray" Data="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14"/>
+                                                </Viewbox>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsChecked" Value="True">
+                                                        <Setter TargetName="heart" Property="Fill">
+                                                            <!-- Value="Yellow">-->
+                                                            <Setter.Value>
+                                                                <LinearGradientBrush>
+                                                                    <GradientStop Color="#FF5250" Offset="0" />
+                                                                    <GradientStop Color="#FF5252" Offset="1" />
+                                                                </LinearGradientBrush>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Grid.Resources>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource heartTemplate}" />
+                                    </Grid>
+                                </UserControl>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="Bamboo shoots" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                                <!-- Time -->
+                                <Label Content="30 minutes" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="Corn kernels" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                                <!-- Difficulty -->
+                                <Label Content="Easy" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                       <CheckBox>
-                            <TextBlock Text="Spinach leaves" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                                <!-- Rating -->
+                                <!--<UserControl x:Name="Rating1"
+                                  Grid.Column="2"
+                                  Grid.Row="1"
+                                  HorizontalAlignment="Center"
+                                >
+                                    <Grid>
+                                        <Grid.Resources>
+                                            <ControlTemplate x:Key="goldStarTemplate" TargetType="{x:Type ToggleButton}">
+                                                <Viewbox>
+                                                    <Path 
+                                                        Name="star" 
+                                                        Fill="#FFFFEE00"  
+                                                        Data= "
+                                                            F1 M 145,
+                                                            174.227L 127.619,
+                                                            110.39L 180.809,
+                                                            70.7577L 114.528,
+                                                            68.1664L 93.2725,
+                                                            5.33333L 70.3262,
+                                                            67.569L 4,
+                                                            68.3681L 56.0988,
+                                                            109.423L 36.3629,
+                                                            172.75L 91.508,
+                                                            135.888L 145.637,
+                                                            174.227 Z"
+                                                          />
+                                                </Viewbox>
+                                            </ControlTemplate>
+                                            <ControlTemplate x:Key="grayStarTemplate" TargetType="{x:Type ToggleButton}">
+                                                <Viewbox>
+                                                    <Path 
+                                                        Name="star" 
+                                                        Fill="Gray"  
+                                                        Data= "
+                                                            F1 M 145,
+                                                            174.227L 127.619,
+                                                            110.39L 180.809,
+                                                            70.7577L 114.528,
+                                                            68.1664L 93.2725,
+                                                            5.33333L 70.3262,
+                                                            67.569L 4,
+                                                            68.3681L 56.0988,
+                                                            109.423L 36.3629,
+                                                            172.75L 91.508,
+                                                            135.888L 145.637,
+                                                            174.227 Z"
+                                                          />
+                                                </Viewbox>
+                                            </ControlTemplate>
+                                        </Grid.Resources>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource goldStarTemplate}" />
+                                        <ToggleButton Grid.Column="1" Tag="2" Cursor="Hand" Template="{StaticResource goldStarTemplate}" />
+                                        <ToggleButton Grid.Column="2" Tag="1" Cursor="Hand" Template="{StaticResource goldStarTemplate}" />
+                                        <ToggleButton Grid.Column="3" Tag="1" Cursor="Hand" Template="{StaticResource grayStarTemplate}" />
+                                        <ToggleButton Grid.Column="4" Tag="1" Cursor="Hand" Template="{StaticResource grayStarTemplate}" Background="Gray" />
+                                    </Grid>
+                                </UserControl>-->
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="Green onion" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="4 cups of Vegetable broth" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                                <!-- Serving size -->
+                                <Label Content="1 serving" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                            </Grid>
+                        </Border>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="Dashi" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
+                        
+                    </StackPanel>
 
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="Soy sauce" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
-
-                    <ListBoxItem Margin="0,0,0,15">
-                        <CheckBox>
-                            <TextBlock Text="3 Tablespoons of Miso paste" TextWrapping="WrapWithOverflow"/>
-                        </CheckBox>
-                    </ListBoxItem>
-                </ListBox>
-
-                    <!-- Instructions section -->
-                    <TextBlock
+                    <!-- Contains Ingridients, Instructions, Nutrition and Comments -->
+                    <StackPanel Margin="0,15,0,0">
+                        <!-- Ingridients section -->
+                        <TextBlock
                         Grid.Column="1"
-                        Grid.Row="4"
+                        Grid.Row="3"
                         Width="auto"
                         FontSize="35"
-                        Text="INSTRUCTIONS"
-                        Name="Instructions"
+                        Text="INGREDIENTS"
+                        Name="Ingredients"
                         Margin="0, 20, 0, 0"
                         FontWeight="Bold"
-                    />
-                    <ListBox BorderThickness="0" Margin="0,0,0,15"  FontSize="30">
-                    <ListBoxItem Margin="0,0,0,15">1. Cook the egg</ListBoxItem>
-                    <ListBox BorderThickness="0">
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                a) Place the whole, un-cracked <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> in a medium pot and fill with water to cover 
-                                <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> by 1 inch (2.5 cm).
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                b) Turn the heat to high and when boiling, turn the heat off and let the <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> sit in the hot water for 10 minutes.
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                c) Promptly use a slotted spoon (keep the hot water in the pot) to remove the <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> and peel the egg under cold running water.
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                d) Slice each egg in half.
-                            </TextBlock>
-                        </ListBoxItem>
-                    </ListBox>
+                        />
+                        <ListBox 
+                        BorderThickness="0" 
+                        Margin="0,0,0,15" 
+                        FontSize="20" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    >
+                            <ListBox.Resources>
+                                <Style TargetType="CheckBox">
+                                    <Setter Property="LayoutTransform">
+                                        <Setter.Value>
+                                            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                                        </Setter.Value>
+                                    </Setter>
 
-                    <ListBoxItem Margin="0,0,0,15">2. Cook the vegetables</ListBoxItem>
-                    <ListBox BorderThickness="0">
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                a) If using fresh <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/>:
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBox BorderThickness="0">
-                            <ListBoxItem Margin="0,0,0,15">
-                                <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                    i. Add the <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/> to the hot water in the pot. Let sit for 1 minute.
-                                </TextBlock>
+                                </Style>
+                            </ListBox.Resources>
+
+                            <ListBoxItem Margin="0,0,0,15" >
+                                <CheckBox>
+                                    <TextBlock Text="2 Eggs" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
                             </ListBoxItem>
+
                             <ListBoxItem Margin="0,0,0,15">
-                                <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                ii. Use slotted spoon (keep hot water in the pot!) to remove <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/>.
-                                </TextBlock>
+                                <CheckBox>
+                                    <TextBlock Text="Bean Sprouts" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
                             </ListBoxItem>
+
                             <ListBoxItem Margin="0,0,0,15">
-                                <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                iii. Rinse <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/> with cool water. Use hands to squeeze the <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/> leaves to remove as much water as possible.
-                                </TextBlock>
+                                <CheckBox>
+                                    <TextBlock Text="2 servings of fresh Ramen Noodles" TextWrapping="Wrap"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="Bamboo shoots" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="Corn kernels" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="Spinach leaves" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="Green onion" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="4 cups of Vegetable broth" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="Dashi" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="Soy sauce" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
+                            </ListBoxItem>
+
+                            <ListBoxItem Margin="0,0,0,15">
+                                <CheckBox>
+                                    <TextBlock Text="3 Tablespoons of Miso paste" TextWrapping="WrapWithOverflow"/>
+                                </CheckBox>
                             </ListBoxItem>
                         </ListBox>
 
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                b) If using frozen <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/>, defrost it, then squeeze leaves with hands to remove as much water as possible.
-                            </TextBlock>
-                        </ListBoxItem>
+                        <!-- Instructions section -->
+                        <TextBlock
+                            Grid.Column="1"
+                            Grid.Row="4"
+                            Width="auto"
+                            FontSize="35"
+                            Text="INSTRUCTIONS"
+                            Name="Instructions"
+                            Margin="0, 20, 0, 0"
+                            FontWeight="Bold"
+                        />
+                        <ListBox BorderThickness="0" Margin="0,0,0,15"  FontSize="30">
+                            <ListBoxItem Margin="0,0,0,15">1. Cook the egg</ListBoxItem>
+                            <ListBox BorderThickness="0">
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    a) Place the whole, un-cracked <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> in a medium pot and fill with water to cover 
+                                    <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> by 1 inch (2.5 cm).
+                                </TextBlock>
+                                </ListBoxItem>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    b) Turn the heat to high and when boiling, turn the heat off and let the <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> sit in the hot water for 10 minutes.
+                                </TextBlock>
+                                </ListBoxItem>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    c) Promptly use a slotted spoon (keep the hot water in the pot) to remove the <TextBlock Text="eggs" TextDecorations="Underline" Foreground="Blue"/> and peel the egg under cold running water.
+                                </TextBlock>
+                                </ListBoxItem>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    d) Slice each egg in half.
+                                    </TextBlock>
+                                </ListBoxItem>
+                            </ListBox>
 
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                               c) To briefly cook the <TextBlock Text="bean sprouts" TextDecorations="Underline" Foreground="Blue"/>, add the bean sprouts to the same hot water in pot. 
-                               Let sit for 1 minute. Use slotted spoon to remove <TextBlock Text="bean sprouts" TextDecorations="Underline" Foreground="Blue"/>. Again, keep the hot water in the pot!
-                            </TextBlock>
-                        </ListBoxItem>
-                    </ListBox>
+                            <ListBoxItem Margin="0,0,0,15">2. Cook the vegetables</ListBoxItem>
+                            <ListBox BorderThickness="0">
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    a) If using fresh <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/>:
+                                </TextBlock>
+                                </ListBoxItem>
+                                <ListBox BorderThickness="0">
+                                    <ListBoxItem Margin="0,0,0,15">
+                                        <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                        i. Add the <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/> to the hot water in the pot. Let sit for 1 minute.
+                                    </TextBlock>
+                                    </ListBoxItem>
+                                    <ListBoxItem Margin="0,0,0,15">
+                                        <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    ii. Use slotted spoon (keep hot water in the pot!) to remove <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/>.
+                                    </TextBlock>
+                                    </ListBoxItem>
+                                    <ListBoxItem Margin="0,0,0,15">
+                                        <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    iii. Rinse <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/> with cool water. Use hands to squeeze the <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/> leaves to remove as much water as possible.
+                                    </TextBlock>
+                                    </ListBoxItem>
+                                </ListBox>
 
-                    <ListBoxItem Margin="0,0,0,15">3. Cook the ramen noodles</ListBoxItem>
-                    <ListBox BorderThickness="0">
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                a) Return the same pot of water to a boil.
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                                b) Add the <TextBlock Text="ramen noodles" TextDecorations="Underline" Foreground="Blue"/> and cook according to package instructions (most ramen noodles only take 3 minutes to cook.)
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                               c)  Drain and rinse with cold water to stop the cooking.
-                            </TextBlock>
-                        </ListBoxItem>
-                    </ListBox>
-    
-                    <ListBoxItem Margin="0,0,0,15">4. Make the miso soup</ListBoxItem>
-                    <ListBox BorderThickness="0">
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                               a) In a large pot, add the stock, instant <TextBlock Text="dashi" TextDecorations="Underline" Foreground="Blue"/> and <TextBlock Text="soy sauce" TextDecorations="Underline" Foreground="Blue"/>.
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                               b) Bring to a boil over high heat. Remove from the heat and stir in the <TextBlock Text="miso" TextDecorations="Underline" Foreground="Blue"/>. 
-                                Taste the soup and add an additional 1 to 2 tablespoons of <TextBlock Text="miso" TextDecorations="Underline" Foreground="Blue"/> if you’d like. 
-                                Ladle soup into each bowl.
-                            </TextBlock>
-                        </ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">
-                            <TextBlock TextWrapping="WrapWithOverflow" Width="300">
-                               c) Top each bowl with <TextBlock Text="green onions" TextDecorations="Underline" Foreground="Blue"/>.
-                            </TextBlock>
-                        </ListBoxItem>
-                    </ListBox>
-                </ListBox>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    b) If using frozen <TextBlock Text="spinach" TextDecorations="Underline" Foreground="Blue"/>, defrost it, then squeeze leaves with hands to remove as much water as possible.
+                                </TextBlock>
+                                </ListBoxItem>
 
-                    <!-- Nutrition section -->
-                    <TextBlock
-                        Grid.Column="1"
-                        Grid.Row="5"
-                        Width="auto"
-                        FontSize="35"
-                        Text="NUTRITION"
-                        Name="Nutrition"
-                        Margin="0, 20, 0, 0"
-                        FontWeight="Bold"
-                    />
-                    <ListBox BorderThickness="0" Margin="0,0,0,20" FontSize="30">
-                        <ListBoxItem Margin="0,0,0,15">Calories: 469kcal</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Carbohydrates: 63g</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Protein: 18g</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Fat: 16g</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Saturated Fat: 7g</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Cholesterol: 163mg</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Sodium: 4323mg</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Potassium: 367mg</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Fiber: 4g</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Sugar: 9g</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Vitamin A: 1520IU</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Vitamin C: 8.9mg</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Calcium: 62mg</ListBoxItem>
-                        <ListBoxItem Margin="0,0,0,15">Iron: 4.9mg</ListBoxItem>
-                    </ListBox>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                   c) To briefly cook the <TextBlock Text="bean sprouts" TextDecorations="Underline" Foreground="Blue"/>, add the bean sprouts to the same hot water in pot. 
+                                   Let sit for 1 minute. Use slotted spoon to remove <TextBlock Text="bean sprouts" TextDecorations="Underline" Foreground="Blue"/>. Again, keep the hot water in the pot!
+                                </TextBlock>
+                                </ListBoxItem>
+                            </ListBox>
 
-                    <!-- Reviews section -->
-                    <TextBlock
-                        Grid.Column="1"
-                        Grid.Row="6"
-                        Width="auto"
-                        FontSize="35"
-                        Text ="REVIEWS"
-                        Name="Reviews"
-                        Margin="0, 20, 0, 0"
-                        FontWeight="Bold"
-                    />
+                            <ListBoxItem Margin="0,0,0,15">3. Cook the ramen noodles</ListBoxItem>
+                            <ListBox BorderThickness="0">
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    a) Return the same pot of water to a boil.
+                                    </TextBlock>
+                                </ListBoxItem>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                    b) Add the <TextBlock Text="ramen noodles" TextDecorations="Underline" Foreground="Blue"/> and cook according to package instructions (most ramen noodles only take 3 minutes to cook.)
+                                </TextBlock>
+                                </ListBoxItem>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                   c)  Drain and rinse with cold water to stop the cooking.
+                                    </TextBlock>
+                                </ListBoxItem>
+                            </ListBox>
 
-                    <!-- User's review -->        
-                    <UserControl x:Name="Rating2"
-                          Grid.Column="2"
-                          Grid.Row="1"
-                    >
-                        <Grid Height="25" Width="100">
-                            <Grid.Resources>
-                                <ControlTemplate x:Key="starTemplate" TargetType="{x:Type ToggleButton}">
-                                    <Viewbox>
-                                        <Path Name="star" Fill="Gray" Data="F1 M 145.637,174.227L 127.619,110.39L 180.809,70.7577L 114.528,68.1664L 93.2725,5.33333L 70.3262,67.569L 4,68.3681L 56.0988,109.423L 36.3629,172.75L 91.508,135.888L 145.637,174.227 Z"/>
-                                    </Viewbox>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsChecked" Value="True">
-                                            <Setter TargetName="star" Property="Fill">
-                                                <!-- Value="Yellow">-->
-                                                <Setter.Value>
-                                                    <LinearGradientBrush>
-                                                        <GradientStop Color="#88FFEF11" Offset="0" />
-                                                        <GradientStop Color="#FFFFEE00" Offset="1" />
-                                                    </LinearGradientBrush>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Grid.Resources>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                            <ToggleButton Grid.Column="1" Tag="2" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                            <ToggleButton Grid.Column="2" Tag="3" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                            <ToggleButton Grid.Column="3" Tag="4" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                            <ToggleButton Grid.Column="4" Tag="5" Cursor="Hand" Template="{StaticResource starTemplate}" />
-                        </Grid>
-                    </UserControl>
-                    <Border BorderBrush="#000000" BorderThickness="1" Margin="0,0,0,10" Width="300" >
-                        <Grid Height="50" >
-                            <TextBox  Text="Add Your Review!"/>
-                        </Grid>
-                    </Border>
-                    <Button Content="Submit" Width="50" Height="20" Margin="0,0,0,30"/>
+                            <ListBoxItem Margin="0,0,0,15">4. Make the miso soup</ListBoxItem>
+                            <ListBox BorderThickness="0">
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                   a) In a large pot, add the stock, instant <TextBlock Text="dashi" TextDecorations="Underline" Foreground="Blue"/> and <TextBlock Text="soy sauce" TextDecorations="Underline" Foreground="Blue"/>.
+                                </TextBlock>
+                                </ListBoxItem>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                   b) Bring to a boil over high heat. Remove from the heat and stir in the <TextBlock Text="miso" TextDecorations="Underline" Foreground="Blue"/>. 
+                                    Taste the soup and add an additional 1 to 2 tablespoons of <TextBlock Text="miso" TextDecorations="Underline" Foreground="Blue"/> if you’d like. 
+                                    Ladle soup into each bowl.
+                                </TextBlock>
+                                </ListBoxItem>
+                                <ListBoxItem Margin="0,0,0,15">
+                                    <TextBlock TextWrapping="WrapWithOverflow" Width="300">
+                                   c) Top each bowl with <TextBlock Text="green onions" TextDecorations="Underline" Foreground="Blue"/>.
+                                </TextBlock>
+                                </ListBoxItem>
+                            </ListBox>
+                        </ListBox>
 
+                        <!-- Nutrition section -->
+                        <TextBlock
+                            Grid.Column="1"
+                            Grid.Row="5"
+                            Width="auto"
+                            FontSize="35"
+                            Text="NUTRITION"
+                            Name="Nutrition"
+                            Margin="0, 20, 0, 0"
+                            FontWeight="Bold"
+                        />
+                        <ListBox BorderThickness="0" Margin="0,0,0,20" FontSize="30">
+                            <ListBoxItem Margin="0,0,0,15">Calories: 469kcal</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Carbohydrates: 63g</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Protein: 18g</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Fat: 16g</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Saturated Fat: 7g</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Cholesterol: 163mg</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Sodium: 4323mg</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Potassium: 367mg</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Fiber: 4g</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Sugar: 9g</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Vitamin A: 1520IU</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Vitamin C: 8.9mg</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Calcium: 62mg</ListBoxItem>
+                            <ListBoxItem Margin="0,0,0,15">Iron: 4.9mg</ListBoxItem>
+                        </ListBox>
 
-                    <!-- Other user's comments -->
-                    <Border BorderBrush="#000000" BorderThickness="1" Width="300" >
-                        <Grid Height="50" >
-                            <TextBox  Text="This food sucks!"/>
-                        </Grid>
-                    </Border>
-                    <Grid Width="300" Height="25" Margin="0,0,0,30">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="150"/>
-                        </Grid.ColumnDefinitions>
+                        <!-- Reviews section -->
+                        <TextBlock
+                            Grid.Column="1"
+                            Grid.Row="6"
+                            Width="auto"
+                            FontSize="35"
+                            Text ="REVIEWS"
+                            Name="Reviews"
+                            Margin="0, 20, 0, 0"
+                            FontWeight="Bold"
+                        />
 
-                        <TextBlock Text="John Doe" Grid.Column="0" HorizontalAlignment="Center"  FontSize="14"/>
-                        <UserControl x:Name="Rating3"
-                          Grid.Column="2"
-                          Grid.Row="1"
+                        <!-- User's review -->
+                        <UserControl x:Name="Rating2"
+                              Grid.Column="2"
+                              Grid.Row="1"
                         >
                             <Grid Height="25" Width="100">
                                 <Grid.Resources>
@@ -535,24 +489,31 @@
                                 <ToggleButton Grid.Column="4" Tag="5" Cursor="Hand" Template="{StaticResource starTemplate}" />
                             </Grid>
                         </UserControl>
-                    </Grid>
+                        <Border BorderBrush="#000000" BorderThickness="1" Margin="0,0,0,10" Width="300" >
+                            <Grid Height="50" >
+                                <TextBox  Text="Add Your Review!"/>
+                            </Grid>
+                        </Border>
+                        <Button Content="Submit" Width="50" Height="20" Margin="0,0,0,30"/>
 
-                    <Border BorderBrush="#000000" BorderThickness="1"  Width="300" >
-                        <Grid Height="50" >
-                            <TextBox  Text="This food sucks!"/>
-                        </Grid>
-                    </Border>
-                    <Grid Width="300" Height="25" Margin="0,0,0,30">
+
+                        <!-- Other user's comments -->
+                        <Border BorderBrush="#000000" BorderThickness="1" Width="300" >
+                            <Grid Height="50" >
+                                <TextBox  Text="This food sucks!"/>
+                            </Grid>
+                        </Border>
+                        <Grid Width="300" Height="25" Margin="0,0,0,30">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="150"/>
                                 <ColumnDefinition Width="150"/>
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Text="John Doe" Grid.Column="0" HorizontalAlignment="Center"  FontSize="14"/>
-                            <UserControl x:Name="Rating4"
-                          Grid.Column="2"
-                          Grid.Row="1"
-                        >
+                            <UserControl x:Name="Rating3"
+                              Grid.Column="2"
+                              Grid.Row="1"
+                            >
                                 <Grid Height="25" Width="100">
                                     <Grid.Resources>
                                         <ControlTemplate x:Key="starTemplate" TargetType="{x:Type ToggleButton}">
@@ -589,10 +550,66 @@
                                 </Grid>
                             </UserControl>
                         </Grid>
-               
-            </StackPanel>
+
+                        <Border BorderBrush="#000000" BorderThickness="1"  Width="300" >
+                            <Grid Height="50" >
+                                <TextBox  Text="This food sucks!"/>
+                            </Grid>
+                        </Border>
+                        <Grid Width="300" Height="25" Margin="0,0,0,30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="John Doe" Grid.Column="0" HorizontalAlignment="Center"  FontSize="14"/>
+                            <UserControl x:Name="Rating4"
+                              Grid.Column="2"
+                              Grid.Row="1"
+                            >
+                                <Grid Height="25" Width="100">
+                                    <Grid.Resources>
+                                        <ControlTemplate x:Key="starTemplate" TargetType="{x:Type ToggleButton}">
+                                            <Viewbox>
+                                                <Path Name="star" Fill="Gray" Data="F1 M 145.637,174.227L 127.619,110.39L 180.809,70.7577L 114.528,68.1664L 93.2725,5.33333L 70.3262,67.569L 4,68.3681L 56.0988,109.423L 36.3629,172.75L 91.508,135.888L 145.637,174.227 Z"/>
+                                            </Viewbox>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter TargetName="star" Property="Fill">
+                                                        <!-- Value="Yellow">-->
+                                                        <Setter.Value>
+                                                            <LinearGradientBrush>
+                                                                <GradientStop Color="#88FFEF11" Offset="0" />
+                                                                <GradientStop Color="#FFFFEE00" Offset="1" />
+                                                            </LinearGradientBrush>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                    <ToggleButton Grid.Column="1" Tag="2" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                    <ToggleButton Grid.Column="2" Tag="3" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                    <ToggleButton Grid.Column="3" Tag="4" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                    <ToggleButton Grid.Column="4" Tag="5" Cursor="Hand" Template="{StaticResource starTemplate}" />
+                                </Grid>
+                            </UserControl>
+                        </Grid>
+
+                    </StackPanel>
+                </StackPanel>
             </ScrollViewer>
-        </StackPanel>
-    </ScrollViewer>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Label at the bottom"/>
+        </Grid>
+    </DockPanel>
     
 </Page>
