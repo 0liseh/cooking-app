@@ -23,16 +23,28 @@ namespace cooking_app
         public HomePage()
         {
             InitializeComponent();
+           // Switcher.pageSwitcher = this;
+           // Switcher.Switch(new HomePage)
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+      //  public void Navigate(UserControl nextPage)
+      //  {
+      //      this.Content = newPage
+      //  }
 
-        }
+//        private void btnProfile_Click(object sender, RoutedEventArgs e)
+//        {
+//               this.NavigationService.Navigate(new Uri("Profile.xaml", UriKind.Relative));
+//        }
 
-        private void btn1Hr_Click(object sender, RoutedEventArgs e)
-        {
+        //private void btnHome_Click(object sender, RoutedEventArgs e)
+       // {
+        //    Switcher.Switch(new HomePage())
+        //}
 
-        }
+        //private void btnSavedRecipes_Click(object sender, RoutedEventArgs e)
+        //{
+        //       Switcher.Switch(new SavedRecipesPage());
+       // }
     }
 }

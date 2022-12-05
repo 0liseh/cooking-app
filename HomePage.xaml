@@ -318,37 +318,29 @@
             CINNAMON BAKED
         </Label>
 
-
-
-
+      <!-- MENU BAR-->
         <Rectangle Grid.Row="15" Grid.Column="0" HorizontalAlignment="Stretch" Fill="White" Height="62" Margin="0,-19,0,0"
                    Width="390" Grid.ColumnSpan="10"/>
 
         <Rectangle Grid.Row="15" Grid.Column="0" HorizontalAlignment="Stretch" Fill="Black" Height="1" Margin="0,-80,0,0"
                    Width="390" Grid.ColumnSpan="10"/>
 
-        <Button Grid.Column="1" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Center" Margin="34,0,0,15">
-            <Button.Content>
-                <fa:ImageAwesome Icon="UserOutline" Foreground="Black" />
-            </Button.Content>
+        <Button x:Name="btnProfile" Grid.Column="1" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Center" Margin="34,0,0,15">
+          <Image Source="img/Profile.png"/>
         </Button>
 
-        <Button Grid.Column="3" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Center" Margin="0,0,0,15">
-            <Button.Content>
-                <fa:ImageAwesome Icon="Home" Foreground="Black" />
-            </Button.Content>
+        <Button x:Name="btnHome" Grid.Column="3" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Center" Margin="0,0,0,15">
+          <Image  Source="img/Home.png"/>
         </Button>
 
-        <Button Grid.Column="5" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Left" Margin="3,0,0,15">
-            <Button.Content>
-                <fa:ImageAwesome Icon="BookmarkOutline" Foreground="Black" />
-            </Button.Content>
+        <Button x:Name="btnSavedRecipes" Grid.Column="5" Grid.Row="15" Width="30" Height="30" Background="White" BorderThickness="0" HorizontalAlignment="Left" Margin="3,0,0,15">
+          <Image  Source="img/Saved.png"/>
         </Button>
         <TextBlock Grid.Column="1" Grid.Row="15" Text="Profile" Margin="35,35,0,0"/>
         <TextBlock Grid.Column="3" Grid.Row="15" Text="Home" HorizontalAlignment="Center" Margin="0,35,0,0"/>
         <TextBlock Grid.Column="5" Grid.Row="15" Text="Saved" Margin="2,35,0,0"/>
 
-<!--        <Rectangle Grid.Column="0" Fill="#5F5F5F" Margin="0,0,-3,19"
+      <!--        <Rectangle Grid.Column="0" Fill="#5F5F5F" Margin="0,0,-3,19"
                    Width="390" Grid.RowSpan="15" Grid.ColumnSpan="7" Opacity="0.8"/>
 
         <Rectangle Grid.Row="1" Grid.Column="1" Fill="White" Height="250" Margin="-13,0,0,0"
