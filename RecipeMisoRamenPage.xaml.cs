@@ -54,7 +54,14 @@ namespace cooking_app
 
         private void ChangeStarColour(object sender, RoutedEventArgs e)
         {
-
+            if (RatingStar.Content == FindResource("greyStar"))
+            {
+                RatingStar.Content = FindResource("goldStar");
+            }
+            else if(RatingStar.Content == FindResource("goldStar"))
+            {
+                RatingStar.Content = FindResource("greyStar");
+            }
         }
     }
 }

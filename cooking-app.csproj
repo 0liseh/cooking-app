@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="img\Bread.jpeg" />
+    <None Remove="img\greystar.png" />
     <None Remove="img\Home.png" />
     <None Remove="img\HomeActive.jpg" />
     <None Remove="img\Profile.png" />
@@ -17,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\greystar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\Saved.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
