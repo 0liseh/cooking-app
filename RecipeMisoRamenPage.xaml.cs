@@ -53,14 +53,5 @@ namespace cooking_app
             Reviews.BringIntoView();
         }
 
-        private void AddRating(object sender, RoutedEventArgs e)
-        {
-            foreach (UserControl Rating in FirstUserComment.Children.OfType<UserControl>())
-            {
-                
-                MessageBox.Show(Rating.Name);
-            }
-
-        }
     }
 }

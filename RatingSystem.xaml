@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              Margin="0,0,0,15"
     >
-        <Grid Width="300">
+    <Grid Width="300" x:Name="RatingSystemStars">
         <Grid.Resources>
             <ControlTemplate x:Key="starTemplate" TargetType="{x:Type ToggleButton}">
                 <Viewbox>
@@ -37,10 +37,10 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource starTemplate}" />
-        <ToggleButton Grid.Column="1" Tag="2" Cursor="Hand" Template="{StaticResource starTemplate}" />
-        <ToggleButton Grid.Column="2" Tag="3" Cursor="Hand" Template="{StaticResource starTemplate}" />
-        <ToggleButton Grid.Column="3" Tag="4" Cursor="Hand" Template="{StaticResource starTemplate}" />
-        <ToggleButton Grid.Column="4" Tag="5" Cursor="Hand" Template="{StaticResource starTemplate}" />
+        <ToggleButton Grid.Column="0" Tag="1" Name="FirstStar" Cursor="Hand" Template="{StaticResource starTemplate}" Click="ChangeRating" />
+        <ToggleButton Grid.Column="1" Tag="2" Name="SecondStar" Cursor="Hand" Template="{StaticResource starTemplate}" Click="ChangeRating" />
+        <ToggleButton Grid.Column="2" Tag="3" Name="ThirdStar" Cursor="Hand" Template="{StaticResource starTemplate}" Click="ChangeRating" />
+        <ToggleButton Grid.Column="3" Tag="4" Name="FourthStar" Cursor="Hand" Template="{StaticResource starTemplate}" Click="ChangeRating" />
+        <ToggleButton Grid.Column="4" Tag="5" Name="FifthStar" Cursor="Hand" Template="{StaticResource starTemplate}" Click="ChangeRating" />
     </Grid>
 </UserControl>
