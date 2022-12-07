@@ -108,6 +108,23 @@
         <RadioButton Grid.Row="14" Grid.Column="3"  x:Name="rbIndian" Content="INDIAN" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
         <RadioButton Grid.Row="14" Grid.Column="2"  Width="135" x:Name="rbMIDDLEEASTERN" GroupName="Cusine" Content="MIDDLE EASTERN" HorizontalAlignment="Left" Click="Cusine_Click"/>
 
+        <DockPanel VerticalAlignment="Center" Margin="10"  Grid.Row="17" Grid.Column="1" Grid.ColumnSpan="4">
+            <TextBlock Text="Min" DockPanel.Dock="Left" TextAlignment="Left" Width="40" FontSize="18"/>
+            <TextBlock Text="+mins" DockPanel.Dock="Right" TextAlignment="Right" Width="40" FontSize="16"/>
+
+            <TextBox Text= "{Binding ElementName=MinDuration, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Center" Width="50" FontSize="18" />
+            <Slider x:Name="MinDuration"   VerticalAlignment="Center"  Maximum="120" Value="5" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="minDuration_ValueChanged"/>
+
+        </DockPanel>
+
+        <DockPanel VerticalAlignment="Center" Margin="10"  Grid.Row="18" Grid.Column="1" Grid.ColumnSpan="4">
+            <TextBlock Text="Max" DockPanel.Dock="Left" TextAlignment="Left" Width="40" FontSize="18"/>
+            <TextBlock Text="+mins" DockPanel.Dock="Right" TextAlignment="Right" Width="40" FontSize="16"/>
+
+            <TextBox Text= "{Binding ElementName=MaxDuration, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Center" Width="50" FontSize="18" />
+            <Slider x:Name="MaxDuration"  VerticalAlignment="Center"  Maximum="120" Value="120" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="maxDuration_ValueChanged"/>
+
+        </DockPanel>
         <Button  x:Name="Apply_Filter" Grid.Column="3" Grid.Row="15" Content="Clear all" Width="80" Height="30"  Margin="10,40,10,0" Foreground="#FF120C0C" Background="#50AF18" FontWeight="Bold"  >
 
             <Button.Resources>
