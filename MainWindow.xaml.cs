@@ -27,6 +27,10 @@ namespace cooking_app
             //CookingApplication.Content = new SearchResultsPage();
             //CookingApplication.Content = new FilterPage();
             CookingApplication.Content = new RecipeMisoRamenPage();
+            //CookingApplication.Content = new RecipeJollofRicePage();
+            //CookingApplication.Content = new RecipeChocolateCakePage();
+            //CookingApplication.Content = new RecipeMacAndCheesePage();
+            //CookingApplication.Content = new RecipeBobaTeaPage();
             //CookingApplication.Content = new SavedRecipesPage();
         }
 

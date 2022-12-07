@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,16 +53,14 @@ namespace cooking_app
             Reviews.BringIntoView();
         }
 
-        private void ChangeStarColour(object sender, RoutedEventArgs e)
+        private void AddRating(object sender, RoutedEventArgs e)
         {
-            if (RatingStar.Content == FindResource("greyStar"))
+            foreach (UserControl Rating in FirstUserComment.Children.OfType<UserControl>())
             {
-                RatingStar.Content = FindResource("goldStar");
+                
+                MessageBox.Show(Rating.Name);
             }
-            else if(RatingStar.Content == FindResource("goldStar"))
-            {
-                RatingStar.Content = FindResource("greyStar");
-            }
+
         }
     }
 }
