@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace cooking_app
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ChocolateCakePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RecipeChocolateCakePage : Page
     {
-        public MainWindow()
+        public RecipeChocolateCakePage()
         {
             InitializeComponent();
-            //CookingApplication.Content = new HomePage();
-            //CookingApplication.Content = new SearchResultsPage();
-            //CookingApplication.Content = new FilterPage();
-            CookingApplication.Content = new MisoRamenPage();
-            //CookingApplication.Content = new SavedRecipesPage();
         }
-
     }
 }

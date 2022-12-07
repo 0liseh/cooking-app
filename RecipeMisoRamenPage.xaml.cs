@@ -20,9 +20,9 @@ namespace cooking_app
     /// <summary>
     /// Interaction logic for RecipePage.xaml
     /// </summary>
-    public partial class RecipePage : Page
+    public partial class RecipeMisoRamenPage : Page
     {
-        public RecipePage()
+        public RecipeMisoRamenPage()
         {
             InitializeComponent();
         }
@@ -50,6 +50,11 @@ namespace cooking_app
         private void ScrollToReviews(object sender, RoutedEventArgs e)
         {
             Reviews.BringIntoView();
+        }
+
+        private void ChangeStarColour(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
