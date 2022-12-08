@@ -22,7 +22,8 @@ namespace cooking_app
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class FilterPage : Page
-    {
+
+
         private List<Object> rbList = new List<Object>();
         public static String[] appliedFilters = new String[6];
 
@@ -39,9 +40,13 @@ namespace cooking_app
         private double maxduration = 120;
       
       
+       
+       
+
         public FilterPage()
         {
             InitializeComponent();
+
      
         }
 
@@ -92,7 +97,12 @@ namespace cooking_app
 
                     MessageBox.Show("Found");
 
+
             }
+        //   Switcher.pageSwitcher = this
+   
+            
+
 
         }
 
@@ -202,11 +212,55 @@ namespace cooking_app
             catch (Exception) { MessageBox.Show("invalid Diet filter selection"); }
         }
 
-        
+        public void minDuration_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+               minduration =  MinDuration.Value;
+          
+         
+
+        }
+        public void maxDuration_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            maxduration = MaxDuration.Value;
+        }
+
+        public void clear_click(object sender, RoutedEventArgs e) {
+
+            
+            foreach (Object s in rbList)
+            {
+                RadioButton radioButton = (RadioButton)s;
+                radioButton.IsChecked = false;
+            }
+
+            dietFil = "";
+            MealFil = "";
+            DiffLevelFil = "";
+            cuisineFil = "";
+            MinDuration.Value = 5;
+            MaxDuration.Value = 120;
+            
+            click = 0;
+            dLclick1 = 0;
+            DietClick1 = 0;
+            Cus_Click1 = 0;
+
+            rbList.Clear();
+
+
+
+
+        }
+        public void Navigate(UserControl nextPage)
+        {
+            this.Content = nextPage;
+            
+        }
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
-            
+
         }
     }
     }
