@@ -20,6 +20,15 @@ namespace cooking_app
     /// </summary>
     public partial class HomeRecipeCard : UserControl
     {
+        private string title;
+        public string Title
+        {
+            get { return title; }
+            set { title = value;
+                this.TitleText.Content = this.title;
+            }
+
+        }
         public HomeRecipeCard()
         {
             InitializeComponent();

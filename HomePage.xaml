@@ -129,6 +129,13 @@
             </Button.Content>
         </Button>
 
+        <ScrollViewer Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="7" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="Trending" Orientation="Horizontal" HorizontalAlignment="Right"  Margin="0,0,0,0">
+            </StackPanel>
+        </ScrollViewer>
+
+
+        <!--
         <Image Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Source="/cooking-app;component/img/Pasta.jpg"  Height="114" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
 
         </Image>
@@ -221,6 +228,8 @@
         <Border Grid.Column="4" Grid.Row="6" Grid.RowSpan="3" Grid.ColumnSpan="4" Width="214" HorizontalAlignment="Left" BorderBrush="#5F5F5F" BorderThickness="3" Margin="0,0,0,5">
 
         </Border>
+        
+        -->
 
         <Button x:Name="btnArrowRecently" Grid.Column="5" Grid.Row="9" Width="15" Height="15" Background="White" BorderThickness="0" HorizontalAlignment="Right" Margin="0 5,20,5">
             <Button.Content>
@@ -228,7 +237,7 @@
             </Button.Content>
         </Button>
 
-        <Image Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" Source="/cooking-app;component/img/Lava.jpeg"  Height="114" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
+        <!--<Image Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="3" Source="/cooking-app;component/img/Lava.jpeg"  Height="114" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
 
         </Image>
 
@@ -315,16 +324,21 @@
 
         <Border Grid.Column="4" Grid.Row="10" Grid.RowSpan="3" Grid.ColumnSpan="4" Width="214" HorizontalAlignment="Left" BorderBrush="#5F5F5F" BorderThickness="3" Margin="0,0,0,5">
 
-        </Border>
+        </Border> -->
+
+        <ScrollViewer Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="10" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="Recommended" Orientation="Horizontal" HorizontalAlignment="Right"  Margin="0,0,0,0">
+            </StackPanel>
+        </ScrollViewer>
 
 
-
+        
         <Button x:Name="btnArrowRecommended" Grid.Column="5" Grid.Row="13" Width="15" Height="15" Background="White" BorderThickness="0" HorizontalAlignment="Right" Margin="0 5,20,5">
             <Button.Content>
                 <fa:ImageAwesome Icon="ArrowRight" Foreground="#5F5F5F" />
             </Button.Content>
         </Button>
-
+        <!--
         <Border Grid.Column="4" Grid.Row="14" Grid.RowSpan="3" Grid.ColumnSpan="4" Width="214" HorizontalAlignment="Left" BorderBrush="#5F5F5F" BorderThickness="3" Background="#EAEAEA" Margin="0,0,0,5">
 
         </Border>
@@ -353,8 +367,12 @@
         <Label Grid.Column="4" Grid.Row="15" Grid.ColumnSpan="4" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-8,0,5" >
             CINNAMON BAKED
         </Label>
-
-
+        -->
+        
+        <ScrollViewer Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="14" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="RecentlyViewed" Orientation="Horizontal" HorizontalAlignment="Right"  Margin="0,0,0,0">
+            </StackPanel>
+        </ScrollViewer>
 
 
         <Rectangle Grid.Row="15" Grid.Column="0" HorizontalAlignment="Stretch" Fill="White" Height="62" Margin="0,-19,0,0"

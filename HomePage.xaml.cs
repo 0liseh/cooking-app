@@ -23,7 +23,30 @@ namespace cooking_app
         public HomePage()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 10; i++)
+            {
+                HomeRecipeCard rcard = new HomeRecipeCard();
+                rcard.Title = "Chocolate" + i.ToString();
+                this.Trending.Children.Add(rcard);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                HomeRecipeCard rcard = new HomeRecipeCard();
+                rcard.Title = "Chocolate" + i.ToString();
+                this.Recommended.Children.Add(rcard);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                HomeRecipeCard rcard = new HomeRecipeCard();
+                rcard.Title = "Chocolate" + i.ToString();
+                this.RecentlyViewed.Children.Add(rcard);
+            }
         }
+
+        HomeRecipeCard card1 = new HomeRecipeCard();
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
