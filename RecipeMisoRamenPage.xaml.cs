@@ -53,5 +53,18 @@ namespace cooking_app
             Reviews.BringIntoView();
         }
 
+        private void EggsPopup(object sender, RoutedEventArgs e)
+        {
+            if (EggPopup.IsOpen == true)
+            {
+                EggPopup.IsOpen = false;
+            }
+            else
+            {
+                EggPopup.IsOpen = true;
+            }
+                
+        }
+
     }
 }

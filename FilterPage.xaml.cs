@@ -21,7 +21,7 @@ namespace cooking_app
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class FilterPage : Page
+    public partial class FilterPage : Page { 
 
 
         private List<Object> rbList = new List<Object>();
