@@ -460,42 +460,9 @@
                 </StackPanel>
             </ScrollViewer>
 
-            <!-- Holds divider and Menu buttons-->
-            <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,5,0,0">
-                <!-- Seperates menu from recipe -->
-                <Rectangle  Grid.Column="0" HorizontalAlignment="Stretch" Fill="Black" Height="1" Width="390"/>
-                
-                <!--<Label Grid.Row="1" Grid.Column="0"  Content="Label at the bottom"/>-->
-                <DockPanel  Height="70" Width="360">
-                <StackPanel Width="120">
-                        <Button x:Name="profile" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0">
-                        <Image Source="/cooking-app;component/img/Profile.png"/>
-                    </Button>
-                    <Button HorizontalAlignment="Center" Height="30" Background="White" BorderThickness="0" FontSize="18">
-                        Profile
-                    </Button>
-                </StackPanel>
+            <!-- Holds divider and Menu buttons -->
+            <local:MenuButtons Grid.Row="1" Grid.Column="0"/>
 
-                <StackPanel Width="120">
-                    <Button x:Name="home" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0">
-                        <Image  Source="/cooking-app;component/img/Home.png"/>
-                    </Button>
-                    <Button Height="30" HorizontalAlignment="Center" Background="White" BorderThickness="0" FontSize="18">
-                        Home
-                    </Button>
-                </StackPanel>
-
-                <StackPanel Width="120">
-                        <Button x:Name="saved" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0">
-                        <Image Source="/cooking-app;component/img/saved.png" 
-                       />
-                    </Button>
-                        <Button Height="30" Background="White" HorizontalAlignment="Center" BorderThickness="0" FontSize="18">
-                        Saved
-                    </Button>
-                </StackPanel>
-            </DockPanel>
-            </StackPanel>
         </Grid>
     </DockPanel>
     
