@@ -7,21 +7,67 @@
              mc:Ignorable="d" 
              xmlns:fa="http://schemas.fontawesome.io/icons/"
 
-             d:DesignHeight="211" d:DesignWidth="345">
+             d:DesignHeight="221" d:DesignWidth="345">
     <Grid Background="white">
-        <Image x:Name="ImgSearchCard" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="cooking-app;component/img/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
+
+        <Image x:Name="ImgSearchCard" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="cooking-app;component/img/ramen/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
 
         </Image>
         <Label x:Name="TitleSearchText" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,126,0,50" >
             MISO RAMEN
         </Label>
-        <!--
-        <Button Width="25" Height="25" Background="white" BorderThickness="0" HorizontalAlignment="Right" Margin="0,131,15,55">
-            <Button.Content>
-                <fa:ImageAwesome Icon="HeartOutline" Foreground="#D11515"/>
-            </Button.Content>
-        </Button>-->
-        <!-- Heart button -->
+
+        <Label x:Name="DurationSearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="15,174,0,0">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            30 MIN
+        </Label>
+        <Label x:Name="DifficultySearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,174,0,0">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Label.Resources>
+            EASY
+        </Label>
+        <Label x:Name="RatingSearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,0,0" Margin="0,178,15,0">
+            4.8
+        </Label>
+        <!-- STARS -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,155,12,34">
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="StarHalfOutline" Foreground="#FDCC0D" Width="13" Height="13"/>
+        </StackPanel>
+        <Border BorderBrush="#5F5F5F" BorderThickness="3" Width="345" Height="211" Margin="0,0,0,10"/>
+        <!--https://stackoverflow.com/questions/20073294/change-color-of-button-when-mouse-is-over-->
+        <Button x:Name="cardBtn" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="345" Height="211" Margin="0,0,0,10" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
         <UserControl x:Name="HeartButton"
                                   Grid.Row="0"
                                   HorizontalAlignment="Right"
@@ -54,34 +100,6 @@
                 <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource heartTemplate}" />
             </Grid>
         </UserControl>
-        <Label x:Name="DurationSearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="15,174,0,0">
-            <Label.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="15"/>
-                </Style>
-            </Label.Resources>
-            30 MIN
-        </Label>
-        <Label x:Name="DifficultySearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,174,0,0">
-            <Label.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="15"/>
-                </Style>
-            </Label.Resources>
-            EASY
-        </Label>
-        <Label x:Name="RatingSearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,0,0" Margin="0,178,15,0">
-            4.8
-        </Label>
-        <!-- STARS -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,161,12,27">
-            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
-            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
-            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
-            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
-            <fa:ImageAwesome Icon="StarHalfOutline" Foreground="#FDCC0D" Width="13" Height="13"/>
-        </StackPanel>
-        <Border BorderBrush="#5F5F5F" BorderThickness="3"/>
 
     </Grid>
 </UserControl>

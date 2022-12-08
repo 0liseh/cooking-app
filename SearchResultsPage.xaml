@@ -40,6 +40,16 @@
                 <fa:ImageAwesome Icon="Filter"/>
             </Button.Content>
         </Button>
+        <!-- text input for search recipe title (this will take us to Joanna's page -->
+        <TextBox Name="searchBar" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="5" BorderThickness="2" BorderBrush="#9B9B9B" Foreground="#9B9B9B" HorizontalAlignment="Left" Width="303" Height="36" Margin="0,0,0,10" Padding="13, 6, 10, 10"
+                 Text="Search Recipe Title" VerticalContentAlignment="Center" FontSize="14" MouseDoubleClick="searchBar_MouseDoubleClick">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <!--
         <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="2" BorderBrush="#9B9B9B" HorizontalAlignment="Left" Width="303" Height="36" Margin="0,0,0,10" Padding="0, 4, 10, 10">
             <Border.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -49,7 +59,7 @@
             <TextBlock Grid.Column="1" Grid.Row="1" FontSize="15" Foreground="#9B9B9B" Grid.ColumnSpan="3" Width="250" Height="36" TextAlignment="Justify">
             Search Recipe Title
             </TextBlock>
-        </Border>
+        </Border>-->
         <Button Grid.Column="3" Grid.Row="2" FontSize="15" Background="#50AF18" Foreground="#F5F5F5" Margin="5, 5, -10, 5" Padding="2, 2, 0, 5" Height="27" Width="75" HorizontalAlignment="Left">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

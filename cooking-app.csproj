@@ -13,12 +13,57 @@
     <None Remove="img\greystar.png" />
     <None Remove="img\Home.png" />
     <None Remove="img\HomeActive.jpg" />
+    <None Remove="img\MisoRamen.jpg" />
+    <None Remove="img\Pasta.jpg" />
     <None Remove="img\Profile.png" />
+    <None Remove="img\ramen\Hakodate.jpg" />
+    <None Remove="img\ramen\Hiroshima.jpg" />
+    <None Remove="img\ramen\MisoRamen.jpg" />
+    <None Remove="img\ramen\Sapporo.jpg" />
+    <None Remove="img\ramen\ShioRamen.jpg" />
+    <None Remove="img\ramen\ShoyuRamen.jpg" />
+    <None Remove="img\ramen\Takayama.jpg" />
+    <None Remove="img\ramen\TokyoRamen.jpg" />
+    <None Remove="img\ramen\Tonkatsu.jpg" />
+    <None Remove="img\ramen\Tsukemen.jpg" />
     <None Remove="img\Saved.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="img\greystar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Pasta.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\Hakodate.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\Hiroshima.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\MisoRamen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\Sapporo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\ShioRamen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\ShoyuRamen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\Takayama.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\TokyoRamen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\Tonkatsu.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\ramen\Tsukemen.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\Saved.png">
