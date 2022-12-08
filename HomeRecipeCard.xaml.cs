@@ -16,29 +16,13 @@ using System.Windows.Shapes;
 namespace cooking_app
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for HomeRecipeCard.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class HomeRecipeCard : UserControl
     {
-        public HomePage()
+        public HomeRecipeCard()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void btn1Hr_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void searchBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            searchBar.Text = "";
-
         }
     }
 }
