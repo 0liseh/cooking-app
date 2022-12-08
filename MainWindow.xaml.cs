@@ -20,18 +20,25 @@ namespace cooking_app
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
             //CookingApplication.Content = new HomePage();
             //CookingApplication.Content = new SearchResultsPage();
-      //      CookingApplication.Content = new FilterPage();
+            //CookingApplication.Content = new FilterPage();
             CookingApplication.Content = new RecipeMisoRamenPage();
             //CookingApplication.Content = new RecipeJollofRicePage();
             //CookingApplication.Content = new RecipeChocolateCakePage();
             //CookingApplication.Content = new RecipeMacAndCheesePage();
             //CookingApplication.Content = new RecipeBobaTeaPage();
             //CookingApplication.Content = new SavedRecipesPage();
+        }
+
+        public static void NavigateToPage(Page page)
+        {
+            ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
         }
 
     }

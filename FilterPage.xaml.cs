@@ -38,10 +38,9 @@ namespace cooking_app
         private string cuisineFil = "";
         private double minduration = 5;
         private double maxduration = 120;
-      
-      
-       
-       
+
+
+        public static SearchResultsPage srpage = new SearchResultsPage();
 
         public FilterPage()
         {
@@ -90,16 +89,11 @@ namespace cooking_app
                                         &&
                             (testReciepe[i, 4] == appliedFilters[4]  && testReciepe[i, 5] == appliedFilters[5] )
 
-                 )
-
-                    // for displaying filters on HomePage
-
-
-                    MessageBox.Show("Found");
-
-
+                 ) { }
             }
-        //   Switcher.pageSwitcher = this
+
+            //ApplicationSwitcher.filterSwitcher = this;
+            //ApplicationSwitcher.Switch(srpage);
    
             
 
@@ -252,7 +246,7 @@ namespace cooking_app
 
 
         }
-        public void Navigate(UserControl nextPage)
+        public void Navigate(Page nextPage)
         {
             this.Content = nextPage;
             

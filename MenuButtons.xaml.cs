@@ -20,9 +20,35 @@ namespace cooking_app
     /// </summary>
     public partial class MenuButtons : UserControl
     {
+        public static Page homePage = new HomePage();
+        public static Page searchPage = new SearchPage();
+        public static Page filterPage = new FilterPage();
+        //public static Page profilePage = new ProfilePage();
+        public static Page misoRamen = new RecipeMisoRamenPage();
+        public static Page bobaTea = new RecipeBobaTeaPage();
+        public static Page jollofRice = new RecipeJollofRicePage();
+        public static Page chocolateCake = new RecipeChocolateCakePage();
+        public static Page macAndCheese = new RecipeMacAndCheesePage();
+        public static Page savedRecipePage = new SavedRecipesPage();
+
         public MenuButtons()
         {
             InitializeComponent();
+        }
+
+        public void ProfileButtonClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        public void HomeButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow.NavigateToPage(homePage);
+        }
+
+        public void SavedRecipesButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow.NavigateToPage(savedRecipePage);
         }
     }
 }

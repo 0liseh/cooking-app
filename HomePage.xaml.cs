@@ -20,9 +20,13 @@ namespace cooking_app
     /// </summary>
     public partial class HomePage : Page
     {
+
+        //public static SavedRecipesPage savedRecipes = new SavedRecipesPage();
+
         public HomePage()
         {
             InitializeComponent();
+            //
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -34,5 +38,7 @@ namespace cooking_app
         {
 
         }
+
+        
     }
 }
