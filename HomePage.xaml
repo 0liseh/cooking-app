@@ -119,7 +119,7 @@
             </Button.Content>
         </Button>
 
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" FontSize="18" FontWeight="Bold" Text="TRENDING RECIPES" Foreground="#5F5F5F" Grid.ColumnSpan="5" Margin="0,13,0,10"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" FontSize="18" FontWeight="Bold" Text="TRENDING RECIPES" Foreground="#5F5F5F" Grid.ColumnSpan="5" Margin="0,8,0,10"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Grid.Row="9" FontSize="18" FontWeight="Bold" Text="RECOMMENDED" Foreground="#5F5F5F" Grid.ColumnSpan="5" Margin="0,8,0,10" />
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Grid.Row="13" FontSize="18" FontWeight="Bold" Text="RECENTLY VIEWED" Foreground="#5F5F5F" Grid.ColumnSpan="5" Margin="0,8,0,10" />
 

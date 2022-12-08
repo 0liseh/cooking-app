@@ -23,6 +23,13 @@ namespace cooking_app
         public SearchResultsPage()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 10; i++)
+            {
+                RecipeCard rcard = new RecipeCard();
+                //rcard.Title = "Chocolate" + i.ToString();
+                this.SearchResults.Children.Add(rcard);
+            }
         }
     }
 }
