@@ -29,7 +29,10 @@ namespace cooking_app
         public static Page jollofRice = new RecipeJollofRicePage();
         public static Page chocolateCake = new RecipeChocolateCakePage();
         public static Page macAndCheese = new RecipeMacAndCheesePage();
-        public static Page savedRecipePage = new SavedRecipesPage();
+        public static Page savedRecipesPage = new SavedRecipesPage();
+
+        public static bool onSavedRecipesPage = false;
+        public static bool onHomePage = false;
 
         public MenuButtons()
         {
@@ -48,7 +51,7 @@ namespace cooking_app
 
         public void SavedRecipesButtonClick(object sender, RoutedEventArgs e)
         {
-            MainWindow.NavigateToPage(savedRecipePage);
+            MainWindow.NavigateToPage(savedRecipesPage);
         }
     }
 }

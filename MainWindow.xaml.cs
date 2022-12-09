@@ -20,26 +20,42 @@ namespace cooking_app
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-
+       
         public MainWindow()
         {
             InitializeComponent();
             //CookingApplication.Content = new HomePage();
             //CookingApplication.Content = new SearchResultsPage();
             //CookingApplication.Content = new FilterPage();
-            CookingApplication.Content = new RecipeMisoRamenPage();
+            //CookingApplication.Content = new RecipeMisoRamenPage();
             //CookingApplication.Content = new RecipeJollofRicePage();
             //CookingApplication.Content = new RecipeChocolateCakePage();
             //CookingApplication.Content = new RecipeMacAndCheesePage();
             //CookingApplication.Content = new RecipeBobaTeaPage();
             //CookingApplication.Content = new SavedRecipesPage();
+            CookingApplication.Content = new SearchPage();
         }
 
         public static void NavigateToPage(Page page)
         {
             //Need to set CookingApplication on an instance of the MainWindow class
-            ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
+            if(page == MenuButtons.savedRecipesPage && MenuButtons.onSavedRecipesPage == false )
+            {
+                MenuButtons.onSavedRecipesPage = true;
+                MenuButtons.onHomePage = false;
+                ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
+            }else if(page == MenuButtons.homePage && MenuButtons.onHomePage == false)
+            {
+                MenuButtons.onHomePage = true;
+                MenuButtons.onSavedRecipesPage = false;
+                ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
+            }
+            else
+            {
+                MenuButtons.onSavedRecipesPage = false;
+                MenuButtons.onHomePage = false;
+                ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
+            }
         }
 
     }
