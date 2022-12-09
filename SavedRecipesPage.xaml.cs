@@ -21,8 +21,15 @@ namespace cooking_app
     public partial class SavedRecipesPage : Page
     {
         public SavedRecipesPage()
-        {
+        { 
             InitializeComponent();
+
+            for (int i=0; i < 10; i++)
+            {
+                RecipeCard2 recipe = new RecipeCard2();
+                this.SavedRecipes.Children.Add(recipe);
+            }
+
         }
     }
 }

@@ -32,8 +32,8 @@ namespace cooking_app
             //CookingApplication.Content = new RecipeChocolateCakePage();
             //CookingApplication.Content = new RecipeMacAndCheesePage();
             //CookingApplication.Content = new RecipeBobaTeaPage();
-            //CookingApplication.Content = new SavedRecipesPage();
-            CookingApplication.Content = new SearchPage();
+            CookingApplication.Content = new SavedRecipesPage();
+            //CookingApplication.Content = new SearchPage();
         }
 
         public static void NavigateToPage(Page page)
