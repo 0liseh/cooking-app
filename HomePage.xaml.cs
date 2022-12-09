@@ -20,14 +20,33 @@ namespace cooking_app
     /// </summary>
     public partial class HomePage : Page
     {
-
-        //public static SavedRecipesPage savedRecipes = new SavedRecipesPage();
-
         public HomePage()
         {
             InitializeComponent();
-            //
+
+            for (int i = 0; i < 10; i++)
+            {
+                HomeRecipeCard rcard = new HomeRecipeCard();
+                rcard.Title = "Chocolate" + i.ToString();
+                this.Trending.Children.Add(rcard);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                HomeRecipeCard rcard = new HomeRecipeCard();
+                rcard.Title = "Chocolate" + i.ToString();
+                this.Recommended.Children.Add(rcard);
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                HomeRecipeCard rcard = new HomeRecipeCard();
+                rcard.Title = "Chocolate" + i.ToString();
+                this.RecentlyViewed.Children.Add(rcard);
+            }
         }
+
+        HomeRecipeCard card1 = new HomeRecipeCard();
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -39,6 +58,10 @@ namespace cooking_app
 
         }
 
-        
+        private void searchBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            searchBar.Text = "";
+
+        }
     }
 }
