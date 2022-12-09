@@ -16,10 +16,11 @@ using System.Windows.Shapes;
 namespace cooking_app
 {
     /// <summary>
-    /// Interaction logic for RecipeCard2.xaml
+    /// Interaction logic for RecipeCard.xaml
     /// </summary>
     public partial class RecipeCard2 : UserControl
     {
+
         private string title;
         public string Title
         {
@@ -86,3 +87,4 @@ namespace cooking_app
         }
     }
 }
+

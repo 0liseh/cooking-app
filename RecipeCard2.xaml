@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:cooking_app"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+
+             d:DesignHeight="221" d:DesignWidth="345">
     <Grid Background="white">
 
         <Image x:Name="ImgSearchCard" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="cooking-app;component/img/ramen/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
@@ -36,6 +38,11 @@
         </Label>
         <!-- STARS -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,155,12,34">
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
+            <fa:ImageAwesome Icon="StarHalfOutline" Foreground="#FDCC0D" Width="13" Height="13"/>
         </StackPanel>
         <Border BorderBrush="#5F5F5F" BorderThickness="3" Width="345" Height="211" Margin="0,0,0,10"/>
         <!--https://stackoverflow.com/questions/20073294/change-color-of-button-when-mouse-is-over-->
@@ -93,6 +100,8 @@
                 <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource heartTemplate}" />
             </Grid>
         </UserControl>
-    </Grid>
 
+    </Grid>
 </UserControl>
+
+
