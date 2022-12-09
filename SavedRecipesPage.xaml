@@ -150,7 +150,7 @@
 
 
 
-    
+    <!--ddd\\\
             <Border Grid.Column="0" Grid.Row="5" BorderBrush="#5F5F5F" BorderThickness="3"
                     Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="32,17,32,0"/>
 
@@ -195,9 +195,9 @@
                     Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="32,16,31,40"/>
 
             <Image x:Name="recipe2" Grid.Column="0" Grid.Row="8" Source="/Pizza.jpg" Height="160" Width="320"
-                   Margin="35,20,35,0" Grid.ColumnSpan="3" Stretch="Fill"/>
+                   Margin="35,20,35,0" Grid.ColumnSpan="3" Stretch="Fill"/>d
 
-            <StackPanel Name="stackPanel1"/>
+            <StackPanel Name="stackPanel1"/>-jjoijeefiowefnbvnnf
 
         </Grid>
             </ScrollViewer>
