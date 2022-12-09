@@ -21,9 +21,15 @@ namespace cooking_app
     /// </summary>
     public partial class RatingSystem : UserControl
     {
+        public static int numberOfStars=0;
         public RatingSystem()
         {
             InitializeComponent();
+        }
+
+        public int getNoOfStars()
+        {
+            return numberOfStars;
         }
 
         public void ChangeRating(object sender, RoutedEventArgs e)
@@ -36,7 +42,7 @@ namespace cooking_app
                 if (stars.ElementAt(0).IsChecked ?? false)
                 {
                     stars.ElementAt(0).IsChecked = true;
-                    
+                    numberOfStars = 1;                    
                 }
                 else
                 {
@@ -45,6 +51,7 @@ namespace cooking_app
                     stars.ElementAt(2).IsChecked = false;
                     stars.ElementAt(3).IsChecked = false;
                     stars.ElementAt(4).IsChecked = false;
+                    numberOfStars = 0;
                 }
 
             }
@@ -55,7 +62,7 @@ namespace cooking_app
                 if (stars.ElementAt(1).IsChecked ?? false)
                 {
                     stars.ElementAt(1).IsChecked = true;
-                    
+                    numberOfStars = 2;
                 }
                 else
                 {
@@ -63,6 +70,7 @@ namespace cooking_app
                     stars.ElementAt(2).IsChecked = false;
                     stars.ElementAt(3).IsChecked = false;
                     stars.ElementAt(4).IsChecked = false;
+                    numberOfStars = 1;
                 }
 
             }
@@ -74,13 +82,14 @@ namespace cooking_app
                 if (stars.ElementAt(2).IsChecked ?? false)
                 {
                     stars.ElementAt(2).IsChecked = true;
-                    
+                    numberOfStars = 3;
                 }
                 else
                 {
                     stars.ElementAt(2).IsChecked = false;
                     stars.ElementAt(3).IsChecked = false;
                     stars.ElementAt(4).IsChecked = false;
+                    numberOfStars = 2;
                 }
             }
             else if (sender.Equals(FourthStar))
@@ -92,12 +101,13 @@ namespace cooking_app
                 if (stars.ElementAt(3).IsChecked ?? false)
                 {
                     stars.ElementAt(3).IsChecked = true;
-                    
+                    numberOfStars = 4;
                 }
                 else
                 {
                     stars.ElementAt(3).IsChecked = false;
                     stars.ElementAt(4).IsChecked = false;
+                    numberOfStars = 3;
                 }
             }
             else if (sender.Equals(FifthStar))
@@ -109,10 +119,12 @@ namespace cooking_app
                 if (stars.ElementAt(4).IsChecked ?? false)
                 {
                     stars.ElementAt(4).IsChecked = true;
+                    numberOfStars = 5;
                 }
                 else
                 {
                     stars.ElementAt(4).IsChecked = false;
+                    numberOfStars = 4;
                 }
 
             }

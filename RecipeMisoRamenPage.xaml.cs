@@ -76,5 +76,14 @@ namespace cooking_app
                 
         }
 
+        private void DisplayUserComment(object sender, RoutedEventArgs e)
+        {
+            RecipePageSubmittedComment comment = new RecipePageSubmittedComment();
+            comment.UserNameContainer.Text = "John Doe";
+            comment.UserCommentContainer.Text = UserComment.Text;
+            comment.addUserRating(UserRating.getNoOfStars());
+
+            UserCommentsAdded.Items.Add(comment);
+        }
     }
 }
