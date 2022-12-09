@@ -150,10 +150,11 @@
 
 
 
+    
             <Border Grid.Column="0" Grid.Row="5" BorderBrush="#5F5F5F" BorderThickness="3"
                     Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="32,17,32,0"/>
 
-            <Image x:Name="recipe1" Grid.Column="0" Grid.Row="5" Source="/Mac and cheese.jpg" Height="160"
+                    <Image x:Name="recipe1" Grid.Column="0" Grid.Row="5" Source="cooking-app;component/img/Mac and cheese.jpg" Height="160"
                    Width="320" VerticalAlignment="Bottom" Grid.ColumnSpan="3" Margin="30,20,30,0" Stretch="Fill"/>
 
 
@@ -202,7 +203,7 @@
             </ScrollViewer>
         
             <!-- Holds divider and Menu buttons -->
-            <local:MenuButtons Grid.Row="1" Grid.Column="0"/>
+           
         </Grid>
     </DockPanel>
 </Page>
