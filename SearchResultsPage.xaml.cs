@@ -25,15 +25,15 @@ namespace cooking_app
 
         string[] filterList;
 
-        string[] ramenResults = { "Miso Ramen", "Shoyu Ramen", "Tonkotsu Ramen", "Shio Ramen", "Hakodate", "Hiroshima", "Sapporo Ramen", "Takayama", "Tsukemen", "Tokyo Ramen" };
-        string[] ramenImg = { "MisoRamen.jpg", "ShoyuRamen.jpg", "Tonkatsu.jpg", "ShioRamen.jpg", "Hakodate.jpg", "Hiroshima.jpg", "Sapporo.jpg", "Takayama.jpg", "Tsukemen.jpg", "TokyoRamen.jpg" };
+        string[] ramenResults = { "Shoyu Ramen", "Tonkotsu Ramen", "Shio Ramen", "Hakodate", "Miso Ramen", "Hiroshima", "Sapporo Ramen", "Takayama", "Tsukemen", "Tokyo Ramen" };
+        string[] ramenImg = { "ShoyuRamen.jpg", "Tonkatsu.jpg", "ShioRamen.jpg", "Hakodate.jpg", "MisoRamen.jpg", "Hiroshima.jpg", "Sapporo.jpg", "Takayama.jpg", "Tsukemen.jpg", "TokyoRamen.jpg" };
         string[] ramenRating = { "5.0", "5.0", "4.9", "4.8", "4.6", "4.5", "4.5", "4.5", "4.5", "4.3" };
 
         string[] macResults = { "Creamy Mac and Cheese", "Mac and Cheese", "Mac and Extra Cheese", "Baked Mac and Cheese", "Southern Mac and Cheese", "White Chedder Mac and Cheese", "Ultra Creamy Mac and Cheese", "3 Cheese Mac and Cheese", "Brie Mac and Cheese", "Simple Mac and Cheese" };
         string[] macRating = { "4.8", "4.8", "4.8", "4.7", "4.5", "4.4", "4.3", "4.3", "4.2", "4.0" };
         
         // change images to mac and cheese 
-        string[] macImg = { "MisoRamen.jpg", "ShoyuRamen.jpg", "Tonkatsu.jpg", "ShioRamen.jpg", "Hakodate.jpg", "Hiroshima.jpg", "Sapporo.jpg", "Takayama.jpg", "Tsukemen.jpg", "TokyoRamen.jpg" };
+        string[] macImg = { "ShoyuRamen.jpg", "Tonkatsu.jpg", "ShioRamen.jpg", "Hakodate.jpg", "MisoRamen.jpg", "Hiroshima.jpg", "Sapporo.jpg", "Takayama.jpg", "Tsukemen.jpg", "TokyoRamen.jpg" };
 
         public SearchResultsPage()
         {
