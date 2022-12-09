@@ -33,9 +33,19 @@ namespace cooking_app
 
         }
 
+
         private void ScrollToIngredients(object sender, RoutedEventArgs e)
         {
             Ingredients.BringIntoView();
+            IEnumerable<Button> tabs = TabSection.Children.OfType<Button>();
+
+            if (sender.Equals(IngridentsTab))
+            {
+                tabs.ElementAt(0).Background = Brushes.Gray;
+                tabs.ElementAt(1).Background = Brushes.White;
+                tabs.ElementAt(2).Background = Brushes.White;
+                tabs.ElementAt(3).Background = Brushes.White;
+            }
         }
 
         private void ScrollToInstructions(object sender, RoutedEventArgs e)

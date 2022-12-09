@@ -38,6 +38,7 @@ namespace cooking_app
 
         public static void NavigateToPage(Page page)
         {
+            //Need to set CookingApplication on an instance of the MainWindow class
             ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
         }
 
