@@ -26,27 +26,27 @@ namespace cooking_app
 
             for (int i = 0; i < 10; i++)
             {
-                HomeRecipeCard rcard = new HomeRecipeCard();
+                UserControl1 rcard = new UserControl1();
                 rcard.Title = "Chocolate" + i.ToString();
                 this.Trending.Children.Add(rcard);
             }
 
             for (int i = 0; i < 10; i++)
             {
-                HomeRecipeCard rcard = new HomeRecipeCard();
+                UserControl1 rcard = new UserControl1();
                 rcard.Title = "Chocolate" + i.ToString();
                 this.Recommended.Children.Add(rcard);
             }
 
             for (int i = 0; i < 10; i++)
             {
-                HomeRecipeCard rcard = new HomeRecipeCard();
+                UserControl1 rcard = new UserControl1();
                 rcard.Title = "Chocolate" + i.ToString();
                 this.RecentlyViewed.Children.Add(rcard);
             }
         }
 
-        HomeRecipeCard card1 = new HomeRecipeCard();
+        //HomeRecipeCard1 card1 = new HomeRecipeCard1();
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {

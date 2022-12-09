@@ -20,10 +20,11 @@ namespace cooking_app
     /// Interaction logic for SearchResultsPage.xaml
     /// </summary>
     public partial class SearchResultsPage : Page
-    {
-        String searchResult = "Ramen";
 
-        string[] filterList;
+    {
+        String searchResult = "Ramen"; //MenuButtons.SearchPage.stringName
+
+        string[] filterList = { "Dinner", "Japanese", "Easy" };//FilterPage.appliedFilters;
 
         string[] ramenResults = { "Shoyu Ramen", "Tonkotsu Ramen", "Shio Ramen", "Hakodate", "Miso Ramen", "Hiroshima", "Sapporo Ramen", "Takayama", "Tsukemen", "Tokyo Ramen" };
         string[] ramenImg = { "ShoyuRamen.jpg", "Tonkatsu.jpg", "ShioRamen.jpg", "Hakodate.jpg", "MisoRamen.jpg", "Hiroshima.jpg", "Sapporo.jpg", "Takayama.jpg", "Tsukemen.jpg", "TokyoRamen.jpg" };
@@ -71,18 +72,24 @@ namespace cooking_app
                 }
             }
 
+            for (int i = 0; i < filterList.Length; i++)
+            {
+                FilterButton filterbtn = new FilterButton();
+                filterbtn.FilterText = filterList[i];
+                this.FilterResults.Children.Add(filterbtn);
+            }
+
         }
 
         private void searchBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            searchBar.Text = "";
-            // navigate to search page 
+            MainWindow.NavigateToPage(MenuButtons.searchPage);
 
         }
 
-        private void btnFilter_MouseClick(object sender, MouseEventArgs e)
+        public void btnFilterButtonClick(object sender, RoutedEventArgs e)
         {
-            // navigate to filter page 
+            MainWindow.NavigateToPage(MenuButtons.filterPage);
         }
     }
 }

@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:cooking_app"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+
+             d:DesignHeight="144" d:DesignWidth="214">
     <Grid>
         <Image x:Name="ImgCard" Source="/cooking-app;component/img/Pasta.jpg"  Height="116" HorizontalAlignment="Center" Margin="0,0,0,28"/>
         <Rectangle Fill="White" Margin="0,79,0,0"
