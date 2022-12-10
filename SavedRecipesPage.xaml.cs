@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -49,14 +50,16 @@ namespace cooking_app
         }
 
         // This will be called when the user clicks to save a recipe
-        public void addSavedRecipe()
+        public void addSavedRecipe(string title, string duration, string difficulty, string rating)
         {
+            RecipeCard2 recipe = new RecipeCard2();
 
-        }
+            recipe.Title = title;
+            recipe.DurationText.Content = duration;
+            recipe.DifficultyText.Content = difficulty;
+            recipe.RatingText.Content = rating;
 
-        // This will be called when the user clicks a saved recipe to remove it from the 
-        public void removeSavedRecipe()
-        {
+            this.SavedRecipes.Children.Add(recipe);
 
         }
 
