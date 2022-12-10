@@ -13,11 +13,11 @@
         <Image x:Name="ImgSearchCard" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="cooking-app;component/img/ramen/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
 
         </Image>
-        <Label x:Name="TitleSearchText" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,126,0,50" >
+        <Label x:Name="TitleText" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,126,0,50" >
             MISO RAMEN
         </Label>
 
-        <Label x:Name="DurationSearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="15,174,0,0">
+        <Label x:Name="DurationText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="15,174,0,0">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -25,7 +25,7 @@
             </Label.Resources>
             30 MIN
         </Label>
-        <Label x:Name="DifficultySearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,174,0,0">
+        <Label x:Name="DifficultyText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,174,0,0">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -33,7 +33,7 @@
             </Label.Resources>
             EASY
         </Label>
-        <Label x:Name="RatingSearchText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,0,0" Margin="0,178,15,0">
+        <Label x:Name="RatingText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,0,0" Margin="0,178,15,0">
             4.8
         </Label>
         <!-- STARS -->
@@ -77,7 +77,7 @@
                 <Grid.Resources>
                     <ControlTemplate x:Key="heartTemplate" TargetType="{x:Type ToggleButton}">
                         <Viewbox>
-                            <Path Name="heart" Fill="Gray" Data="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14"/>
+                            <Path Name="heart" Fill="#FF5250" Data="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14"/>
                         </Viewbox>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
@@ -85,8 +85,8 @@
                                     <!-- Value="Yellow">-->
                                     <Setter.Value>
                                         <LinearGradientBrush>
-                                            <GradientStop Color="#FF5250" Offset="0" />
-                                            <GradientStop Color="#FF5252" Offset="1" />
+                                            <GradientStop Color="Gray" Offset="0" />
+                                            <GradientStop Color="Gray" Offset="1" />
                                         </LinearGradientBrush>
                                     </Setter.Value>
                                 </Setter>

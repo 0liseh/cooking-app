@@ -28,7 +28,7 @@ namespace cooking_app
             set
             {
                 title = value;
-                this.TitleSearchText.Content = this.title;
+                this.TitleText.Content = this.title;
             }
 
         }
@@ -40,7 +40,7 @@ namespace cooking_app
             set
             {
                 duration = value;
-                this.DurationSearchText.Content = this.duration;
+                this.DurationText.Content = this.duration;
             }
 
         }
@@ -52,7 +52,7 @@ namespace cooking_app
             set
             {
                 rating = value;
-                this.RatingSearchText.Content = this.rating;
+                this.RatingText.Content = this.rating;
             }
 
         }
@@ -64,7 +64,7 @@ namespace cooking_app
             set
             {
                 difficulty = value;
-                this.DifficultySearchText.Content = this.difficulty;
+                this.DifficultyText.Content = this.difficulty;
             }
 
         }
