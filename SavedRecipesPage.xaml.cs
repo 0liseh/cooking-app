@@ -21,19 +21,20 @@ namespace cooking_app
     public partial class SavedRecipesPage : Page
     {
         public SavedRecipesPage()
-        { 
+        {
+
             InitializeComponent();
 
             // The inital saved recipes 
-            string[] title = { "Mac and Cheese", "Pizza", "Ceaser Salad" };
-            string[] duration = { "30 MIN", "1 HR", "15 MIN" };
-            string[] difficulty = { "EASY", "HARD", "EASY" };
-            string[] rating = { "4.5", "4.1", "4.8" };
-            string[] image = { "Mac and cheese.jpg", "Pizza.pg", "Ceaser Salad.jpg"};
+            string[] title = { "MAC AND CHEESE", "PIZZA", "CEASER SALAS", "CHICKEN NOODLE SOUP" };
+            string[] duration = { "30 MIN", "1 HR", "15 MIN", "45 MIN"};
+            string[] difficulty = { "EASY", "HARD", "EASY", "MEDIUM"};
+            string[] rating = { "4.5", "4.1", "4.8", "4.0"};
+            string[] image = { "Mac and cheese.jpg", "Pizza.jpg", "Ceaser Salad.jpg"};
 
 
             // Create a few default saved recipes initally 
-            for (int i=0; i < 2; i++)
+            for (int i=0; i < 4; i++)
             {
                 RecipeCard2 recipe = new RecipeCard2();
 
@@ -41,10 +42,6 @@ namespace cooking_app
                 recipe.DurationText.Content = duration[i];
                 recipe.DifficultyText.Content = difficulty[i];
                 recipe.RatingText.Content = rating[i];
-
-                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/ramen/" + image[i], UriKind.Absolute);
-                ImageSource imgSource = new BitmapImage(uri);
-                recipe.ImageCard = imgSource;
 
                 this.SavedRecipes.Children.Add(recipe);
             }

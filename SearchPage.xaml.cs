@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,13 @@ namespace cooking_app
     /// </summary>
     public partial class SearchPage : Page
     {
-        String search;
+        public static String search;
 
         public static bool onSavedPage = false;
         public static bool onHomePage = false;
+
+        public static string[] recentSearches = { "Mac and Cheese" , "30 minute Ramen", "Poke", "Burritos", "Easy Pizza", "Chicken Salad"
+        "Apple pie",  "Overnight oats", "Turkey"};
 
         //Initial values 
         String recentOne = "Mac and Cheese";
@@ -35,6 +39,7 @@ namespace cooking_app
         String recentSeven = "Apple pie";
         String recentEight = "Overnight oats";
         String recentNine = "Turkey";
+
         public SearchPage()
         {
             InitializeComponent();
@@ -77,6 +82,9 @@ namespace cooking_app
 
             recent9.Text = "";
             recentNine = "";
+
+            // Creates a new empty list 
+            recentSearches = new string[9];
         }
 
         private void recent1_Click(object sender, RoutedEventArgs e)
@@ -128,36 +136,46 @@ namespace cooking_app
 
         private void enter_Click(object sender, RoutedEventArgs e)
         {
-            //Gets rid of search
+            //Saves whatever was searched in a string  
             search = searchBar.Text;
-            searchBar.Text = "`";
+            //Gets rid of the text in the search bar 
+            searchBar.Text = "";
 
-            //Adds the search to the recently searched
+            //Adds the search to the recently searched and changes the array accordingly
             recent9.Text = recentEight;
+            recentSearches[8] = recentSearches[7];
             recentNine = recentEight;
 
             recent8.Text = recentSeven;
+            recentSearches[7] = recentSearches[6];
             recentEight = recentSeven;
 
             recent7.Text = recentSix;
+            recentSearches[6] = recentSearches[5];
             recentSeven = recentSix;
 
             recent6.Text = recentFive;
+            recentSearches[5] = recentSearches[4];
             recentSix = recentFive;
 
             recent5.Text = recentFour;
+            recentSearches[4] = recentSearches[3];
             recentFive = recentFour;
 
             recent4.Text = recentThree;
+            recentSearches[3] = recentSearches[2];
             recentFour = recentThree;
 
             recent3.Text = recentTwo;
+            recentSearches[2] = recentSearches[1];
             recentThree = recentTwo;
 
             recent2.Text = recentOne;
+            recentSearches[1] = recentSearches[0];
             recentTwo = recentOne;
 
             recent1.Text = search;
+            recentSearches[0] = search;
             recentOne = search;
 
             //Navigate to the recipe results page 

@@ -10,14 +10,20 @@
 
   <ItemGroup>
     <None Remove="img\Bread.jpeg" />
+    <None Remove="img\Ceaser Salad.jpg" />
     <None Remove="img\greystar.png" />
     <None Remove="img\Home.png" />
     <None Remove="img\HomeActive.jpg" />
+    <None Remove="img\Mac and cheese.jpg" />
+    <None Remove="img\Pizza.jpg" />
     <None Remove="img\Profile.png" />
     <None Remove="img\Saved.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\Ceaser Salad.jpg" />
+    <Resource Include="img\Mac and cheese.jpg" />
+    <Resource Include="img\Pizza.jpg" />
     <Resource Include="img\Saved.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
