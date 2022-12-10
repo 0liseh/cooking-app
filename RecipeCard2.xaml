@@ -97,7 +97,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource heartTemplate}" />
+                <ToggleButton Grid.Column="0" Tag="1" Cursor="Hand" Template="{StaticResource heartTemplate}" Click="heartButton_Click"/>
             </Grid>
         </UserControl>
 

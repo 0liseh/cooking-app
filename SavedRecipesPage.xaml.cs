@@ -60,5 +60,52 @@ namespace cooking_app
 
         }
 
+
+        // When the user clicks to filter the saved recipes 
+        private void catergory1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void catergory2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void catergory3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void catergory4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void catergory5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void catergory6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void generalSearch_Click(object sender, RoutedEventArgs e)
+        {
+            MenuButtons.onSavedRecipesPage = true;
+            MainWindow.NavigateToPage(MenuButtons.searchPage);
+           
+        }
+
+        // Only searches through the saved recipes 
+        private void searchSaved_Click(object sender, RoutedEventArgs e)
+        {
+            MenuButtons.onSavedRecipesPage = true;
+            MainWindow.NavigateToPage(MenuButtons.searchPage);
+        }
+
+
     }
 }

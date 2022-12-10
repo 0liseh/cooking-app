@@ -85,6 +85,12 @@ namespace cooking_app
         {
             InitializeComponent();
         }
+
+        
+        private void heartButton_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Remove(this);
+        }
     }
 }
 

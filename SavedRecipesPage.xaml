@@ -17,21 +17,23 @@
                                Grid.ColumnSpan="3"> 
                      MY RECIPES
                 </TextBlock>
-                <Button x:Name="generalSearch"  Height="30" Width="30" Background="White" BorderThickness="0" Margin="55,0,0,0" >
+                <Button x:Name="generalSearch"  Height="30" Width="30" Background="White" BorderThickness="0" Margin="55,0,0,0" 
+                        Click="generalSearch_Click">
                     <Image Source="cooking-app;component/img/search.png"/>
                 </Button>
             </StackPanel>
 
             <Border DockPanel.Dock="Bottom" BorderThickness="2" BorderBrush="#9B9B9B" HorizontalAlignment="Center" Width="300" Height="36" >
-                    <Border.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="14"/>
-                        </Style>
-                    </Border.Resources>
-                    <TextBlock FontSize="15" Foreground="#9B9B9B" Width="250" Height="28" VerticalAlignment="Bottom">
-                        Search Saved Recipes
-                    </TextBlock>
-                </Border>
+                <Border.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="14"/>
+                    </Style>
+                </Border.Resources>
+
+                <Button Content="Search Saved Recipes" Width="250" Height="28" Background="White" BorderThickness="0" HorizontalContentAlignment="Left"
+                        Click="searchSaved_Click"/>
+
+            </Border>
                 
             
         </DockPanel>
@@ -50,7 +52,7 @@
                         <StackPanel Orientation="horizontal">
                             <Button x:Name ="catergory1" Grid.Column="0" Grid.Row="3" Width="100" Height="70"
                      Margin="20,20,10,20" Content="BREAKFAST" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory1_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -63,7 +65,7 @@
 
                             <Button x:Name="catergory2" Grid.Column="1" Grid.Row="3" Width="100" Height="70"
                      Margin="10,20,20,20" Content="LUNCH" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory2_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -75,7 +77,7 @@
 
                             <Button x:Name="catergory3" Grid.Column="2" Grid.Row="3" Width="100" Height="70"
                      Margin="0" Content="DINNER" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory3_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -94,7 +96,7 @@
 
                             <Button  x:Name="catergory4" Grid.Column="0" Grid.Row="4" Width="100" Height="70"
                      Margin="20,0,10,10" Content="SNACKS" Background="#50af18" Foreground="White"
-                     FontSize="17" FontWeight="Medium" BorderThickness="2">
+                     FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory4_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -106,7 +108,7 @@
 
                             <Button x:Name="catergory5" Grid.Column="1" Grid.Row="4" Width="100" Height="70"
                      Margin="10,0,10,10" Content="DESSERT" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory5_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -119,7 +121,7 @@
 
                             <Button x:Name="catergory6" Grid.Column="2" Grid.Row="4" Width="100" Height="70"
                      Margin="10,0,0,10" Content="DRINKS" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory6_Click">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="7"/>

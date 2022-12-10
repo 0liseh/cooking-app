@@ -41,19 +41,19 @@ namespace cooking_app
             //Need to set CookingApplication on an instance of the MainWindow class
             if(page == MenuButtons.savedRecipesPage && MenuButtons.onSavedRecipesPage == false )
             {
-                MenuButtons.onSavedRecipesPage = true;
-                MenuButtons.onHomePage = false;
+                //MenuButtons.onSavedRecipesPage = true;
+                //MenuButtons.onHomePage = false;
                 ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
             }else if(page == MenuButtons.homePage && MenuButtons.onHomePage == false)
             {
-                MenuButtons.onHomePage = true;
-                MenuButtons.onSavedRecipesPage = false;
+                //MenuButtons.onHomePage = true;
+               //MenuButtons.onSavedRecipesPage = false;
                 ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
             }
             else
             {
-                MenuButtons.onSavedRecipesPage = false;
-                MenuButtons.onHomePage = false;
+                //MenuButtons.onSavedRecipesPage = false;
+                //MenuButtons.onHomePage = false;
                 ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
             }
         }

@@ -24,5 +24,11 @@ namespace cooking_app
         {
             InitializeComponent();
         }
+
+        private void heart_Click(object sender, RoutedEventArgs e)
+        {
+
+
+        }
     }
 }

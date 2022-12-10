@@ -26,7 +26,7 @@ namespace cooking_app
         public static bool onSavedPage = false;
         public static bool onHomePage = false;
 
-        public static string[] recentSearches = { "Mac and Cheese" , "30 minute Ramen", "Poke", "Burritos", "Easy Pizza", "Chicken Salad"
+        public static string[] recentSearches = { "Mac and Cheese" , "30 minute Ramen", "Poke", "Burritos", "Easy Pizza", "Chicken Salad",
         "Apple pie",  "Overnight oats", "Turkey"};
 
         //Initial values 
@@ -307,13 +307,17 @@ namespace cooking_app
 
         private void back_click(object sender, RoutedEventArgs e)
         {
-            if(MenuButtons.onSavedRecipesPage == true)
-            {
+             if(MenuButtons.onSavedRecipesPage == true)
+             {
+                MenuButtons.onSavedRecipesPage = false;
                 MainWindow.NavigateToPage(MenuButtons.savedRecipesPage);
-            }else if (MenuButtons.onHomePage == true)
-            {
-                MainWindow.NavigateToPage(MenuButtons.homePage);
-            }
+
+             }else if (MenuButtons.onHomePage == true)
+             {
+                 MenuButtons.onHomePage = false;
+                 MainWindow.NavigateToPage(MenuButtons.homePage);
+             }        
+
         }
     }
 }
