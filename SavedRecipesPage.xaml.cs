@@ -29,13 +29,23 @@ namespace cooking_app
             string[] duration = { "30 MIN", "1 HR", "15 MIN" };
             string[] difficulty = { "EASY", "HARD", "EASY" };
             string[] rating = { "4.5", "4.1", "4.8" };
-            string[] image = {}
+            string[] image = { "Mac and cheese.jpg", "Pizza.pg", "Ceaser Salad.jpg"};
 
 
             // Create a few default saved recipes initally 
-            for (int i=0; i < 10; i++)
+            for (int i=0; i < 2; i++)
             {
                 RecipeCard2 recipe = new RecipeCard2();
+
+                recipe.Title = title[i];
+                recipe.DurationText.Content = duration[i];
+                recipe.DifficultyText.Content = difficulty[i];
+                recipe.RatingText.Content = rating[i];
+
+                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/ramen/" + image[i], UriKind.Absolute);
+                ImageSource imgSource = new BitmapImage(uri);
+                recipe.ImageCard = imgSource;
+
                 this.SavedRecipes.Children.Add(recipe);
             }
 
