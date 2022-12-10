@@ -46,53 +46,53 @@
                 <Grid Margin="-7,0,0,0" DockPanel.Dock="Top">
 
 
-    <StackPanel Name="SavedRecipes">
-        <StackPanel Orientation="horizontal">
-            <Button x:Name ="catergory1" Grid.Column="0" Grid.Row="3" Width="100" Height="70"
+                    <StackPanel Name="SavedRecipes">
+                        <StackPanel Orientation="horizontal">
+                            <Button x:Name ="catergory1" Grid.Column="0" Grid.Row="3" Width="100" Height="70"
                      Margin="20,20,10,20" Content="BREAKFAST" Background="#50af18" Foreground="White"
                     FontSize="17" FontWeight="Medium" BorderThickness="2">
 
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="7"/>
-                    </Style>
-                </Button.Resources>
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
 
-            </Button>
+                            </Button>
 
 
-            <Button x:Name="catergory2" Grid.Column="1" Grid.Row="3" Width="100" Height="70"
+                            <Button x:Name="catergory2" Grid.Column="1" Grid.Row="3" Width="100" Height="70"
                      Margin="10,20,20,20" Content="LUNCH" Background="#50af18" Foreground="White"
                     FontSize="17" FontWeight="Medium" BorderThickness="2">
 
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="7"/>
-                    </Style>
-                </Button.Resources>
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
 
-            </Button>
+                            </Button>
 
-            <Button x:Name="catergory3" Grid.Column="2" Grid.Row="3" Width="100" Height="70"
+                            <Button x:Name="catergory3" Grid.Column="2" Grid.Row="3" Width="100" Height="70"
                      Margin="0" Content="DINNER" Background="#50af18" Foreground="White"
                     FontSize="17" FontWeight="Medium" BorderThickness="2">
 
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="7"/>
-                    </Style>
-                </Button.Resources>
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
 
-            </Button>
+                            </Button>
 
-    </StackPanel>
+                        </StackPanel>
 
 
-                        
-        <StackPanel Orientation="horizontal">
-            
-            
-            <Button  x:Name="catergory4" Grid.Column="0" Grid.Row="4" Width="100" Height="70"
+
+                        <StackPanel Orientation="horizontal">
+
+
+                            <Button  x:Name="catergory4" Grid.Column="0" Grid.Row="4" Width="100" Height="70"
                      Margin="20,0,10,10" Content="SNACKS" Background="#50af18" Foreground="White"
                      FontSize="17" FontWeight="Medium" BorderThickness="2">
 
@@ -130,9 +130,9 @@
 
                         </StackPanel>
 
-        
-        <!-- Where the recipes are added in-->
-        
+
+                        <!-- Where the recipes are added in-->
+
                     </StackPanel>
 
 
@@ -185,13 +185,13 @@
                    Margin="35,20,35,0" Grid.ColumnSpan="3" Stretch="Fill"/> -->
 
 
-                </Grid> 
-                    
-                    
-      </ScrollViewer>
-                <!-- Holds divider and Menu buttons -->
-            
-           
+                </Grid>
+
+
+     </ScrollViewer>
+            <!-- Holds divider and Menu buttons -->
+            <local:MenuButtons Grid.Row="1" Grid.Column="0"/>
+
         </Grid>
     </DockPanel>
 </Page>

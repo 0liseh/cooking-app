@@ -24,6 +24,15 @@ namespace cooking_app
         { 
             InitializeComponent();
 
+            // The inital saved recipes 
+            string[] title = { "Mac and Cheese", "Pizza", "Ceaser Salad" };
+            string[] duration = { "30 MIN", "1 HR", "15 MIN" };
+            string[] difficulty = { "EASY", "HARD", "EASY" };
+            string[] rating = { "4.5", "4.1", "4.8" };
+            string[] image = {}
+
+
+            // Create a few default saved recipes initally 
             for (int i=0; i < 10; i++)
             {
                 RecipeCard2 recipe = new RecipeCard2();
@@ -31,5 +40,18 @@ namespace cooking_app
             }
 
         }
+
+        // This will be called when the user clicks to save a recipe
+        public void addSavedRecipe()
+        {
+
+        }
+
+        // This will be called when the user clicks a saved recipe to remove it from the 
+        public void removeSavedRecipe()
+        {
+
+        }
+
     }
 }
