@@ -33,6 +33,7 @@ namespace cooking_app
 
         public static bool onSavedRecipesPage = false;
         public static bool onHomePage = false;
+        public static bool onSearchPage = false;
 
         public MenuButtons()
         {

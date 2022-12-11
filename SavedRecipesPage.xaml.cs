@@ -50,7 +50,7 @@ namespace cooking_app
         }
 
         // This will be called when the user clicks to save a recipe
-        public void addSavedRecipe(string title, string duration, string difficulty, string rating)
+        public void addSavedRecipe(string title, string duration, string difficulty, string rating, ImageSource img)
         {
             RecipeCard2 recipe = new RecipeCard2();
 
@@ -58,6 +58,7 @@ namespace cooking_app
             recipe.DurationText.Content = duration;
             recipe.DifficultyText.Content = difficulty;
             recipe.RatingText.Content = rating;
+            recipe.ImageCard = img;
 
             this.SavedRecipes.Children.Add(recipe);
 
