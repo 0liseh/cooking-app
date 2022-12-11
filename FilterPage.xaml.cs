@@ -56,7 +56,6 @@ namespace cooking_app
             appliedFilters[0] = MealFil;
             appliedFilters[1] = DiffLevelFil;
             appliedFilters[2] = dietFil;
-            appliedFilters[3] = cuisineFil;
             if (minduration > maxduration)
                 MessageBox.Show("Minimum Duration cannot be greater than Maximum Duration");
             else

@@ -22,6 +22,7 @@ namespace cooking_app
     {
         public static Page homePage = new HomePage();
         public static Page searchPage = new SearchPage();
+        public static Page searchResultPage = new SearchResultsPage();
         public static Page filterPage = new FilterPage();
         //public static Page profilePage = new ProfilePage();
         public static Page misoRamen = new RecipeMisoRamenPage();
@@ -29,7 +30,14 @@ namespace cooking_app
         public static Page jollofRice = new RecipeJollofRicePage();
         public static Page chocolateCake = new RecipeChocolateCakePage();
         public static Page macAndCheese = new RecipeMacAndCheesePage();
-        public static Page savedRecipePage = new SavedRecipesPage();
+        public static Page savedRecipesPage = new SavedRecipesPage();
+
+        public static bool onSavedRecipesPage = false;
+        public static bool onHomePage = false;
+        public static bool onSearchPage = false;
+        public static bool durationFilterClicked = false;
+        public static string durationFilterText = "5Min";
+
 
         public MenuButtons()
         {
@@ -38,7 +46,7 @@ namespace cooking_app
 
         public void ProfileButtonClick(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         public void HomeButtonClick(object sender, RoutedEventArgs e)
@@ -48,7 +56,10 @@ namespace cooking_app
 
         public void SavedRecipesButtonClick(object sender, RoutedEventArgs e)
         {
-            MainWindow.NavigateToPage(savedRecipePage);
+            MainWindow.NavigateToPage(savedRecipesPage);
         }
+
+        // This will be called when the user clicks to save a recipe
+
     }
 }

@@ -35,7 +35,7 @@
             <RowDefinition Height="35" />
         </Grid.RowDefinitions>
         <!-- Move position attributes from the Grid into the enclosing Border -->
-        <Button x:Name="btnFilter" Click="btnFilterButtonClick" Grid.Column="3" Grid.Row="1" Width="27" Height="27" Background="White" BorderThickness="0" HorizontalAlignment="Left" Margin="80,-10,0,0">
+        <Button x:Name="btnFilter" Click="btnFilterButtonClick" Grid.Column="3" Grid.Row="1" Width="35" Height="35" Background="White" BorderThickness="0" HorizontalAlignment="Left" Margin="80,-10,0,0">
             <Button.Content>
                 <fa:ImageAwesome Icon="Filter"/>
             </Button.Content>
@@ -55,7 +55,7 @@
             </StackPanel>
         </ScrollViewer>
 
-        <ScrollViewer Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="650">
+        <ScrollViewer x:Name="ScrollSearch" ScrollChanged="eventhandler" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="650">
             <StackPanel x:Name="SearchResults" Orientation="Vertical" HorizontalAlignment="Right"  Margin="-15,8,0,0">
 
             </StackPanel>

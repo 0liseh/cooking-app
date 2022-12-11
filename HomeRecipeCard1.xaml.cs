@@ -32,9 +32,66 @@ namespace cooking_app
 
         }
 
+        private string duration;
+        public string Duration
+        {
+            get { return duration; }
+            set
+            {
+                duration = value;
+                this.DurationText.Content = this.duration;
+            }
+
+        }
+
+        private string rating;
+        public string Rating
+        {
+            get { return rating; }
+            set
+            {
+                rating = value;
+                this.RatingText.Content = this.rating;
+            }
+
+        }
+
+        private string difficulty;
+        public string Difficulty
+        {
+            get { return difficulty; }
+            set
+            {
+                difficulty = value;
+                this.DifficultyText.Content = this.difficulty;
+            }
+
+        }
+
+        private ImageSource img;
+        public ImageSource ImageCard
+        {
+            get { return img; }
+            set
+            {
+                img = value;
+                this.ImgCard.Source = this.img;
+            }
+
+        }
+
+
         public UserControl1()
         {
             InitializeComponent();
+        }
+
+        public void cardBtnClick(object sender, RoutedEventArgs e)
+        {
+            if (title.Contains("Chocolate Cake", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MainWindow.NavigateToPage(MenuButtons.chocolateCake);
+            }
         }
     }
 }

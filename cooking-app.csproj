@@ -13,6 +13,26 @@
     <None Remove="img\greystar.png" />
     <None Remove="img\Home.png" />
     <None Remove="img\HomeActive.jpg" />
+    <None Remove="img\mac\mac1.jpg" />
+    <None Remove="img\mac\mac10.jpg" />
+    <None Remove="img\mac\mac2.jpg" />
+    <None Remove="img\mac\mac3.jpg" />
+    <None Remove="img\mac\mac4.jpg" />
+    <None Remove="img\mac\mac5.jpg" />
+    <None Remove="img\mac\mac6.jpg" />
+    <None Remove="img\mac\mac7.jpg" />
+    <None Remove="img\mac\mac8.jpg" />
+    <None Remove="img\mac\mac9.jpg" />
+    <None Remove="img\newRecommended\airFryPorkChops.png" />
+    <None Remove="img\newRecommended\bakedLemonRisotto.jpg" />
+    <None Remove="img\newRecommended\blackbeantostadas.jpg" />
+    <None Remove="img\newRecommended\breakfastTostadas.jpeg" />
+    <None Remove="img\newRecommended\chickenFriedRice.png" />
+    <None Remove="img\newRecommended\classicStuffedPeppers.jpg" />
+    <None Remove="img\newRecommended\fetaPasta.jpg" />
+    <None Remove="img\newRecommended\glazedSalmon.jpg" />
+    <None Remove="img\newRecommended\padThai.jpg" />
+    <None Remove="img\newRecommended\veganLasagna.jpg" />
     <None Remove="img\Profile.png" />
     <None Remove="img\ramen\Hakodate.jpg" />
     <None Remove="img\ramen\Hiroshima.jpg" />
@@ -24,10 +44,85 @@
     <None Remove="img\ramen\TokyoRamen.jpg" />
     <None Remove="img\ramen\Tonkatsu.jpg" />
     <None Remove="img\ramen\Tsukemen.jpg" />
+    <None Remove="img\recipe.png" />
     <None Remove="img\Saved.png" />
+    <None Remove="img\trending\bakedPotatoe.jpeg" />
+    <None Remove="img\trending\bakedZiti.jpeg" />
+    <None Remove="img\trending\cheeseDanish.jpeg" />
+    <None Remove="img\trending\chickenMarsala.jpeg" />
+    <None Remove="img\trending\chickenScampi.jpeg" />
+    <None Remove="img\trending\chocolateCake.jpg" />
+    <None Remove="img\trending\funeralPotatoes.jpeg" />
+    <None Remove="img\trending\hashWaffle.jpeg" />
+    <None Remove="img\trending\overBakedSalmon.jpeg" />
+    <None Remove="img\trending\Pasta.jpg" />
+    <None Remove="img\trending\redVelvet.jpeg" />
+    <None Remove="img\trending\scallopsProvencal.jpeg" />
+    <None Remove="img\trending\shrimpLinguini.jpeg" />
+    <None Remove="img\trending\stuffedBellPeppers.jpeg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\mac\mac1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac10.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac7.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac8.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\mac\mac9.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\airFryPorkChops.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\bakedLemonRisotto.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\blackbeantostadas.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\breakfastTostadas.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\chickenFriedRice.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\classicStuffedPeppers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\fetaPasta.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\glazedSalmon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\padThai.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\newRecommended\veganLasagna.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\ramen\Hakodate.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -58,6 +153,9 @@
     <Resource Include="img\ramen\Tsukemen.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="img\recipe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\Saved.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -78,6 +176,48 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\Profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\bakedPotatoe.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\bakedZiti.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\cheeseDanish.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\chickenMarsala.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\chickenScampi.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\chocolateCake.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\funeralPotatoes.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\hashWaffle.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\overBakedSalmon.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\Pasta.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\redVelvet.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\scallopsProvencal.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\shrimpLinguini.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\trending\stuffedBellPeppers.jpeg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
