@@ -30,6 +30,7 @@
     <None Remove="img\5Min\turkishcoffee.jpg" />
     <None Remove="img\Bread.jpeg" />
     <None Remove="img\Ceaser Salad.jpg" />
+    <None Remove="img\chocolateCake.jpg" />
     <None Remove="img\Cinnamon.jpg" />
     <None Remove="img\Curry.jpg" />
     <None Remove="img\goldstar.jpg" />
@@ -90,6 +91,12 @@
     <None Remove="img\trending\scallopsProvencal.jpeg" />
     <None Remove="img\trending\shrimpLinguini.jpeg" />
     <None Remove="img\Udon.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\chocolateCake.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -337,6 +344,7 @@
     <Resource Include="img\trending\shrimpLinguini.jpeg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+
     <Resource Include="img\Udon.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

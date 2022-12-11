@@ -35,7 +35,7 @@ namespace cooking_app
         string[] trendingTitleAdded = { "Shrimp Linguini", "Chocolate Cake", "Stuffed Bell Peppers", "Funeral Potatoes", "Baked Ziti", "Hashbrown Waffle", "Over-Baked Salmon", "One-Pan Baked Pasta", "Cheese Danish", "Chicken Marsala" };
 
         string[] trendingImg = { "bakedPotatoe.jpeg", "bakedZiti.jpeg", "hashWaffle.jpeg", "overBakedSalmon.jpeg", "Pasta.jpg", "cheeseDanish.jpeg", "chickenMarsala.jpeg", "redVelvet.jpeg", "scallopsProvencal.jpeg", "chickenScampi.jpeg" };
-        string[] trendingImgAdded = { "shrimpLinguini.jpeg", "chocolateCake.jpg", "stuffedBellPeppers.jpeg", "funeralPotatoes.jpeg", "bakedPotatoe.jpeg", "bakedZiti.jpeg", "hashWaffle.jpeg", "overBakedSalmon.jpeg", "Pasta.jpg", "cheeseDanish.jpeg" };
+        string[] trendingImgAdded = { "trending/shrimpLinguini.jpeg", "chocolateCake.jpg", "newRecommended/classicStuffedPeppers.jpg", "trending/funeralPotatoes.jpeg", "trending/bakedPotatoe.jpeg", "trending/bakedZiti.jpeg", "trending/hashWaffle.jpeg", "trending/overBakedSalmon.jpeg", "trending/Pasta.jpg", "trending/cheeseDanish.jpeg" };
 
         string[] trendingRating = { "4.5", "5.0", "4.8", "4.8", "4.3", "4.7", "4.2", "4.0", "5.0", "4.3" };
 
@@ -116,7 +116,7 @@ namespace cooking_app
                 rcard.Difficulty = trendingDifficulty[i];
                 rcard.Rating = trendingRating[i];
                 rcard.Duration = trendingDuration[i];
-                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/trending/" + trendingImgAdded[i], UriKind.Absolute);
+                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/" + trendingImgAdded[i], UriKind.Absolute);
                 ImageSource imgSource = new BitmapImage(uri);
                 rcard.ImageCard = imgSource;
                 this.Trending.Children.Add(rcard);
