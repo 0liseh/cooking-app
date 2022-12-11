@@ -22,6 +22,7 @@ namespace cooking_app
     {
         public static Page homePage = new HomePage();
         public static Page searchPage = new SearchPage();
+        public static Page searchResultPage = new SearchResultsPage();
         public static Page filterPage = new FilterPage();
         //public static Page profilePage = new ProfilePage();
         public static Page misoRamen = new RecipeMisoRamenPage();
@@ -32,13 +33,25 @@ namespace cooking_app
         public static Page savedRecipesPage = new SavedRecipesPage();
 
         public static bool onSavedRecipesPage = false;
+        public static bool onSearchResultsPage = false;
         public static bool onHomePage = false;
         public static bool onSearchPage = false;
+
+        public static bool durationFilterClicked = false;
+        public static string durationFilterText = "5Min";
 
         public MenuButtons()
         {
             InitializeComponent();
         }
+
+        public static Page GetSavedPage() { return savedRecipesPage; }
+
+        public static bool getDurationFilter()
+        {
+            return durationFilterClicked;
+        }
+
 
         public void ProfileButtonClick(object sender, RoutedEventArgs e)
         {

@@ -94,8 +94,9 @@ namespace cooking_app
 
             //ApplicationSwitcher.filterSwitcher = this;
             //ApplicationSwitcher.Switch(srpage);
-   
-            
+
+            MainWindow.NavigateToPage(MenuButtons.searchResultPage); 
+
 
 
         }

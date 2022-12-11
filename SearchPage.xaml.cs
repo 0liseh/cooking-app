@@ -179,6 +179,8 @@ namespace cooking_app
             recentOne = search;
 
             //Navigate to the recipe results page 
+            MainWindow.NavigateToPage(MenuButtons.searchResultPage);
+
 
         }
 

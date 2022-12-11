@@ -8,16 +8,48 @@
              xmlns:fa="http://schemas.fontawesome.io/icons/"
 
              d:DesignHeight="221" d:DesignWidth="345">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="Transparent"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="Transparent"/>
+        <ControlTemplate x:Key="ButtonTemplate1" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="true">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
     <Grid Background="white">
 
-        <Image x:Name="ImgSearchCard" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="cooking-app;component/img/ramen/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0, 0, 0, 5">
+        <Image x:Name="ImgSearchCard" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Source="cooking-app;component/img/ramen/MisoRamen.jpg" Width="344" Height="126" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16, 0, 0, 5">
 
         </Image>
         <Label x:Name="TitleText" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,126,0,50" >
             MISO RAMEN
         </Label>
 
-        <Label x:Name="DurationText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#EAEAEA" Height="27" Padding="20, 3, 20, 5" Margin="15,174,0,0">
+        <Label x:Name="DurationText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#EAEAEA" Height="27" Padding="15, 3, 20, 5" Margin="30,174,0,0">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -25,7 +57,7 @@
             </Label.Resources>
             30 MIN
         </Label>
-        <Label x:Name="DifficultyText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="0,174,0,0">
+        <Label x:Name="DifficultyText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#EAEAEA" Height="27" Padding="15, 3, 15, 5" Margin="5,174,0,0">
             <Label.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -33,11 +65,11 @@
             </Label.Resources>
             EASY
         </Label>
-        <Label x:Name="RatingText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,0,0" Margin="0,178,15,0">
+        <Label x:Name="RatingText" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,0,0" Margin="0,178,33,0">
             4.8
         </Label>
         <!-- STARS -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,155,12,34">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,155,30,34">
             <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
             <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
             <fa:ImageAwesome Icon="Star" Foreground="#FDCC0D" Width="13" Height="13"/>
@@ -45,33 +77,13 @@
             <fa:ImageAwesome Icon="StarHalfOutline" Foreground="#FDCC0D" Width="13" Height="13"/>
         </StackPanel>
         <Border BorderBrush="#5F5F5F" BorderThickness="3" Width="345" Height="211" Margin="0,0,0,10"/>
-        <!--https://stackoverflow.com/questions/20073294/change-color-of-button-when-mouse-is-over-->
-        <Button x:Name="cardBtn" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="345" Height="211" Margin="0,0,0,10" >
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="Transparent"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
+        <Button Template="{DynamicResource ButtonTemplate1}" x:Name="cardBtn" Click="cardBtnClick" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="345" Height="211" Margin="0,0,0,10" >
         </Button>
 
         <UserControl x:Name="HeartButton"
                                   Grid.Row="0"
                                   HorizontalAlignment="Right"
-                                  Margin="0,126,12,55" Width="25"
+                                  Margin="0,126,30,55" Width="25"
                                 >
             <Grid>
                 <Grid.Resources>

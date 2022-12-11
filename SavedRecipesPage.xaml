@@ -34,18 +34,18 @@
                         Click="searchSaved_Click"/>
 
             </Border>
-                
-            
+
+
         </DockPanel>
-        
+
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <ScrollViewer>
-                <Grid Margin="-7,0,0,0" DockPanel.Dock="Top">
+            <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="650">
+                <Grid Margin="0,0,0,0" DockPanel.Dock="Top">
 
 
                     <StackPanel Name="SavedRecipes">
@@ -190,7 +190,7 @@
                 </Grid>
 
 
-     </ScrollViewer>
+            </ScrollViewer>
             <!-- Holds divider and Menu buttons -->
             <local:MenuButtons Grid.Row="1" Grid.Column="0"/>
 

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:cooking_app"
              mc:Ignorable="d">
-    <StackPanel Margin="0,10,0,0">
+    <StackPanel Margin="0,10,0,0" Background="white">
         <!-- Seperates menu from recipe -->
         <Rectangle  Grid.Column="0" HorizontalAlignment="Stretch" Fill="Black" Height="1" Width="390"/>
 

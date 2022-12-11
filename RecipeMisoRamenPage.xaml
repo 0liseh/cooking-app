@@ -22,7 +22,7 @@
             Content="Back" 
             HorizontalAlignment="Left" 
             VerticalAlignment="Center" 
-            Click="Back_Click" Height="50" Width="60" 
+            Click="Back_Click" Height="36" Width="80" 
             FontSize="20"
             DockPanel.Dock="Top">
             <Button.Resources>

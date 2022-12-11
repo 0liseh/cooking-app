@@ -27,11 +27,11 @@ namespace cooking_app
             InitializeComponent();
 
             // The inital saved recipes 
-            string[] title = { "MAC AND CHEESE", "PIZZA", "CEASER SALAS", "CHICKEN NOODLE SOUP" };
+            string[] title = { "Mac and Cheese", "Pizza", "Ceasar Salad", "Japanese Udon" };
             string[] duration = { "30 MIN", "1 HR", "15 MIN", "45 MIN"};
             string[] difficulty = { "EASY", "HARD", "EASY", "MEDIUM"};
             string[] rating = { "4.5", "4.1", "4.8", "4.0"};
-            string[] image = { "Mac and cheese.jpg", "Pizza.jpg", "Ceaser Salad.jpg"};
+            string[] image = { "mac/mac2.jpg", "Pizza.jpg", "Ceaser Salad.jpg", "Udon.jpg"};
 
 
             // Create a few default saved recipes initally 
@@ -43,14 +43,17 @@ namespace cooking_app
                 recipe.DurationText.Content = duration[i];
                 recipe.DifficultyText.Content = difficulty[i];
                 recipe.RatingText.Content = rating[i];
-
+                recipe.Duration = "1 HR";
+                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/" + image[i], UriKind.Absolute);
+                ImageSource imgSource = new BitmapImage(uri);
+                recipe.ImageCard = imgSource;
                 this.SavedRecipes.Children.Add(recipe);
             }
 
         }
 
         // This will be called when the user clicks to save a recipe
-        public void addSavedRecipe(string title, string duration, string difficulty, string rating, ImageSource img)
+public void addSavedRecipe(string title, string duration, string difficulty, string rating, ImageSource img)
         {
             RecipeCard2 recipe = new RecipeCard2();
 
@@ -60,7 +63,7 @@ namespace cooking_app
             recipe.RatingText.Content = rating;
             recipe.ImageCard = img;
 
-            this.SavedRecipes.Children.Add(recipe);
+            this.SavedRecipes.Children.Insert(0,recipe);
 
         }
 

@@ -86,10 +86,18 @@ namespace cooking_app
             InitializeComponent();
         }
 
-        
+
         private void heartButton_Click(object sender, RoutedEventArgs e)
         {
             (this.Parent as Panel).Children.Remove(this);
+        }
+
+        public void cardBtnClick(object sender, RoutedEventArgs e)
+        {
+            if (title.Contains("Miso Ramen", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MainWindow.NavigateToPage(MenuButtons.misoRamen);
+            }
         }
     }
 }
