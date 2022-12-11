@@ -30,6 +30,7 @@ namespace cooking_app
         public static Page chocolateCake = new RecipeChocolateCakePage();
         public static Page macAndCheese = new RecipeMacAndCheesePage();
         public static Page savedRecipesPage = new SavedRecipesPage();
+        public static Page loginPage = new LoginPage();
 
         public static bool onSavedRecipesPage = false;
         public static bool onHomePage = false;
@@ -41,7 +42,7 @@ namespace cooking_app
 
         public void ProfileButtonClick(object sender, RoutedEventArgs e)
         {
-            
+            MainWindow.NavigateToPage(loginPage);
         }
 
         public void HomeButtonClick(object sender, RoutedEventArgs e)
