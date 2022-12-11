@@ -40,5 +40,14 @@ namespace cooking_app
         {
 
         }
+
+        private void LogInButtonClick(object sender, RoutedEventArgs e)
+        {
+            if(LoginEmailTextBox.Text == "")
+            {
+                LoginEmailTextBox.Text = "Please enter an actual email and not an empty string!";
+                
+            }
+        }
     }
 }

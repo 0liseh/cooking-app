@@ -352,8 +352,14 @@
             </Button.Content>
         </Button>
 
-
-        <Button x:Name="btnLogin" Grid.Column="2" Grid.Row="10" Width="220" Height="40" Background="#50AF18" FontSize="18" FontWeight="bold" Foreground="White" BorderThickness="0" HorizontalAlignment="Right" Margin="0,40,1,39" Content="LOG IN" Grid.ColumnSpan="3">
+        <!-- Login Button -->
+        <Button 
+            x:Name="btnLogin" Grid.Column="2" Grid.Row="10" Width="220" Height="40" 
+            Background="#50AF18" FontSize="18" 
+            FontWeight="bold" Foreground="White" 
+            BorderThickness="0" HorizontalAlignment="Right" 
+            Margin="0,40,1,39" Content="LOG IN" 
+            Grid.ColumnSpan="3" Click="LogInButtonClick">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="13"/>
@@ -362,6 +368,8 @@
         </Button>
 
         <TextBlock FontSize="15" Grid.Column="2" Margin="1,18,0,0" Grid.Row="8" TextWrapping="Wrap" Height="34" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Left" Width="220" Grid.ColumnSpan="3"><Run Language="en-ca" Text="Log in with your email."/></TextBlock>
+        
+        <!-- Input for email -->
         <TextBox Text="" Name ="LoginEmailTextBox" Grid.Column="2" HorizontalAlignment="Left" Margin="0,18,0,0" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Height="32" TextChanged="TextBox_TextChanged_1" Grid.ColumnSpan="3"/>
 
     </Grid>
