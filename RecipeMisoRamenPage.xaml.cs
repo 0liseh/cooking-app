@@ -23,29 +23,17 @@ namespace cooking_app
     /// </summary>
     public partial class RecipeMisoRamenPage : Page
     {
+        public static RecipeMisoRamenPage instance = null;
+
+        public static string userNameForComment = "";
         public RecipeMisoRamenPage()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            if (MenuButtons.onSavedRecipesPage == true)
-            {
-                MenuButtons.onSavedRecipesPage = false;
-                MainWindow.NavigateToPage(MenuButtons.savedRecipesPage);
-
-            }
-            else if (MenuButtons.onHomePage == true)
-            {
-                MenuButtons.onHomePage = false;
-                MainWindow.NavigateToPage(MenuButtons.homePage);
-            }
-            else if (MenuButtons.onSearchResultsPage == true)
-            {
-                MenuButtons.onSearchResultsPage = false;
-                MainWindow.NavigateToPage(MenuButtons.searchResultPage);
-            }
 
         }
 
@@ -55,9 +43,9 @@ namespace cooking_app
             Ingredients.BringIntoView();
             IEnumerable<Button> tabs = TabSection.Children.OfType<Button>();
 
-            if (sender.Equals(IngridentsTab))
+            if (sender.Equals(IngredientsTab))
             {
-                tabs.ElementAt(0).Background = Brushes.Gray;
+                tabs.ElementAt(0).Background = Brushes.LightGray;
                 tabs.ElementAt(1).Background = Brushes.White;
                 tabs.ElementAt(2).Background = Brushes.White;
                 tabs.ElementAt(3).Background = Brushes.White;
@@ -65,18 +53,44 @@ namespace cooking_app
         }
 
         private void ScrollToInstructions(object sender, RoutedEventArgs e)
-        {
-            
+        {         
             Instructions.BringIntoView();
+            IEnumerable<Button> tabs = TabSection.Children.OfType<Button>();
+
+            if (sender.Equals(InstructionsTab))
+            {
+                tabs.ElementAt(0).Background = Brushes.White;
+                tabs.ElementAt(1).Background = Brushes.LightGray;
+                tabs.ElementAt(2).Background = Brushes.White;
+                tabs.ElementAt(3).Background = Brushes.White;
+            }
         }
 
         private void ScrollToNutrition(object sender, RoutedEventArgs e)
         {
             Nutrition.BringIntoView();
+            IEnumerable<Button> tabs = TabSection.Children.OfType<Button>();
+
+            if (sender.Equals(NutritionTab))
+            {
+                tabs.ElementAt(0).Background = Brushes.White;
+                tabs.ElementAt(1).Background = Brushes.White;
+                tabs.ElementAt(2).Background = Brushes.LightGray;
+                tabs.ElementAt(3).Background = Brushes.White;
+            }
         }
         private void ScrollToReviews(object sender, RoutedEventArgs e)
         {
             Reviews.BringIntoView();
+            IEnumerable<Button> tabs = TabSection.Children.OfType<Button>();
+
+            if (sender.Equals(ReviewsTab))
+            {
+                tabs.ElementAt(0).Background = Brushes.White;
+                tabs.ElementAt(1).Background = Brushes.White;
+                tabs.ElementAt(2).Background = Brushes.White;
+                tabs.ElementAt(3).Background = Brushes.Gray;
+            }
         }
 
         private void EggsPopup(object sender, RoutedEventArgs e)
@@ -92,5 +106,21 @@ namespace cooking_app
                 
         }
 
+        private void DisplayUserComment(object sender, RoutedEventArgs e)
+        {
+            RecipePageSubmittedComment comment = new RecipePageSubmittedComment();
+            LoginPage page = LoginPage.instance;
+            if(page.LoginEmailTextBox.Text == "") {
+                comment.UserNameContainer.Text = "anonymous";
+            }
+            else
+            {
+                comment.UserNameContainer.Text = page.LoginEmailTextBox.Text;
+            }
+            comment.UserCommentContainer.Text = UserComment.Text;
+            comment.addUserRating(UserRating.getNoOfStars());
+
+            UserCommentsAdded.Items.Add(comment);
+        }
     }
 }

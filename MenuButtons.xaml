@@ -11,10 +11,10 @@
 
         <DockPanel  Height="70" Width="360">
             <StackPanel Width="120">
-                <Button x:Name="profileButtonImage" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0" >
+                <Button x:Name="profileButtonImage" Click="ProfileButtonClick" HorizontalAlignment="Center" Height="40" Background="White" BorderThickness="0" >
                     <Image Source="/cooking-app;component/img/Profile.png"/>
                 </Button>
-                <Button x:Name="profileText" HorizontalAlignment="Center" Height="30" Background="White" BorderThickness="0" FontSize="18">
+                <Button x:Name="profileText" Click="ProfileButtonClick" HorizontalAlignment="Center" Height="30" Background="White" BorderThickness="0" FontSize="18">
                     Profile
                 </Button>
             </StackPanel>

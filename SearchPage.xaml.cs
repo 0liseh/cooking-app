@@ -21,29 +21,32 @@ namespace cooking_app
     /// </summary>
     public partial class SearchPage : Page
     {
+
+        public static SearchPage instance;
+
         public static String search;
 
         public static bool onSavedPage = false;
         public static bool onHomePage = false;
 
-        public static string[] recentSearches = { "Mac and Cheese" , "30 minute Ramen", "Poke", "Burritos", "Easy Pizza", "Chicken Salad",
-        "Apple pie",  "Overnight oats", "Turkey"};
+        public static string[] recentSearches = new string[9];//{ "Mac and Cheese" , "30 minute Ramen", "Poke", "Burritos", "Easy Pizza", "Chicken Salad",
+        //"Apple pie",  "Overnight oats", "Turkey"};
 
         //Initial values 
-        String recentOne = "Mac and Cheese";
-        String recentTwo = "30 minute Ramen";
-        String recentThree = "Poke";
-        String recentFour = "Burritos";
-        String recentFive = "Easy Pizza";
-        String recentSix = "Chicken Salad";
-        String recentSeven = "Apple pie";
-        String recentEight = "Overnight oats";
-        String recentNine = "Turkey";
+        String recentOne = "";//"Mac and Cheese";
+        String recentTwo = "";//"30 minute Ramen";
+        String recentThree = "";//"Poke";
+        String recentFour = "";//"Burritos";
+        String recentFive = "";//"Easy Pizza";
+        String recentSix = "";//"Chicken Salad";
+        String recentSeven = "";//"Apple pie";
+        String recentEight = "";//"Overnight oats";
+        String recentNine = "";//"Turkey";
 
         public SearchPage()
         {
             InitializeComponent();
-
+            instance = this;
         }
 
         // Will get rid of the text in the search bar 
@@ -133,7 +136,8 @@ namespace cooking_app
                 searchBar.Text = searchBar.Text.Substring(0, searchBar.Text.Length - 1);
             }
         }
-
+        string searchResults;
+        string[] filter = new string[1];
         private void enter_Click(object sender, RoutedEventArgs e)
         {
             //Saves whatever was searched in a string  
@@ -179,8 +183,11 @@ namespace cooking_app
             recentOne = search;
 
             //Navigate to the recipe results page 
-            MainWindow.NavigateToPage(MenuButtons.searchResultPage);
+            MainWindow.NavigateToPage(MainWindow.searchResultPage);
 
+            searchResults = search;
+
+            NavigationService.Navigate(new SearchResultsPage(searchResults, filter));
 
         }
 
@@ -309,16 +316,17 @@ namespace cooking_app
 
         private void back_click(object sender, RoutedEventArgs e)
         {
-             if(MenuButtons.onSavedRecipesPage == true)
-             {
+            if (MenuButtons.onSavedRecipesPage == true)
+            {
                 MenuButtons.onSavedRecipesPage = false;
-                MainWindow.NavigateToPage(MenuButtons.savedRecipesPage);
+                MainWindow.NavigateToPage(MainWindow.savedRecipesPage);
 
-             }else if (MenuButtons.onHomePage == true)
-             {
-                 MenuButtons.onHomePage = false;
-                 MainWindow.NavigateToPage(MenuButtons.homePage);
-             }        
+            }
+            else if (MenuButtons.onHomePage == true)
+            {
+                MenuButtons.onHomePage = false;
+                MainWindow.NavigateToPage(MainWindow.homePage);
+            }
 
         }
     }

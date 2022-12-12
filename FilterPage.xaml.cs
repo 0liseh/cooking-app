@@ -21,13 +21,14 @@ namespace cooking_app
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class FilterPage : Page { 
-
+    public partial class FilterPage : Page
+    {
+        public static FilterPage instance;
 
         private List<Object> rbList = new List<Object>();
         public static String[] appliedFilters = new String[6];
 
-        public String[,] testReciepe = new String[3,6] {
+        public String[,] testReciepe = new String[3, 6] {
                                             { "Breakfast", "Easy", "Vegan", "Italian", "5", "120"},
                                             { "Lunch", "Easy", "Low-Carbs", "Italian", "35", "120" },
                                             { "Dinner", "Medium", "", "Italian", "40", "60"}
@@ -45,9 +46,17 @@ namespace cooking_app
         public FilterPage()
         {
             InitializeComponent();
-
-     
+            instance = this;
         }
+
+        string searchResults;
+        public FilterPage(string strfromp) : this()
+        {
+            searchResults = strfromp;
+            //this.Loaded += new RoutedEventHandler(displayResults);
+        }
+
+        String[] appliedFiltersText;
 
         // can have null values and last element of the list are double converted into string
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -64,39 +73,40 @@ namespace cooking_app
                 appliedFilters[4] = minduration.ToString();
                 appliedFilters[5] = maxduration.ToString();
             }
-           
+
+            appliedFiltersText = appliedFilters;
+            NavigationService.Navigate(new SearchResultsPage(searchResults, appliedFilters));
 
             // foreach (String f in appliedFilters)
-         //   {
-               // if (appliedFilters[i] != null && (appliedFilters[4] != "5" && appliedFilters[5] != "120"))
-           //         MessageBox.Show(appliedFilters[i], i.ToString());
-           // }
-            
-            for (int i = 0; i < 3; i++)
-            {
+            //   {
+            // if (appliedFilters[i] != null && (appliedFilters[4] != "5" && appliedFilters[5] != "120"))
+            //         MessageBox.Show(appliedFilters[i], i.ToString());
+            // }
 
-                if (
-                            testReciepe[i, 0].ToUpper() == appliedFilters[0].ToUpper()
-                                        &&
-                            testReciepe[i, 1].ToUpper() == appliedFilters[1].ToUpper()
+            //for (int i = 0; i < 3; i++)
+            /** {
 
-                                        &&
-                            testReciepe[i, 2].ToUpper() == appliedFilters[2].ToUpper()
-                                        &&
+                 if (
+                             testReciepe[i, 0].ToUpper() == appliedFilters[0].ToUpper()
+                                         &&
+                             testReciepe[i, 1].ToUpper() == appliedFilters[1].ToUpper()
 
-                            testReciepe[i, 3].ToUpper() == appliedFilters[3].ToUpper()
+                                         &&
+                             testReciepe[i, 2].ToUpper() == appliedFilters[2].ToUpper()
+                                         &&
 
-                                        &&
-                            (testReciepe[i, 4] == appliedFilters[4]  && testReciepe[i, 5] == appliedFilters[5] )
+                             testReciepe[i, 3].ToUpper() == appliedFilters[3].ToUpper()
 
-                 ) { }
-            }
+                                         &&
+                             (testReciepe[i, 4] == appliedFilters[4]  && testReciepe[i, 5] == appliedFilters[5] )
 
+                  ) { }
+             }
+            **/
             //ApplicationSwitcher.filterSwitcher = this;
             //ApplicationSwitcher.Switch(srpage);
 
-            MainWindow.NavigateToPage(MenuButtons.searchResultPage); 
-
+            //MainWindow.NavigateToPage(MenuButtons.searchResultPage); 
 
 
         }
@@ -106,7 +116,7 @@ namespace cooking_app
         {
             rbList.Add(sender);
             RadioButton radioButton = (RadioButton)sender;
-            
+
             try
             {
                 click++;
@@ -120,13 +130,13 @@ namespace cooking_app
 
                 click %= 2;
 
-     
+
 
             }
             catch (Exception) { MessageBox.Show("invalid Meal filter selection"); }
-        
 
-    }
+
+        }
 
         int dLclick1 = 0;
         private void DiffLevel_click(object sender, RoutedEventArgs e)
@@ -147,7 +157,7 @@ namespace cooking_app
 
                 dLclick1 %= 2;                   // click = 0
 
-       
+
 
             }
             catch (Exception) { MessageBox.Show("invalid Difficulty Level filter selection"); }
@@ -173,7 +183,7 @@ namespace cooking_app
 
                 DietClick1 %= 2;                   // click = 0
 
-             
+
 
             }
             catch (Exception) { MessageBox.Show("invalid Diet filter selection"); }
@@ -182,7 +192,7 @@ namespace cooking_app
         }
 
         int Cus_Click1 = 0;
-        private void Cusine_Click(object sender, RoutedEventArgs e)
+        public void Cusine_Click(object sender, RoutedEventArgs e)
         {
             rbList.Add(sender);
 
@@ -201,7 +211,7 @@ namespace cooking_app
 
                 Cus_Click1 %= 2;                   // click = 0
 
-          
+
 
             }
             catch (Exception) { MessageBox.Show("invalid Diet filter selection"); }
@@ -210,9 +220,9 @@ namespace cooking_app
         public void minDuration_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
-               minduration =  MinDuration.Value;
-          
-         
+            minduration = MinDuration.Value;
+
+
 
         }
         public void maxDuration_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -220,9 +230,10 @@ namespace cooking_app
             maxduration = MaxDuration.Value;
         }
 
-        public void clear_click(object sender, RoutedEventArgs e) {
+        public void clear_click(object sender, RoutedEventArgs e)
+        {
 
-            
+
             foreach (Object s in rbList)
             {
                 RadioButton radioButton = (RadioButton)s;
@@ -235,7 +246,7 @@ namespace cooking_app
             cuisineFil = "";
             MinDuration.Value = 5;
             MaxDuration.Value = 120;
-            
+
             click = 0;
             dLclick1 = 0;
             DietClick1 = 0;
@@ -247,15 +258,10 @@ namespace cooking_app
 
 
         }
-        public void Navigate(Page nextPage)
-        {
-            this.Content = nextPage;
-            
-        }
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
 
         }
     }
-    }
+}

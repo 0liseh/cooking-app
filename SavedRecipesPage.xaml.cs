@@ -19,12 +19,18 @@ namespace cooking_app
     /// <summary>
     /// Interaction logic for SavedRecipesPage.xaml
     /// </summary>
+    
     public partial class SavedRecipesPage : Page
     {
+        public static SavedRecipesPage instance = null;
+        public static StackPanel SPRef = null;
         public SavedRecipesPage()
         {
 
             InitializeComponent();
+            instance = this;
+
+            SPRef = SavedRecipesStackPanel;
 
             // The inital saved recipes 
             string[] title = { "Mac and Cheese", "Pizza", "Ceasar Salad", "Japanese Udon" };
@@ -47,7 +53,7 @@ namespace cooking_app
                 Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/" + image[i], UriKind.Absolute);
                 ImageSource imgSource = new BitmapImage(uri);
                 recipe.ImageCard = imgSource;
-                this.SavedRecipes.Children.Add(recipe);
+                this.SavedRecipesStackPanel.Children.Add(recipe);
             }
 
         }
@@ -63,37 +69,37 @@ namespace cooking_app
             recipe.RatingText.Content = rating;
             recipe.ImageCard = img;
 
-            this.SavedRecipes.Children.Insert(2,recipe);
+            SPRef.Children.Insert(2,recipe);
         }
 
 
         // When the user clicks to filter the saved recipes 
-        private void catergory1_Click(object sender, RoutedEventArgs e)
+        private void breakfast_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void catergory2_Click(object sender, RoutedEventArgs e)
+        private void lunch_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void catergory3_Click(object sender, RoutedEventArgs e)
+        private void dinner_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void catergory4_Click(object sender, RoutedEventArgs e)
+        private void snacks_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void catergory5_Click(object sender, RoutedEventArgs e)
+        private void desert_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void catergory6_Click(object sender, RoutedEventArgs e)
+        private void drinks_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -101,7 +107,7 @@ namespace cooking_app
         private void generalSearch_Click(object sender, RoutedEventArgs e)
         {
             MenuButtons.onSavedRecipesPage = true;
-            MainWindow.NavigateToPage(MenuButtons.searchPage);
+            MainWindow.NavigateToPage(MainWindow.searchPage);
            
         }
 
@@ -109,7 +115,7 @@ namespace cooking_app
         private void searchSaved_Click(object sender, RoutedEventArgs e)
         {
             MenuButtons.onSavedRecipesPage = true;
-            MainWindow.NavigateToPage(MenuButtons.searchPage);
+            MainWindow.NavigateToPage(MainWindow.searchSavedPage);
         }
 
 

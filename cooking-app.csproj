@@ -28,6 +28,17 @@
     <None Remove="img\5Min\microwaveCheesecake.jpg" />
     <None Remove="img\5Min\quesadillas.jpg" />
     <None Remove="img\5Min\turkishcoffee.jpg" />
+    <None Remove="img\5Min\vietnamesePizza.jpg" />
+    <None Remove="img\advanceFilter\capreseZoodleSalad.jpg" />
+    <None Remove="img\advanceFilter\cauliflowerRisotto.jpeg" />
+    <None Remove="img\advanceFilter\chickenAlfredoCasserole.jpg" />
+    <None Remove="img\advanceFilter\chickenParmesanMeatballs.jpg" />
+    <None Remove="img\advanceFilter\creamyChickenMarsala.jpg" />
+    <None Remove="img\advanceFilter\eggplantLasagna.jpg" />
+    <None Remove="img\advanceFilter\italianChickenInCreamySauce.jpg" />
+    <None Remove="img\advanceFilter\italianMeatloaf.jpg" />
+    <None Remove="img\advanceFilter\marryMetChicken.jpg" />
+    <None Remove="img\advanceFilter\tomatoeAndBasilSoup.jpg" />
     <None Remove="img\Bread.jpeg" />
     <None Remove="img\Ceaser Salad.jpg" />
     <None Remove="img\chocolateCake.jpg" />
@@ -94,6 +105,39 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\5Min\vietnamesePizza.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\capreseZoodleSalad.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\cauliflowerRisotto.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\chickenAlfredoCasserole.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\chickenParmesanMeatballs.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\creamyChickenMarsala.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\eggplantLasagna.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\italianChickenInCreamySauce.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\italianMeatloaf.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\marryMetChicken.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\advanceFilter\tomatoeAndBasilSoup.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\chocolateCake.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

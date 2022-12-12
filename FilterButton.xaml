@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:cooking_app"
              mc:Ignorable="d" 
-             d:DesignHeight="40" d:DesignWidth="110">
+             d:DesignHeight="40" d:DesignWidth="130">
     <Grid Background="white" >
-        <Button x:Name="filterButton" Grid.Column="2" Grid.Row="2" FontSize="15" Background="#50AF18" Foreground="#F5F5F5" Margin="5, 5, 5, 5" Padding="10, 2, 10, 5" Height="27" Width="100" HorizontalAlignment="Left">
+        <Button x:Name="filterButton" Click="btnFilter_Clicked" Grid.Column="2" Grid.Row="2" FontSize="15" Background="#50AF18" Foreground="#F5F5F5" Margin="5, 5, 5, 5" Padding="10, 2, 10, 5" Height="27" Width="120" HorizontalAlignment="Left">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>

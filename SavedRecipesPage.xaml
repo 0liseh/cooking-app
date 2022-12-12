@@ -50,11 +50,11 @@
                 <Grid Margin="0,0,0,0" DockPanel.Dock="Top">
 
 
-                    <StackPanel Name="SavedRecipes">
+                    <StackPanel Name="SavedRecipesStackPanel">
                         <StackPanel Orientation="horizontal">
-                            <Button x:Name ="catergory1" Grid.Column="0" Grid.Row="3" Width="100" Height="70"
+                            <Button x:Name ="breakfast" Grid.Column="0" Grid.Row="3" Width="100" Height="70"
                      Margin="20,20,10,20" Content="BREAKFAST" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory1_Click">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="breakfast_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -65,9 +65,9 @@
                             </Button>
 
 
-                            <Button x:Name="catergory2" Grid.Column="1" Grid.Row="3" Width="100" Height="70"
+                            <Button x:Name="lunch" Grid.Column="1" Grid.Row="3" Width="100" Height="70"
                      Margin="10,20,20,20" Content="LUNCH" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory2_Click">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="lunch_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -77,9 +77,9 @@
 
                             </Button>
 
-                            <Button x:Name="catergory3" Grid.Column="2" Grid.Row="3" Width="100" Height="70"
+                            <Button x:Name="dinner" Grid.Column="2" Grid.Row="3" Width="100" Height="70"
                      Margin="0" Content="DINNER" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory3_Click">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="dinner3_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -96,9 +96,9 @@
                         <StackPanel Orientation="horizontal">
 
 
-                            <Button  x:Name="catergory4" Grid.Column="0" Grid.Row="4" Width="100" Height="70"
+                            <Button  x:Name="snacks" Grid.Column="0" Grid.Row="4" Width="100" Height="70"
                      Margin="20,0,10,10" Content="SNACKS" Background="#50af18" Foreground="White"
-                     FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory4_Click">
+                     FontSize="17" FontWeight="Medium" BorderThickness="2" Click="snacks_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -108,9 +108,9 @@
 
                             </Button>
 
-                            <Button x:Name="catergory5" Grid.Column="1" Grid.Row="4" Width="100" Height="70"
+                            <Button x:Name="dessert" Grid.Column="1" Grid.Row="4" Width="100" Height="70"
                      Margin="10,0,10,10" Content="DESSERT" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory5_Click">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="dessert_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
@@ -121,9 +121,9 @@
                             </Button>
 
 
-                            <Button x:Name="catergory6" Grid.Column="2" Grid.Row="4" Width="100" Height="70"
+                            <Button x:Name="drinks" Grid.Column="2" Grid.Row="4" Width="100" Height="70"
                      Margin="10,0,0,10" Content="DRINKS" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory6_Click">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="drinks_Click">
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="CornerRadius" Value="7"/>

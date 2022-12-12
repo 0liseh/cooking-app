@@ -20,27 +20,18 @@ namespace cooking_app
     /// </summary>
     public partial class MenuButtons : UserControl
     {
-        public static Page homePage = new HomePage();
-        public static Page searchPage = new SearchPage();
-        public static Page searchResultPage = new SearchResultsPage();
-        public static Page filterPage = new FilterPage();
-        //public static Page profilePage = new ProfilePage();
-        public static Page misoRamen = new RecipeMisoRamenPage();
-        public static Page bobaTea = new RecipeBobaTeaPage();
-        public static Page jollofRice = new RecipeJollofRicePage();
-        public static Page chocolateCake = new RecipeChocolateCakePage();
-        public static Page macAndCheese = new RecipeMacAndCheesePage();
-        public static Page savedRecipesPage = new SavedRecipesPage();
+        
         public static Page searchSavedPage = new SearchSavedPage();
         public static Page savedResults = new SearchSavedRecipesResuts();
+        
 
 
         public static bool onSavedRecipesPage = false;
         public static bool onSearchResultsPage = false;
         public static bool onHomePage = false;
         public static bool onSearchPage = false;
-        public static string generalSearch;
-        public static string savedSearch;
+        public static string generalSearch="";
+        public static string savedSearch="";
 
         public static bool durationFilterClicked = false;
         public static string durationFilterText = "5Min";
@@ -52,17 +43,17 @@ namespace cooking_app
 
         public void ProfileButtonClick(object sender, RoutedEventArgs e)
         {
-            
+            MainWindow.NavigateToPage(MainWindow.loginPage);
         }
 
         public void HomeButtonClick(object sender, RoutedEventArgs e)
         {
-            MainWindow.NavigateToPage(homePage);
+            MainWindow.NavigateToPage(MainWindow.homePage);
         }
 
         public void SavedRecipesButtonClick(object sender, RoutedEventArgs e)
         {
-            MainWindow.NavigateToPage(savedRecipesPage);
+            MainWindow.NavigateToPage(MainWindow.savedRecipesPage);
         }
     }
 }

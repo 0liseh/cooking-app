@@ -20,20 +20,19 @@ namespace cooking_app
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        public static Page homePage = new HomePage();
         public static Page searchPage = new SearchPage();
         public static Page searchResultPage = new SearchResultsPage();
         public static Page filterPage = new FilterPage();
-        //public static Page profilePage = new ProfilePage();
         public static Page misoRamen = new RecipeMisoRamenPage();
         public static Page bobaTea = new RecipeBobaTeaPage();
         public static Page jollofRice = new RecipeJollofRicePage();
         public static Page chocolateCake = new RecipeChocolateCakePage();
         public static Page macAndCheese = new RecipeMacAndCheesePage();
         public static Page savedRecipesPage = new SavedRecipesPage();
+        public static Page loginPage = new LoginPage();
         public static Page searchSavedPage = new SearchSavedPage();
-        public static Page savedResults = new SearchSavedRecipesResuts();
-
+   
 
         public static bool onSavedRecipesPage = false;
         public static bool onSearchResultsPage = false;
@@ -50,10 +49,11 @@ namespace cooking_app
         {
 
             InitializeComponent();
-            CookingApplication.Content = new HomePage();
+            //CookingApplication.Content = new HomePage();
+            //CookingApplication.Content = new RecipeCard1();
             //CookingApplication.Content = new SearchResultsPage();
             //CookingApplication.Content = new FilterPage();
-            //CookingApplication.Content = new RecipeMisoRamenPage();
+            CookingApplication.Content = new RecipeMisoRamenPage();
             //CookingApplication.Content = new RecipeJollofRicePage();
             //CookingApplication.Content = new RecipeChocolateCakePage();
             //CookingApplication.Content = new RecipeMacAndCheesePage();
@@ -66,15 +66,15 @@ namespace cooking_app
         public static void NavigateToPage(Page page)
         {
             //Need to set CookingApplication on an instance of the MainWindow class
-            if(page == MenuButtons.savedRecipesPage && MenuButtons.onSavedRecipesPage == false )
+            if(page == SavedRecipesPage.instance && MenuButtons.onSavedRecipesPage == false )
             {
                 //MenuButtons.onSavedRecipesPage = true;
                 //MenuButtons.onHomePage = false;
                 ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
-            }else if(page == MenuButtons.homePage && MenuButtons.onHomePage == false)
+            }else if(page == MainWindow.homePage && MenuButtons.onHomePage == false)
             {
                 //MenuButtons.onHomePage = true;
-               //MenuButtons.onSavedRecipesPage = false;
+               MenuButtons.onSavedRecipesPage = false;
                 ((MainWindow)Application.Current.MainWindow).CookingApplication.Content = page;
             }
             else

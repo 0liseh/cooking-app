@@ -32,6 +32,13 @@ namespace cooking_app
 
         }
 
+        public void btnFilter_Clicked(object sender, RoutedEventArgs e)
+        {
+            FilterPage page = new FilterPage();
+
+            (this.Parent as Panel).Children.Remove(this);
+        }
+
         public FilterButton()
         {
             InitializeComponent();

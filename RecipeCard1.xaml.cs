@@ -96,19 +96,13 @@ namespace cooking_app
 
         public void cardBtnClick(object sender, RoutedEventArgs e)
         {
-            MenuButtons.onSearchResultsPage = true;
-
-            if (title.Contains("Miso Ramen", StringComparison.InvariantCultureIgnoreCase))
+            if (title.Contains("Chocolate Cake", StringComparison.InvariantCultureIgnoreCase))
             {
-                MainWindow.NavigateToPage(MenuButtons.misoRamen);
+                MainWindow.NavigateToPage(MainWindow.chocolateCake);
             }
 
-
-            recentlyViewedListTitle.Add(title);
-            recentlyViewedListDuration.Add(duration);
-            recentlyViewedListRating.Add(rating);
-            recentlyViewedListDifficulty.Add(difficulty);
-            recentlyViewedListImage.Add(img);
+            HomePage page = HomePage.instance;
+            page.addSavedRecipe(title, duration, difficulty, rating, img);
         }
 
         public List<String> getList
@@ -118,14 +112,10 @@ namespace cooking_app
 
         public void savedRecipeClick(object sender, RoutedEventArgs e)
         {
-            SavedRecipesPage page = new SavedRecipesPage();
+            SavedRecipesPage page = SavedRecipesPage.instance;
             page.addSavedRecipe(title, duration, difficulty, rating, img);
-
-            MainWindow.NavigateToPage(page);
-
-
-            MainWindow.savedRecipesPage.addSavedRecipe(title, duration, difficulty, rating, img);
-
         }
+
+
     }
 }

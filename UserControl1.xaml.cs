@@ -90,8 +90,17 @@ namespace cooking_app
         {
             if (title.Contains("Chocolate Cake", StringComparison.InvariantCultureIgnoreCase))
             {
-                MainWindow.NavigateToPage(MenuButtons.chocolateCake);
+                MainWindow.NavigateToPage(MainWindow.chocolateCake);
             }
+
+            HomePage page = HomePage.instance;
+            page.addSavedRecipe(title, duration, difficulty, rating, img);
+        }
+
+        public void btn_Saved(object sender, RoutedEventArgs e)
+        {
+            SavedRecipesPage page = SavedRecipesPage.instance;
+            page.addSavedRecipe(title, duration, difficulty, rating, img);
         }
     }
 }

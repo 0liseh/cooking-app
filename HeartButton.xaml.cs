@@ -27,7 +27,13 @@ namespace cooking_app
 
         private void heart_Click(object sender, RoutedEventArgs e)
         {
+            Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/MisoRamen.jpg", UriKind.Absolute);
+            ImageSource imgSource = new BitmapImage(uri);
 
+            SavedRecipesPage page = SavedRecipesPage.instance;
+            page.addSavedRecipe("RA", "RA", "RA", "RA", imgSource);
+
+            //MainWindow.NavigateToPage(page);
 
         }
     }

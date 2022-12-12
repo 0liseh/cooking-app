@@ -96,7 +96,7 @@ namespace cooking_app
         {
             if (title.Contains("Miso Ramen", StringComparison.InvariantCultureIgnoreCase))
             {
-                MainWindow.NavigateToPage(MenuButtons.misoRamen);
+                MainWindow.NavigateToPage(MainWindow.misoRamen);
             }
         }
     }

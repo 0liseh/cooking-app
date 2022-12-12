@@ -55,10 +55,10 @@
             </Grid.RowDefinitions>
 
             <ScrollViewer>
-                <Grid Margin="-7,0,0,0" DockPanel.Dock="Top">
+                <Grid Margin="-7,0,0,0">
 
 
-                    <StackPanel Name="SavedRecipes">
+                    <StackPanel Name="SavedRecipes" Height="650">
                         
                         <!--
                         

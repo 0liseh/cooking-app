@@ -21,6 +21,8 @@ namespace cooking_app
     /// </summary>
     public partial class SearchSavedPage : Page
     {
+        public static SearchSavedPage instance = null;
+
         public static String search = "";
 
         public static bool onSavedPage = false;
@@ -42,7 +44,7 @@ namespace cooking_app
         public SearchSavedPage()
         {
             InitializeComponent();
-
+            instance = this;
         }
 
         // Will get rid of the text in the search bar 
@@ -133,10 +135,12 @@ namespace cooking_app
             }
         }
 
+        string searchResults;
         private void enter_Click(object sender, RoutedEventArgs e)
         {
-            //Saves whatever was searched in a string  
+            //Saves whatever was searched in a string
             search = searchBar.Text;
+            searchResults = search;
             //Gets rid of the text in the search bar 
             searchBar.Text = "Search Saved Recipes";
 
@@ -181,9 +185,13 @@ namespace cooking_app
 
             MenuButtons.savedSearch = search.ToLower();
             search = "";
-            MainWindow.NavigateToPage(MenuButtons.savedResults);
+            //MainWindow.NavigateToPage(MenuButtons.savedResults);
+
+            NavigationService.Navigate(new SearchSavedRecipesResuts(searchResults));
 
         }
+
+       
 
         private void shift_Click(object sender, RoutedEventArgs e)
         {
@@ -334,7 +342,7 @@ namespace cooking_app
 
         private void back_click(object sender, RoutedEventArgs e)
         {
-            MainWindow.NavigateToPage(MenuButtons.savedRecipesPage);
+            MainWindow.NavigateToPage(SavedRecipesPage.instance);
 
         }
     }

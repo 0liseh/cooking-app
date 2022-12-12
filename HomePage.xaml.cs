@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
+using System.Drawing;
 
 
 namespace cooking_app
@@ -22,7 +24,7 @@ namespace cooking_app
     /// </summary>
     public partial class HomePage : Page
     {
-
+        public static HomePage instance;
 
         List<string> recentlyViewedListTitle = RecipeCard1.recentlyViewedListTitle;
         public static List<string> recentlyViewedListDuration = new List<string>();
@@ -55,6 +57,7 @@ namespace cooking_app
         public HomePage()
         {
             InitializeComponent();
+            instance = this;
 
             for (int i = 0; i < 10; i++)
             {
@@ -95,16 +98,20 @@ namespace cooking_app
 
         }
 
-
+        string filterText;
+        string[] filter = new string[1];
         private void btn1Hr_Click(object sender, RoutedEventArgs e)
         {
+            filterText = "1hr";
+            filter[0] = "1 HR";
+            NavigationService.Navigate(new SearchResultsPage(filterText, filter));
+        }
 
-            MainWindow.durationFilterClicked = true;
-
-            MainWindow.durationFilterText = "1hr";
-
-            MainWindow.NavigateToPage(MenuButtons.searchResultPage);
-
+        private void btn5Min_Click(object sender, RoutedEventArgs e)
+        {
+            filterText = "5min";
+            filter[0] = "5 MIN";
+            NavigationService.Navigate(new SearchResultsPage(filterText, filter));
         }
 
         private void btnAddTrending(object sender, RoutedEventArgs e)
@@ -144,8 +151,21 @@ namespace cooking_app
         private void searchBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             MenuButtons.onHomePage = true;
-            MainWindow.NavigateToPage(MenuButtons.searchPage);
+            MainWindow.NavigateToPage(MainWindow.searchPage);
 
+        }
+
+        public void addSavedRecipe(string title, string duration, string difficulty, string rating, ImageSource img)
+        {
+            UserControl1 recipe = new UserControl1();
+
+            recipe.Title = title;
+            recipe.DurationText.Content = duration;
+            recipe.DifficultyText.Content = difficulty;
+            recipe.RatingText.Content = rating;
+            recipe.ImageCard = img;
+
+            this.RecentlyViewed.Children.Insert(0,recipe);
         }
     }
 }
