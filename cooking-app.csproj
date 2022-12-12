@@ -40,7 +40,7 @@
     <None Remove="img\advanceFilter\marryMetChicken.jpg" />
     <None Remove="img\advanceFilter\tomatoeAndBasilSoup.jpg" />
     <None Remove="img\Bread.jpeg" />
-    <None Remove="img\Ceaser Salad.jpg" />
+    <None Remove="img\ceaser.jpg" />
     <None Remove="img\chocolateCake.jpg" />
     <None Remove="img\Cinnamon.jpg" />
     <None Remove="img\Curry.jpg" />
@@ -297,7 +297,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="img\Ceaser Salad.jpg">
+    <Resource Include="img\ceaser.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\Cinnamon.jpg">

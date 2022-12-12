@@ -132,7 +132,7 @@ namespace cooking_app
 
             if (searchBar.Text != null && searchBar.Text != "")
             {
-                search = search.Substring(0, search.Length - 1);
+                //search = search.Substring(0, search.Length - 1);
                 searchBar.Text = searchBar.Text.Substring(0, searchBar.Text.Length - 1);
             }
         }

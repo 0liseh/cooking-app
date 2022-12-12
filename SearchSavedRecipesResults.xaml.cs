@@ -28,27 +28,6 @@ namespace cooking_app
             InitializeComponent();
             instance = this;
 
-            // The inital saved recipes 
-            // string[] title = { "MAC AND CHEESE", "PIZZA", "CEASER SALAS", "CHICKEN NOODLE SOUP" };
-            // string[] duration = { "30 MIN", "1 HR", "15 MIN", "45 MIN" };
-            // string[] difficulty = { "EASY", "HARD", "EASY", "MEDIUM" };
-            // string[] rating = { "4.5", "4.1", "4.8", "4.0" };
-            // string[] image = { "Mac and cheese.jpg", "Pizza.jpg", "Ceaser Salad.jpg" };
-
-
-            // Create a few default saved recipes initally 
-            //  for (int i = 0; i < 4; i++)
-            // {
-            //     RecipeCard2 recipe = new RecipeCard2();
-
-            //     recipe.Title = title[i];
-            //     recipe.DurationText.Content = duration[i];
-            //     recipe.DifficultyText.Content = difficulty[i];
-            //     recipe.RatingText.Content = rating[i];
-
-            //      this.SavedRecipes.Children.Add(recipe);
-            //   }
-
         }
 
         string str;
@@ -85,6 +64,80 @@ namespace cooking_app
                 recipe.DifficultyText.Content = "EASY";
                 recipe.RatingText.Content = "4.0";
                 Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/chocolatecake.jpg", UriKind.Absolute);
+                ImageSource imgSource = new BitmapImage(uri);
+                recipe.ImageCard = imgSource;
+                this.SavedRecipes.Children.Add(recipe);
+
+            }
+            else if (str.Contains("lunch", StringComparison.InvariantCultureIgnoreCase)
+)
+            {
+                RecipeCard2 recipe = new RecipeCard2();
+
+                recipe.Title = "Mac and Cheese";
+                recipe.DurationText.Content = "30 MIN";
+                recipe.DifficultyText.Content = "EASY";
+                recipe.RatingText.Content = "4.5";
+                recipe.Duration = "30 MIN";
+                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/mac/mac2.jpg", UriKind.Absolute);
+                ImageSource imgSource = new BitmapImage(uri);
+                recipe.ImageCard = imgSource;
+                this.SavedRecipes.Children.Add(recipe);
+
+            }
+
+            else if (str.Contains("dinner", StringComparison.InvariantCultureIgnoreCase)
+)
+            {
+                RecipeCard2 recipe = new RecipeCard2();
+
+                recipe.Title = "Miso Ramen";
+                recipe.DurationText.Content = "30 MIN";
+                recipe.DifficultyText.Content = "EASY";
+                recipe.RatingText.Content = "3.0";
+                recipe.Duration = "30 MIN";
+                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/ramen/MisoRamen.jpg", UriKind.Absolute);
+                ImageSource imgSource = new BitmapImage(uri);
+                recipe.ImageCard = imgSource;
+                this.SavedRecipes.Children.Add(recipe);
+
+                RecipeCard2 recipe2 = new RecipeCard2();
+
+                recipe.Title = "Pizza";
+                recipe.DurationText.Content = "1 HR";
+                recipe.DifficultyText.Content = "HARD";
+                recipe.RatingText.Content = "4.8";
+                recipe.Duration = "1 HR";
+                Uri uri1 = new Uri("pack://application:,,,/cooking-app;component/img/pizza.jpg", UriKind.Absolute);
+                ImageSource imgSource1 = new BitmapImage(uri);
+                recipe2.ImageCard = imgSource;
+                this.SavedRecipes.Children.Add(recipe2);
+
+                RecipeCard2 recipe3 = new RecipeCard2();
+
+                recipe.Title = "Japanese Udon";
+                recipe.DurationText.Content = "45 MIN";
+                recipe.DifficultyText.Content = "MED";
+                recipe.RatingText.Content = "4.0";
+                recipe.Duration = "45 MIN";
+                Uri uri3 = new Uri("pack://application:,,,/cooking-app;component/ramen/MisoRamen.jpg", UriKind.Absolute);
+                ImageSource imgSource3 = new BitmapImage(uri);
+                recipe.ImageCard = imgSource;
+                this.SavedRecipes.Children.Add(recipe3);
+
+            }
+
+            else if (str.Contains("drinks", StringComparison.InvariantCultureIgnoreCase)
+)
+            {
+                RecipeCard2 recipe = new RecipeCard2();
+
+                recipe.Title = "Bubble Tea";
+                recipe.DurationText.Content = "5 MIN";
+                recipe.DifficultyText.Content = "EASY";
+                recipe.RatingText.Content = "4.0";
+                recipe.Duration = "5 MIN";
+                Uri uri = new Uri("pack://application:,,,/cooking-app;component/img/5Min/bubbletea.jpg", UriKind.Absolute);
                 ImageSource imgSource = new BitmapImage(uri);
                 recipe.ImageCard = imgSource;
                 this.SavedRecipes.Children.Add(recipe);

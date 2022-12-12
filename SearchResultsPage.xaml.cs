@@ -39,7 +39,7 @@ namespace cooking_app
         // RAMEN SEARCH RESULTS
         string[] ramenResults = { "Shoyu Ramen", "Tonkotsu Ramen", "Shio Ramen", "Hakodate", "Miso Ramen", "Hiroshima", "Sapporo Ramen", "Takayama", "Tsukemen", "Tokyo Ramen" };
         string[] ramenImg = { "ShoyuRamen.jpg", "Tonkatsu.jpg", "ShioRamen.jpg", "Hakodate.jpg", "MisoRamen.jpg", "Hiroshima.jpg", "Sapporo.jpg", "Takayama.jpg", "Tsukemen.jpg", "TokyoRamen.jpg" };
-        string[] ramenRating = { "5.0", "5.0", "4.9", "4.8", "4.6", "4.5", "4.5", "4.5", "4.5", "4.3" };
+        string[] ramenRating = { "5.0", "5.0", "4.9", "4.8", "3.0", "4.5", "4.5", "4.5", "4.5", "4.3" };
 
 
         // MAC AND CHEESE SEARCH RESULTS 

@@ -60,7 +60,7 @@
                     <!-- Food pic and card info -->
                     <StackPanel>
                         <!-- Food pic -->
-                        <Image Source="cooking-app;component/img/MisoRamen.jpg" />
+                        <Image Source="cooking-app;component/img/ramen/MisoRamen.jpg" />
 
                         <!-- Food card section -->
                         <Border BorderThickness="2" BorderBrush="#000000">

@@ -31,7 +31,8 @@ namespace cooking_app
             ImageSource imgSource = new BitmapImage(uri);
 
             SavedRecipesPage page = SavedRecipesPage.instance;
-            page.addSavedRecipe("RA", "RA", "RA", "RA", imgSource);
+
+            page.addSavedRecipe("Miso Ramen", "30 MIN", "EASY", "3.0", imgSource);
 
             //MainWindow.NavigateToPage(page);
 

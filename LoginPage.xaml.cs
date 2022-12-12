@@ -45,6 +45,12 @@ namespace cooking_app
 
         }
 
+        private void btn_closed(object sender, RoutedEventArgs e)
+        {
+            MainWindow.NavigateToPage(MainWindow.homePage);
+
+        }
+
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
@@ -57,10 +63,11 @@ namespace cooking_app
             if (validemails.Contains(LoginEmailTextBox.Text) && userIsLoggedIn == false)
             {
                 ErrorMessage.Foreground = Brushes.White;                
-                btnLogin.Content = "Log Out";
                 TextBlockShowOnLogIn.Visibility = Visibility.Hidden;
                 LoginEmailTextBox.Visibility = Visibility.Hidden;
                 MessageBox.Show("You are now logged in!");
+                btnLogin.Content = "Log Out";
+
                 userIsLoggedIn = true;
                 
 

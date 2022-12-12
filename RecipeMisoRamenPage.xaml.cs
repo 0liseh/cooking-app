@@ -34,6 +34,23 @@ namespace cooking_app
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
+            if (MenuButtons.onHomePage)
+            {
+                MainWindow.NavigateToPage(MainWindow.homePage);
+            } else if (MenuButtons.onSavedRecipesPage)
+            {
+                MainWindow.NavigateToPage(MainWindow.savedRecipesPage);
+            } else if (MenuButtons.onSearchResultsPage)
+            {
+                MainWindow.NavigateToPage(MainWindow.searchResultPage);
+            } else
+            {
+                MainWindow.NavigateToPage(MainWindow.homePage);
+            }
+
+            MenuButtons.onHomePage = false;
+            MenuButtons.onSavedRecipesPage = false;
+            MenuButtons.onSearchResultsPage = false;
 
         }
 

@@ -94,9 +94,30 @@ namespace cooking_app
 
         public void cardBtnClick(object sender, RoutedEventArgs e)
         {
-            if (title.Contains("Miso Ramen", StringComparison.InvariantCultureIgnoreCase))
+            if (title.Contains("Chocolate Cake", StringComparison.InvariantCultureIgnoreCase))
             {
+                MenuButtons.onSavedRecipesPage = true;
+                MainWindow.NavigateToPage(MainWindow.chocolateCake);
+            }
+            else if (title.Contains("Miso Ramen", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSavedRecipesPage = true;
                 MainWindow.NavigateToPage(MainWindow.misoRamen);
+            }
+            else if (title.Contains("Mac and Cheese", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSavedRecipesPage = true;
+                MainWindow.NavigateToPage(MainWindow.macAndCheese);
+            }
+            else if (title.Contains("Jollof Rice", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSavedRecipesPage = true;
+                MainWindow.NavigateToPage(MainWindow.jollofRice);
+            }
+            else if (title.Contains("Bubble Tea", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSavedRecipesPage = true;
+                MainWindow.NavigateToPage(MainWindow.bobaTea);
             }
         }
     }

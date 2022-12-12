@@ -335,7 +335,7 @@
         <Rectangle Grid.Row="1" Grid.Column="1" Fill="White" Height="250" Margin="-13,0,0,0"
                    Width="300" Grid.RowSpan="100" Grid.ColumnSpan="100"/>
 
-        <Button x:Name="btnClose" Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="8" Width="25" Height="25" Background="White" BorderThickness="0" HorizontalAlignment="Right" Margin="0,-70,60,5">
+        <Button x:Name="btnClose" Click="btn_closed"  Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="8" Width="25" Height="25" Background="White" BorderThickness="0" HorizontalAlignment="Right" Margin="0,-70,60,5">
             <Button.Content>
                 <fa:ImageAwesome Icon="Close" Foreground="#5F5F5F" />
             </Button.Content>

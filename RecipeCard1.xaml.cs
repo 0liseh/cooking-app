@@ -98,11 +98,32 @@ namespace cooking_app
         {
             if (title.Contains("Chocolate Cake", StringComparison.InvariantCultureIgnoreCase))
             {
+                MenuButtons.onSearchResultsPage = true;
                 MainWindow.NavigateToPage(MainWindow.chocolateCake);
+            } else if (title.Contains("Miso Ramen", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSearchResultsPage = true;
+                MainWindow.NavigateToPage(MainWindow.misoRamen);
+            }
+            else if (title.Contains("Mac and Cheese", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSearchResultsPage = true;
+                MainWindow.NavigateToPage(MainWindow.macAndCheese);
+            }
+            else if (title.Contains("Jollof Rice", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSearchResultsPage = true;
+                MainWindow.NavigateToPage(MainWindow.jollofRice);
+            }
+            else if (title.Contains("Bubble Tea", StringComparison.InvariantCultureIgnoreCase))
+            {
+                MenuButtons.onSearchResultsPage = true;
+                MainWindow.NavigateToPage(MainWindow.bobaTea);
             }
 
             HomePage page = HomePage.instance;
             page.addSavedRecipe(title, duration, difficulty, rating, img);
+
         }
 
         public List<String> getList
