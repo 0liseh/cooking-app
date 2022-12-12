@@ -20,9 +20,35 @@ namespace cooking_app
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+
+        public static Page searchPage = new SearchPage();
+        public static Page searchResultPage = new SearchResultsPage();
+        public static Page filterPage = new FilterPage();
+        //public static Page profilePage = new ProfilePage();
+        public static Page misoRamen = new RecipeMisoRamenPage();
+        public static Page bobaTea = new RecipeBobaTeaPage();
+        public static Page jollofRice = new RecipeJollofRicePage();
+        public static Page chocolateCake = new RecipeChocolateCakePage();
+        public static Page macAndCheese = new RecipeMacAndCheesePage();
+        public static Page savedRecipesPage = new SavedRecipesPage();
+        public static Page searchSavedPage = new SearchSavedPage();
+        public static Page savedResults = new SearchSavedRecipesResuts();
+
+
+        public static bool onSavedRecipesPage = false;
+        public static bool onSearchResultsPage = false;
+        public static bool onHomePage = false;
+        public static bool onSearchPage = false;
+        public static string generalSearch;
+        public static string savedSearch;
+
+        public static bool durationFilterClicked = false;
+        public static string durationFilterText = "5Min";
+
+
         public MainWindow()
         {
+
             InitializeComponent();
             CookingApplication.Content = new HomePage();
             //CookingApplication.Content = new SearchResultsPage();
@@ -34,6 +60,7 @@ namespace cooking_app
             //CookingApplication.Content = new RecipeBobaTeaPage();
             //CookingApplication.Content = new SavedRecipesPage();
             //CookingApplication.Content = new SearchPage();
+
         }
 
         public static void NavigateToPage(Page page)

@@ -31,11 +31,16 @@ namespace cooking_app
         public static Page chocolateCake = new RecipeChocolateCakePage();
         public static Page macAndCheese = new RecipeMacAndCheesePage();
         public static Page savedRecipesPage = new SavedRecipesPage();
+        public static Page searchSavedPage = new SearchSavedPage();
+        public static Page savedResults = new SearchSavedRecipesResuts();
+
 
         public static bool onSavedRecipesPage = false;
         public static bool onSearchResultsPage = false;
         public static bool onHomePage = false;
         public static bool onSearchPage = false;
+        public static string generalSearch;
+        public static string savedSearch;
 
         public static bool durationFilterClicked = false;
         public static string durationFilterText = "5Min";
@@ -44,14 +49,6 @@ namespace cooking_app
         {
             InitializeComponent();
         }
-
-        public static Page GetSavedPage() { return savedRecipesPage; }
-
-        public static bool getDurationFilter()
-        {
-            return durationFilterClicked;
-        }
-
 
         public void ProfileButtonClick(object sender, RoutedEventArgs e)
         {

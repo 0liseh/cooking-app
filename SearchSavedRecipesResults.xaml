@@ -1,27 +1,35 @@
-﻿<Page x:Class="cooking_app.SavedRecipesPage"
+﻿<Page x:Class="cooking_app.SearchSavedRecipesResuts"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cooking_app"
       mc:Ignorable="d" 
-                   xmlns:fa="http://schemas.fontawesome.io/icons/"
-
       d:DesignHeight="840" d:DesignWidth="390"
-      Title="SavedRecipesPage" Background="White"
-    >
+      Title="SearchSavedRecipesResults"
+      Background="white">
 
     <DockPanel LastChildFill="False">
         <DockPanel DockPanel.Dock="Top">
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Center">
-                <TextBlock FontSize="30" Margin="90,0,0,10" 
+
+                <Button x:Name="back" Grid.Column="0" Grid.Row="1" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                Height="20" Width="40" Grid.ColumnSpan="2" Click="back_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <TextBlock FontSize="30" Margin="40,10,0,10" 
                                HorizontalAlignment="Center" FontWeight="Bold" Foreground="#5F5F5F"
                                Grid.ColumnSpan="3"> 
                      MY RECIPES
                 </TextBlock>
-                <Button x:Name="generalSearch"  Height="30" Width="30" Background="White" BorderThickness="0" Margin="55,0,0,7" 
+                <Button x:Name="generalSearch"  Height="30" Width="30" Background="White" BorderThickness="0" Margin="50,0,0,0" 
                         Click="generalSearch_Click">
-                    <fa:ImageAwesome Icon="Search" Foreground="#9B9B9B" Width="30" Height="30"/>
+                    <Image Source="cooking-app;component/img/search.png"/>
                 </Button>
             </StackPanel>
 
@@ -46,11 +54,14 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="650">
-                <Grid Margin="0,0,0,0" DockPanel.Dock="Top">
+            <ScrollViewer>
+                <Grid Margin="-7,0,0,0" DockPanel.Dock="Top">
 
 
                     <StackPanel Name="SavedRecipes">
+                        
+                        <!--
+                        
                         <StackPanel Orientation="horizontal">
                             <Button x:Name ="catergory1" Grid.Column="0" Grid.Row="3" Width="100" Height="70"
                      Margin="20,20,10,20" Content="BREAKFAST" Background="#50af18" Foreground="White"
@@ -132,8 +143,9 @@
 
                             </Button>
 
-                        </StackPanel>
-
+                        </StackPanel> 
+                        -->
+                                    
 
                         <!-- Where the recipes are added in-->
 
@@ -193,6 +205,7 @@
 
 
             </ScrollViewer>
+
             <!-- Holds divider and Menu buttons -->
             <local:MenuButtons Grid.Row="1" Grid.Column="0"/>
 

@@ -118,8 +118,13 @@ namespace cooking_app
 
         public void savedRecipeClick(object sender, RoutedEventArgs e)
         {
+            SavedRecipesPage page = new SavedRecipesPage();
+            page.addSavedRecipe(title, duration, difficulty, rating, img);
 
-            //MenuButtons.savedRecipesPage.AddSavedRecipe(title, duration, difficulty, rating, img);
+            MainWindow.NavigateToPage(page);
+
+
+            MainWindow.savedRecipesPage.addSavedRecipe(title, duration, difficulty, rating, img);
 
         }
     }

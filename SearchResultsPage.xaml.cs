@@ -27,8 +27,8 @@ namespace cooking_app
 
 
     {
-        private static bool durationFilterClicked = MenuButtons.durationFilterClicked;
-        private static string durationFilterText = MenuButtons.durationFilterText;
+        private static bool durationFilterClicked = MainWindow.durationFilterClicked;
+        private static string durationFilterText = MainWindow.durationFilterText;
 
         String searchResult = "ramen"; //MenuButtons.SearchPage.stringName
 

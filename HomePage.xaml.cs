@@ -99,9 +99,9 @@ namespace cooking_app
         private void btn1Hr_Click(object sender, RoutedEventArgs e)
         {
 
-            MenuButtons.durationFilterClicked = true;
+            MainWindow.durationFilterClicked = true;
 
-            //MenuButtons.durationFilterText = "1hr";
+            MainWindow.durationFilterText = "1hr";
 
             MainWindow.NavigateToPage(MenuButtons.searchResultPage);
 
