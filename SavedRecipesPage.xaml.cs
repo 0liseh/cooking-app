@@ -94,7 +94,7 @@ namespace cooking_app
 
         }
 
-        private void desert_Click(object sender, RoutedEventArgs e)
+        private void dessert_Click(object sender, RoutedEventArgs e)
         {
 
         }

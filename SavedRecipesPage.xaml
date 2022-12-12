@@ -79,7 +79,7 @@
 
                             <Button x:Name="dinner" Grid.Column="2" Grid.Row="3" Width="100" Height="70"
                      Margin="0" Content="DINNER" Background="#50af18" Foreground="White"
-                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="dinner3_Click">
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="dinner_Click">
 
                                 <Button.Resources>
                                     <Style TargetType="{x:Type Border}">
